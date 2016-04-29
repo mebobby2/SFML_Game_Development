@@ -18,7 +18,7 @@
 // Here is a small helper for you ! Have a look.
 #include "ResourcePath.hpp"
 
-#include <Game.hpp>
+#include "Game.hpp"
 
 int main()
 {
