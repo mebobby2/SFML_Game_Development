@@ -8,6 +8,8 @@
 
 #include "Game.hpp"
 
+const float Game::PlayerSpeed = 100.f;
+
 Game::Game()
 : mWindow(sf::VideoMode(640, 480), "SpaceWars!")
 , mPlayer()
@@ -23,10 +25,12 @@ Game::Game()
 
 void Game::run()
 {
+    sf::Clock clock;
     while (mWindow.isOpen())
     {
+        sf::Time deltaTime = clock.restart();
         processEvents();
-        update();
+        update(deltaTime);
         render();
     }
 }
@@ -50,19 +54,19 @@ void Game::processEvents()
     }
 }
 
-void Game::update()
+void Game::update(sf::Time deltaTime)
 {
     sf::Vector2f movement(0.f, 0.f);
     if (mIsMovingUp)
-        movement.y -= 1.f;
+        movement.y -= PlayerSpeed;
     if (mIsMovingDown)
-        movement.y += 1.f;
+        movement.y += PlayerSpeed;
     if (mIsMovingLeft)
-        movement.x -= 1.f;
+        movement.x -= PlayerSpeed;
     if (mIsMovingRight)
-        movement.x += 1.f;
+        movement.x += PlayerSpeed;
     
-    mPlayer.move(movement);
+    mPlayer.move(movement * deltaTime.asSeconds());
     
 }
 
