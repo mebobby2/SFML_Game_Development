@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92D697BF1CD31272000CF4BB /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92D697BD1CD31272000CF4BB /* Game.cpp */; };
 		92F130351CD06F710009C29C /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 92F130341CD06F710009C29C /* ResourcePath.mm */; };
-		92F130381CD06F710009C29C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92F130371CD06F710009C29C /* main.cpp */; };
+		92F130381CD06F710009C29C /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92F130371CD06F710009C29C /* Main.cpp */; };
 		92F1303B1CD06F710009C29C /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92F1303A1CD06F710009C29C /* cute_image.jpg */; };
 		92F1303D1CD06F710009C29C /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 92F1303C1CD06F710009C29C /* nice_music.ogg */; };
 		92F1303F1CD06F710009C29C /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92F1303E1CD06F710009C29C /* sansation.ttf */; };
@@ -16,11 +17,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		92D697BD1CD31272000CF4BB /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		92D697BE1CD31272000CF4BB /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		92F1302F1CD06F710009C29C /* SpaceWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F130331CD06F710009C29C /* SpaceWars-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpaceWars-Info.plist"; sourceTree = "<group>"; };
 		92F130341CD06F710009C29C /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
 		92F130361CD06F710009C29C /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
-		92F130371CD06F710009C29C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		92F130371CD06F710009C29C /* Main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
 		92F1303A1CD06F710009C29C /* cute_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cute_image.jpg; sourceTree = "<group>"; };
 		92F1303C1CD06F710009C29C /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
 		92F1303E1CD06F710009C29C /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
@@ -57,9 +60,11 @@
 		92F130311CD06F710009C29C /* SpaceWars */ = {
 			isa = PBXGroup;
 			children = (
+				92D697BD1CD31272000CF4BB /* Game.cpp */,
+				92D697BE1CD31272000CF4BB /* Game.hpp */,
+				92F130371CD06F710009C29C /* Main.cpp */,
 				92F130341CD06F710009C29C /* ResourcePath.mm */,
 				92F130361CD06F710009C29C /* ResourcePath.hpp */,
-				92F130371CD06F710009C29C /* main.cpp */,
 				92F130391CD06F710009C29C /* Resources */,
 				92F130321CD06F710009C29C /* Supporting Files */,
 			);
@@ -172,7 +177,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92F130381CD06F710009C29C /* main.cpp in Sources */,
+				92D697BF1CD31272000CF4BB /* Game.cpp in Sources */,
+				92F130381CD06F710009C29C /* Main.cpp in Sources */,
 				92F130351CD06F710009C29C /* ResourcePath.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +317,7 @@
 				92F130461CD06F710009C29C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
