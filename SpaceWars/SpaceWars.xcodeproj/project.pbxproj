@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9266C7561CD707D50021AF29 /* Eagle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9266C7551CD707D50021AF29 /* Eagle.png */; };
 		92D697BF1CD31272000CF4BB /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92D697BD1CD31272000CF4BB /* Game.cpp */; };
 		92F130351CD06F710009C29C /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 92F130341CD06F710009C29C /* ResourcePath.mm */; };
 		92F130381CD06F710009C29C /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92F130371CD06F710009C29C /* Main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9266C7551CD707D50021AF29 /* Eagle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eagle.png; sourceTree = "<group>"; };
 		92D697BD1CD31272000CF4BB /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		92D697BE1CD31272000CF4BB /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		92F1302F1CD06F710009C29C /* SpaceWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,7 @@
 		92F130391CD06F710009C29C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9266C7551CD707D50021AF29 /* Eagle.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9266C7561CD707D50021AF29 /* Eagle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

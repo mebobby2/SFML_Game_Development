@@ -7,21 +7,25 @@
 //
 
 #include "Game.hpp"
+#include "ResourcePath.hpp"
 
 const float Game::PlayerSpeed = 100.f;
 const sf::Time Game::TimePerFrame = sf::seconds(1.f/60.f);
 
 Game::Game()
 : mWindow(sf::VideoMode(640, 480), "SpaceWars!")
+, mTexture()
 , mPlayer()
 , mIsMovingUp(false)
 , mIsMovingDown(false)
 , mIsMovingLeft(false)
 , mIsMovingRight(false)
 {
-    mPlayer.setRadius(40.f);
+    if (!mTexture.loadFromFile(resourcePath() + "Eagle.png")) {
+        
+    }
+    mPlayer.setTexture(mTexture);
     mPlayer.setPosition(100.f, 100.f);
-    mPlayer.setFillColor(sf::Color::Cyan);
 }
 
 void Game::run()
