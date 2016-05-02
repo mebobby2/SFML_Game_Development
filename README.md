@@ -13,4 +13,4 @@
 3. Make sure the C++ Compiler and Standard Library is set to C++11 with Clang and libc++
 4. Compile and run the skeleton template.
 
-## Upto Page 24 - Other techniques related to frame rates
+## Upto Page 40 - Error handling
