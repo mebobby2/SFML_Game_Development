@@ -9,7 +9,6 @@
 #ifndef __SpaceWars__Game__
 #define __SpaceWars__Game__
 
-#include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
 class Game

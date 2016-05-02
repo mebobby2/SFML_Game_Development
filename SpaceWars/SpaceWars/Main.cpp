@@ -18,10 +18,11 @@
 // Here is a small helper for you ! Have a look.
 #include "ResourcePath.hpp"
 
+#include "TextureHolder.hpp"
 #include "Game.hpp"
 
 int main()
-{
+{    
     Game game;
     game.run();
 }

@@ -1,0 +1,45 @@
+//
+//  TextureHolder.h
+//  SpaceWars
+//
+//  Created by Bobby Lei on 2/05/16.
+//  Copyright (c) 2016 mebobby. All rights reserved.
+//
+
+#ifndef __SpaceWars__TextureHolder__
+#define __SpaceWars__TextureHolder__
+
+#include <SFML/Graphics.hpp>
+
+#include <map>
+#include <memory>
+
+namespace Textures
+{
+    enum ID
+    {
+        Landscape,
+        Airplane,
+    };
+}
+
+class TextureHolder
+{
+public:
+    void load(Textures::ID id, const std::string& filename);
+    
+    
+    sf::Texture& get(Textures::ID id);
+    //If we only have a pointer or reference to a TextureHolder at hand, we need to provide a const-qualified overload for this function
+    //to be callable. E.g. if we have:
+    //  const TextureHolder textureHolder;
+    //And when we call get on this object, the compiler will the const-qualified method 'const sf::Texture& get(Textures::ID id) const'
+    //If we have:
+    //  TextureHolder textureHolder;
+    //The compiler will call the 'sf::Texture& get(Textures::ID id)' function.
+    const sf::Texture& get(Textures::ID id) const;
+private:
+    std::map<Textures::ID, std::unique_ptr<sf::Texture>> mTextureMap;
+};
+
+#endif /* defined(__SpaceWars__TextureHolder__) */
