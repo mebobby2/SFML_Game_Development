@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9266C7561CD707D50021AF29 /* Eagle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9266C7551CD707D50021AF29 /* Eagle.png */; };
-		9266C7591CD711C10021AF29 /* TextureHolder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9266C7571CD711C10021AF29 /* TextureHolder.cpp */; };
+		9266C7591CD711C10021AF29 /* ResourceHolder.inl in Sources */ = {isa = PBXBuildFile; fileRef = 9266C7571CD711C10021AF29 /* ResourceHolder.inl */; };
 		92D697BF1CD31272000CF4BB /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92D697BD1CD31272000CF4BB /* Game.cpp */; };
 		92F130351CD06F710009C29C /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 92F130341CD06F710009C29C /* ResourcePath.mm */; };
 		92F130381CD06F710009C29C /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92F130371CD06F710009C29C /* Main.cpp */; };
@@ -16,8 +16,8 @@
 
 /* Begin PBXFileReference section */
 		9266C7551CD707D50021AF29 /* Eagle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eagle.png; sourceTree = "<group>"; };
-		9266C7571CD711C10021AF29 /* TextureHolder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureHolder.cpp; sourceTree = "<group>"; };
-		9266C7581CD711C10021AF29 /* TextureHolder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TextureHolder.hpp; sourceTree = "<group>"; };
+		9266C7571CD711C10021AF29 /* ResourceHolder.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ResourceHolder.inl; sourceTree = "<group>"; };
+		9266C7581CD711C10021AF29 /* ResourceHolder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceHolder.hpp; sourceTree = "<group>"; };
 		92D697BD1CD31272000CF4BB /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		92D697BE1CD31272000CF4BB /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		92F1302F1CD06F710009C29C /* SpaceWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,8 +62,8 @@
 				92F130371CD06F710009C29C /* Main.cpp */,
 				92F130341CD06F710009C29C /* ResourcePath.mm */,
 				92F130361CD06F710009C29C /* ResourcePath.hpp */,
-				9266C7571CD711C10021AF29 /* TextureHolder.cpp */,
-				9266C7581CD711C10021AF29 /* TextureHolder.hpp */,
+				9266C7571CD711C10021AF29 /* ResourceHolder.inl */,
+				9266C7581CD711C10021AF29 /* ResourceHolder.hpp */,
 				92F130391CD06F710009C29C /* Resources */,
 				92F130321CD06F710009C29C /* Supporting Files */,
 			);
@@ -171,7 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92D697BF1CD31272000CF4BB /* Game.cpp in Sources */,
-				9266C7591CD711C10021AF29 /* TextureHolder.cpp in Sources */,
+				9266C7591CD711C10021AF29 /* ResourceHolder.inl in Sources */,
 				92F130381CD06F710009C29C /* Main.cpp in Sources */,
 				92F130351CD06F710009C29C /* ResourcePath.mm in Sources */,
 			);
