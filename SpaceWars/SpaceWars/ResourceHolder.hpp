@@ -9,19 +9,8 @@
 #ifndef __SpaceWars__TextureHolder__
 #define __SpaceWars__TextureHolder__
 
-#include <SFML/Graphics.hpp>
-
 #include <map>
 #include <memory>
-
-namespace Textures
-{
-    enum ID
-    {
-        Landscape,
-        Airplane,
-    };
-}
 
 template <typename Resource, typename Identifier>
 class ResourceHolder

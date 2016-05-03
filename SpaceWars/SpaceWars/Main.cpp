@@ -18,8 +18,19 @@
 // Here is a small helper for you ! Have a look.
 #include "ResourcePath.hpp"
 
+#include <SFML/Graphics.hpp>
+
 #include "ResourceHolder.hpp"
 #include "Game.hpp"
+
+namespace Textures
+{
+    enum ID
+    {
+        Landscape,
+        Airplane,
+    };
+}
 
 int main()
 {    
