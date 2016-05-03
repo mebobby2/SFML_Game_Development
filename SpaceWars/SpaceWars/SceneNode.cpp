@@ -24,12 +24,14 @@ void SceneNode::attachChild(Ptr child)
 SceneNode::Ptr SceneNode::detachChild(const SceneNode &node)
 {
     // .get() returns a pointer to the object pointed by the unique_ptr object.
-    // A pointer stores the memory address of a object it's pointing to.
+    // A pointer stores the memory address of another variable.
     
-    // References in C++ are 'aliases' for another variable and the main reason they are added
+    // References in C++ are 'aliases' for another variable (ie a reference is a variable which
+    // refers to another variable), and the main reason they are added
     // to the language is to support pass by reference in function calls. That is why C++
     // makes it nice to work with references in that you do not need to explicitly dereference
-    // them, using *, like you do when using pointers.
+    // them, using *, like you do when using pointers. It is understood that you are intending
+    // to work with the referred variable when using references.
     // &node returns the memory address of the node which the reference is pointing to.
     
     // Therefore, p.get() == &node is testing whether the address stored by the pointer p.get()
