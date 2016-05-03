@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9242CAAB1CD8544800AC8A64 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9242CAA91CD8544800AC8A64 /* Entity.cpp */; };
 		9242CAAE1CD8562800AC8A64 /* Aircraft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9242CAAC1CD8562800AC8A64 /* Aircraft.cpp */; };
+		9242CAB41CD85A5600AC8A64 /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9242CAB21CD85A5600AC8A64 /* SceneNode.cpp */; };
 		9266C7561CD707D50021AF29 /* Eagle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9266C7551CD707D50021AF29 /* Eagle.png */; };
 		9266C7591CD711C10021AF29 /* ResourceHolder.inl in Sources */ = {isa = PBXBuildFile; fileRef = 9266C7571CD711C10021AF29 /* ResourceHolder.inl */; };
 		92D697BF1CD31272000CF4BB /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92D697BD1CD31272000CF4BB /* Game.cpp */; };
@@ -21,6 +22,8 @@
 		9242CAAA1CD8544800AC8A64 /* Entity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
 		9242CAAC1CD8562800AC8A64 /* Aircraft.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Aircraft.cpp; sourceTree = "<group>"; };
 		9242CAAD1CD8562800AC8A64 /* Aircraft.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Aircraft.hpp; sourceTree = "<group>"; };
+		9242CAB21CD85A5600AC8A64 /* SceneNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneNode.cpp; sourceTree = "<group>"; };
+		9242CAB31CD85A5600AC8A64 /* SceneNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SceneNode.hpp; sourceTree = "<group>"; };
 		9266C7551CD707D50021AF29 /* Eagle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eagle.png; sourceTree = "<group>"; };
 		9266C7571CD711C10021AF29 /* ResourceHolder.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ResourceHolder.inl; sourceTree = "<group>"; };
 		9266C7581CD711C10021AF29 /* ResourceHolder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceHolder.hpp; sourceTree = "<group>"; };
@@ -66,6 +69,15 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
+		9242CAB11CD85A1900AC8A64 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9242CAB21CD85A5600AC8A64 /* SceneNode.cpp */,
+				9242CAB31CD85A5600AC8A64 /* SceneNode.hpp */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
 		92F130251CD06F710009C29C = {
 			isa = PBXGroup;
 			children = (
@@ -87,9 +99,10 @@
 			children = (
 				9242CAB01CD8593000AC8A64 /* Entities */,
 				9242CAAF1CD8591E00AC8A64 /* Loaders */,
-				92D697BD1CD31272000CF4BB /* Game.cpp */,
-				92D697BE1CD31272000CF4BB /* Game.hpp */,
+				9242CAB11CD85A1900AC8A64 /* Scenes */,
 				92F130371CD06F710009C29C /* Main.cpp */,
+				92D697BE1CD31272000CF4BB /* Game.hpp */,
+				92D697BD1CD31272000CF4BB /* Game.cpp */,
 				92F130391CD06F710009C29C /* Resources */,
 				92F130321CD06F710009C29C /* Supporting Files */,
 			);
@@ -200,6 +213,7 @@
 				9266C7591CD711C10021AF29 /* ResourceHolder.inl in Sources */,
 				92F130381CD06F710009C29C /* Main.cpp in Sources */,
 				9242CAAB1CD8544800AC8A64 /* Entity.cpp in Sources */,
+				9242CAB41CD85A5600AC8A64 /* SceneNode.cpp in Sources */,
 				92F130351CD06F710009C29C /* ResourcePath.mm in Sources */,
 				9242CAAE1CD8562800AC8A64 /* Aircraft.cpp in Sources */,
 			);
