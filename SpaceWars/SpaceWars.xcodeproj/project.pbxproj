@@ -44,7 +44,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9242CAAF1CD8591E00AC8A64 /* Services */ = {
+		9242CAAF1CD8591E00AC8A64 /* Loaders */ = {
 			isa = PBXGroup;
 			children = (
 				92F130341CD06F710009C29C /* ResourcePath.mm */,
@@ -52,7 +52,7 @@
 				9266C7571CD711C10021AF29 /* ResourceHolder.inl */,
 				9266C7581CD711C10021AF29 /* ResourceHolder.hpp */,
 			);
-			name = Services;
+			name = Loaders;
 			sourceTree = "<group>";
 		};
 		9242CAB01CD8593000AC8A64 /* Entities */ = {
@@ -86,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				9242CAB01CD8593000AC8A64 /* Entities */,
-				9242CAAF1CD8591E00AC8A64 /* Services */,
+				9242CAAF1CD8591E00AC8A64 /* Loaders */,
 				92D697BD1CD31272000CF4BB /* Game.cpp */,
 				92D697BE1CD31272000CF4BB /* Game.hpp */,
 				92F130371CD06F710009C29C /* Main.cpp */,
