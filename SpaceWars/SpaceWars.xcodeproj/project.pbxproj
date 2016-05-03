@@ -44,6 +44,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9242CAAF1CD8591E00AC8A64 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				92F130341CD06F710009C29C /* ResourcePath.mm */,
+				92F130361CD06F710009C29C /* ResourcePath.hpp */,
+				9266C7571CD711C10021AF29 /* ResourceHolder.inl */,
+				9266C7581CD711C10021AF29 /* ResourceHolder.hpp */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		9242CAB01CD8593000AC8A64 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9242CAA91CD8544800AC8A64 /* Entity.cpp */,
+				9242CAAA1CD8544800AC8A64 /* Entity.hpp */,
+				9242CAAC1CD8562800AC8A64 /* Aircraft.cpp */,
+				9242CAAD1CD8562800AC8A64 /* Aircraft.hpp */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 		92F130251CD06F710009C29C = {
 			isa = PBXGroup;
 			children = (
@@ -63,19 +85,13 @@
 		92F130311CD06F710009C29C /* SpaceWars */ = {
 			isa = PBXGroup;
 			children = (
+				9242CAB01CD8593000AC8A64 /* Entities */,
+				9242CAAF1CD8591E00AC8A64 /* Services */,
 				92D697BD1CD31272000CF4BB /* Game.cpp */,
 				92D697BE1CD31272000CF4BB /* Game.hpp */,
 				92F130371CD06F710009C29C /* Main.cpp */,
-				92F130341CD06F710009C29C /* ResourcePath.mm */,
-				92F130361CD06F710009C29C /* ResourcePath.hpp */,
-				9266C7571CD711C10021AF29 /* ResourceHolder.inl */,
-				9266C7581CD711C10021AF29 /* ResourceHolder.hpp */,
 				92F130391CD06F710009C29C /* Resources */,
 				92F130321CD06F710009C29C /* Supporting Files */,
-				9242CAA91CD8544800AC8A64 /* Entity.cpp */,
-				9242CAAA1CD8544800AC8A64 /* Entity.hpp */,
-				9242CAAC1CD8562800AC8A64 /* Aircraft.cpp */,
-				9242CAAD1CD8562800AC8A64 /* Aircraft.hpp */,
 			);
 			path = SpaceWars;
 			sourceTree = "<group>";
