@@ -10,7 +10,10 @@
 #define __SpaceWars__TextureHolder__
 
 #include <map>
+#include <string>
 #include <memory>
+#include <stdexcept>
+#include <cassert>
 
 template <typename Resource, typename Identifier>
 class ResourceHolder
@@ -38,5 +41,14 @@ class ResourceHolder
     private:
         std::map<Identifier, std::unique_ptr<Resource>> mResourceMap;
 };
+
+// ResourceHolder uses templates. When using templates, the complete implementation needs to be in the header. We cannot
+// use .cpp files for the method definitions anymore, but we would still like to seperate interface and implmentation.
+// That is why we use an 'inl' file for the method definitions and include them in the header file. inl is a common file
+// extension for inline template implementations.
+#include "ResourceHolder.inl"
+
+
+
 
 #endif /* defined(__SpaceWars__TextureHolder__) */
