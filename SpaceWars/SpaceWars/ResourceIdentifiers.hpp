@@ -9,7 +9,8 @@
 #ifndef __SpaceWars__ResourceIdentifiers__
 #define __SpaceWars__ResourceIdentifiers__
 
-namespace sf {
+namespace sf
+{
     class Texture;
 }
 

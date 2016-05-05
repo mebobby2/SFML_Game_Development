@@ -11,7 +11,7 @@
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
 
-Textures::ID toTextureId(Aircraft::Type type)
+Textures::ID toTextureID(Aircraft::Type type)
 {
     switch (type) {
         case Aircraft::Eagle:
@@ -23,7 +23,7 @@ Textures::ID toTextureId(Aircraft::Type type)
 
 Aircraft::Aircraft(Type type, const TextureHolder& textures)
 : mType(type)
-, mSprite(textures.get(toTextureId(type)))
+, mSprite(textures.get(toTextureID(type)))
 {
     sf::FloatRect bounds = mSprite.getLocalBounds();
     mSprite.setOrigin(bounds.width / 2.f, bounds.height / 2.f);
