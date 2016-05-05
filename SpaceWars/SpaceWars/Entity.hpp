@@ -12,7 +12,9 @@
 #include <SFML/Graphics/Transformable.hpp>
 #include <SFML/Graphics/Drawable.hpp>
 
-class Entity
+#include "SceneNode.hpp"
+
+class Entity : public SceneNode
 {
     public:
         void setVelocity(sf::Vector2f velocity);
