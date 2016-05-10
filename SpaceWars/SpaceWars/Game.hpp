@@ -29,12 +29,18 @@ private:
     void render();
     
     void handlePlayerInput(sf::Keyboard::Key key, bool isPressed);
+    void updateStatistics(sf::Time elapsedTime);
     
 private:
     static const sf::Time TimePerFrame;
     
     sf::RenderWindow mWindow;
     World mWorld;
+    
+    sf::Font mFont;
+    sf::Text mStatisticsText;
+    sf::Time mStatisticsUpdateTime;
+    std::size_t mStatisticsNumFrames;
 };
 
 #endif /* defined(__SpaceWars__Game__) */

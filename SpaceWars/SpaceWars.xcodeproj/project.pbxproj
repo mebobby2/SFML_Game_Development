@@ -12,6 +12,7 @@
 		0752C7E71CE19E7600EF1365 /* Raptor.png in Resources */ = {isa = PBXBuildFile; fileRef = 0752C7E51CE19E7600EF1365 /* Raptor.png */; };
 		0752C7EB1CE1A27800EF1365 /* StringHelpers.inl in Sources */ = {isa = PBXBuildFile; fileRef = 0752C7E91CE1A27800EF1365 /* StringHelpers.inl */; };
 		0752C7EE1CE1A39300EF1365 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0752C7EC1CE1A39300EF1365 /* World.cpp */; };
+		07551B1F1CE29B4900D1CE8F /* Sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07551B1E1CE29B4900D1CE8F /* Sansation.ttf */; };
 		9242CAAB1CD8544800AC8A64 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9242CAA91CD8544800AC8A64 /* Entity.cpp */; };
 		9242CAAE1CD8562800AC8A64 /* Aircraft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9242CAAC1CD8562800AC8A64 /* Aircraft.cpp */; };
 		9242CAB41CD85A5600AC8A64 /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9242CAB21CD85A5600AC8A64 /* SceneNode.cpp */; };
@@ -31,6 +32,7 @@
 		0752C7EA1CE1A27800EF1365 /* StringHelpers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StringHelpers.hpp; sourceTree = "<group>"; };
 		0752C7EC1CE1A39300EF1365 /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = World.cpp; sourceTree = "<group>"; };
 		0752C7ED1CE1A39300EF1365 /* World.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = World.hpp; sourceTree = "<group>"; };
+		07551B1E1CE29B4900D1CE8F /* Sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sansation.ttf; sourceTree = "<group>"; };
 		9242CAA91CD8544800AC8A64 /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
 		9242CAAA1CD8544800AC8A64 /* Entity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
 		9242CAAC1CD8562800AC8A64 /* Aircraft.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Aircraft.cpp; sourceTree = "<group>"; };
@@ -68,6 +70,16 @@
 				0752C7EA1CE1A27800EF1365 /* StringHelpers.hpp */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		07551B201CE29B6000D1CE8F /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				0752C7E41CE19E7600EF1365 /* Desert.png */,
+				0752C7E51CE19E7600EF1365 /* Raptor.png */,
+				9266C7551CD707D50021AF29 /* Eagle.png */,
+			);
+			name = Textures;
 			sourceTree = "<group>";
 		};
 		9242CAAF1CD8591E00AC8A64 /* ResourceLoaders */ = {
@@ -157,9 +169,8 @@
 		92F130391CD06F710009C29C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0752C7E41CE19E7600EF1365 /* Desert.png */,
-				0752C7E51CE19E7600EF1365 /* Raptor.png */,
-				9266C7551CD707D50021AF29 /* Eagle.png */,
+				07551B201CE29B6000D1CE8F /* Textures */,
+				07551B1E1CE29B4900D1CE8F /* Sansation.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -222,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0752C7E61CE19E7600EF1365 /* Desert.png in Resources */,
+				07551B1F1CE29B4900D1CE8F /* Sansation.ttf in Resources */,
 				0752C7E71CE19E7600EF1365 /* Raptor.png in Resources */,
 				9266C7561CD707D50021AF29 /* Eagle.png in Resources */,
 			);
