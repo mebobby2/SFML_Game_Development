@@ -54,8 +54,13 @@ SceneNode::Ptr SceneNode::detachChild(const SceneNode &node)
 void SceneNode::draw(sf::RenderTarget &target, sf::RenderStates states) const
 {
     states.transform *= getTransform();
-    drawCurrent(target, states);
     
+    drawCurrent(target, states);
+    drawChildren(target, states);
+}
+
+void SceneNode::drawChildren(sf::RenderTarget &target, sf::RenderStates states) const
+{
     for (const Ptr& child : mChildren) {
         child->draw(target, states);
     }
