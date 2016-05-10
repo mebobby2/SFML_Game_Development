@@ -13,4 +13,9 @@
 3. Make sure the C++ Compiler and Standard Library is set to C++11 with Clang and libc++
 4. Compile and run the skeleton template.
 
-## Upto Page 71 - Landscape rendering
+## Upto Page 74 - Composing our world
+
+## Todo
+1. Make sure all code is same as from Chapter 3
+2. Implment World class
+3. Add on statistics
