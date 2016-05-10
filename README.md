@@ -14,7 +14,3 @@
 4. Compile and run the skeleton template.
 
 ## Upto Page 85
-
-## Todo
-1. Implment World class
-2. Add on statistics
