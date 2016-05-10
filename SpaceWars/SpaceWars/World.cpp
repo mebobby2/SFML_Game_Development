@@ -36,7 +36,7 @@ void World::update(sf::Time dt)
     sf::Vector2f velocity = mPlayerAircraft->getVelocity();
     if (position.x <= mWorldBounds.left + 150.f || position.x >= mWorldBounds.left + mWorldBounds.width - 150.f) {
         velocity.x = -velocity.x;
-        mPlayerAircraft->setPosition(velocity);
+        mPlayerAircraft->setVelocity(velocity);
     }
     mSceneGraph.update(dt);
 }
