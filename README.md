@@ -16,6 +16,5 @@
 ## Upto Page 74 - Composing our world
 
 ## Todo
-1. Make sure all code is same as from Chapter 3
-2. Implment World class
-3. Add on statistics
+1. Implment World class
+2. Add on statistics
