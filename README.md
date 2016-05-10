@@ -13,7 +13,7 @@
 3. Make sure the C++ Compiler and Standard Library is set to C++11 with Clang and libc++
 4. Compile and run the skeleton template.
 
-## Upto Page 74 - Composing our world
+## Upto Page 85
 
 ## Todo
 1. Implment World class
