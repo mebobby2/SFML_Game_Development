@@ -14,23 +14,17 @@
 // method resourcePath() from ResourcePath.hpp
 //
 
-
-// Here is a small helper for you ! Have a look.
-#include "ResourcePath.hpp"
-
 #include "Game.hpp"
 
-namespace Textures
-{
-    enum ID
-    {
-        Landscape,
-        Airplane,
-    };
-}
+#include <stdexcept>
+#include <iostream>
 
 int main()
-{    
-    Game game;
-    game.run();
+{
+    try {
+        Game game;
+        game.run();
+    } catch (std::exception& e) {
+        std::cout << "\nEXCEPTION: " << e.what() << std::endl;
+    }
 }

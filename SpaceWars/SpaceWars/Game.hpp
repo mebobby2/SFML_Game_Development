@@ -9,32 +9,34 @@
 #ifndef __SpaceWars__Game__
 #define __SpaceWars__Game__
 
-#include <SFML/Graphics.hpp>
+#include <SFML/System/Time.hpp>
+#include <SFML/Window/Keyboard.hpp>
+#include <SFML/Graphics/Text.hpp>
+#include <SFML/Graphics/Font.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
 
-class Game
+#include "World.hpp"
+
+class Game : private sf::NonCopyable
 {
-    public:
-                Game();
-        void    run();
-    private:
-        void    processEvents();
-    void    update(sf::Time deltaTime);
-        void    render();
+public:
+    Game();
+    void run();
     
-        void    handlePlayerInput(sf::Keyboard::Key key, bool isPressed);
+private:
+    void processEvents();
+    void update(sf::Time elapsedTime);
+    void render();
     
-    private:
-        static const float PlayerSpeed;
-        static const sf::Time TimePerFrame;
+    void handlePlayerInput(sf::Keyboard::Key key, bool isPressed);
     
-        sf::RenderWindow mWindow;
-        sf::Texture mTexture;
-        sf::Sprite mPlayer;
+private:
+    static const sf::Time TimePerFrame;
     
-        bool mIsMovingUp;
-        bool mIsMovingDown;
-        bool mIsMovingRight;
-        bool mIsMovingLeft;
+    sf::RenderWindow mWindow;
+    World mWorld;
 };
 
 #endif /* defined(__SpaceWars__Game__) */
+
+
