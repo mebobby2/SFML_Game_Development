@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0752C7E31CE19AD100EF1365 /* SpriteNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0752C7E11CE19AD100EF1365 /* SpriteNode.cpp */; };
 		9242CAAB1CD8544800AC8A64 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9242CAA91CD8544800AC8A64 /* Entity.cpp */; };
 		9242CAAE1CD8562800AC8A64 /* Aircraft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9242CAAC1CD8562800AC8A64 /* Aircraft.cpp */; };
 		9242CAB41CD85A5600AC8A64 /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9242CAB21CD85A5600AC8A64 /* SceneNode.cpp */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0752C7E11CE19AD100EF1365 /* SpriteNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteNode.cpp; sourceTree = "<group>"; };
+		0752C7E21CE19AD100EF1365 /* SpriteNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SpriteNode.hpp; sourceTree = "<group>"; };
 		9242CAA91CD8544800AC8A64 /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
 		9242CAAA1CD8544800AC8A64 /* Entity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
 		9242CAAC1CD8562800AC8A64 /* Aircraft.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Aircraft.cpp; sourceTree = "<group>"; };
@@ -74,6 +77,8 @@
 		9242CAB11CD85A1900AC8A64 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0752C7E11CE19AD100EF1365 /* SpriteNode.cpp */,
+				0752C7E21CE19AD100EF1365 /* SpriteNode.hpp */,
 				9242CAB21CD85A5600AC8A64 /* SceneNode.cpp */,
 				9242CAB31CD85A5600AC8A64 /* SceneNode.hpp */,
 			);
@@ -223,6 +228,7 @@
 				9266C7591CD711C10021AF29 /* ResourceHolder.inl in Sources */,
 				92F130381CD06F710009C29C /* Main.cpp in Sources */,
 				9242CAAB1CD8544800AC8A64 /* Entity.cpp in Sources */,
+				0752C7E31CE19AD100EF1365 /* SpriteNode.cpp in Sources */,
 				9242CAB41CD85A5600AC8A64 /* SceneNode.cpp in Sources */,
 				92F130351CD06F710009C29C /* ResourcePath.mm in Sources */,
 				9242CAAE1CD8562800AC8A64 /* Aircraft.cpp in Sources */,

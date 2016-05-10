@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2BAA20BF6E7892D7C1BFC76BE4596DE36C014C61+++C96E5DB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2BAA20BF6E7892D7C1BFC76BE4596DE36C014C61+++C96E5DB" : 0,
+    "2BAA20BF6E7892D7C1BFC76BE4596DE36C014C61+++14B597D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D2601D4E-DF3E-4F99-9B89-FE3D855E5C89",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2BAA20BF6E7892D7C1BFC76BE4596DE36C014C61+++C96E5DB" : "SFML_Game_Development",
+    "2BAA20BF6E7892D7C1BFC76BE4596DE36C014C61+++14B597D" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SpaceWars",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SpaceWars\/SpaceWars.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mebobby2\/SFML_Game_Development.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2BAA20BF6E7892D7C1BFC76BE4596DE36C014C61+++14B597D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mebobby2\/SFML_Game_Development.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2BAA20BF6E7892D7C1BFC76BE4596DE36C014C61+++C96E5DB"
+    }
+  ]
+}
