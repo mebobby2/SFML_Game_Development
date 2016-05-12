@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0722368B1CE2DCA60086A0CF /* Command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 072236891CE2DCA60086A0CF /* Command.cpp */; };
 		07468E0C1CE542C70089667C /* CommandQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07468E0A1CE542C70089667C /* CommandQueue.cpp */; };
+		07468E0F1CE546AF0089667C /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07468E0D1CE546AF0089667C /* Player.cpp */; };
 		0752C7E31CE19AD100EF1365 /* SpriteNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0752C7E11CE19AD100EF1365 /* SpriteNode.cpp */; };
 		0752C7E61CE19E7600EF1365 /* Desert.png in Resources */ = {isa = PBXBuildFile; fileRef = 0752C7E41CE19E7600EF1365 /* Desert.png */; };
 		0752C7E71CE19E7600EF1365 /* Raptor.png in Resources */ = {isa = PBXBuildFile; fileRef = 0752C7E51CE19E7600EF1365 /* Raptor.png */; };
@@ -31,6 +32,8 @@
 		0722368D1CE2DDD40086A0CF /* Category.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Category.hpp; sourceTree = "<group>"; };
 		07468E0A1CE542C70089667C /* CommandQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CommandQueue.cpp; sourceTree = "<group>"; };
 		07468E0B1CE542C70089667C /* CommandQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CommandQueue.hpp; sourceTree = "<group>"; };
+		07468E0D1CE546AF0089667C /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		07468E0E1CE546AF0089667C /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 		0752C7E11CE19AD100EF1365 /* SpriteNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteNode.cpp; sourceTree = "<group>"; };
 		0752C7E21CE19AD100EF1365 /* SpriteNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SpriteNode.hpp; sourceTree = "<group>"; };
 		0752C7E41CE19E7600EF1365 /* Desert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Desert.png; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 				92D697BD1CD31272000CF4BB /* Game.cpp */,
 				0752C7EC1CE1A39300EF1365 /* World.cpp */,
 				0752C7ED1CE1A39300EF1365 /* World.hpp */,
+				07468E0D1CE546AF0089667C /* Player.cpp */,
+				07468E0E1CE546AF0089667C /* Player.hpp */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 				07468E0C1CE542C70089667C /* CommandQueue.cpp in Sources */,
 				0752C7EB1CE1A27800EF1365 /* StringHelpers.inl in Sources */,
 				0752C7E31CE19AD100EF1365 /* SpriteNode.cpp in Sources */,
+				07468E0F1CE546AF0089667C /* Player.cpp in Sources */,
 				0752C7EE1CE1A39300EF1365 /* World.cpp in Sources */,
 				9242CAB41CD85A5600AC8A64 /* SceneNode.cpp in Sources */,
 				92F130351CD06F710009C29C /* ResourcePath.mm in Sources */,
