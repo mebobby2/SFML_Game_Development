@@ -14,6 +14,7 @@
 #include "SceneNode.hpp"
 #include "SpriteNode.hpp"
 #include "Aircraft.hpp"
+#include "CommandQueue.hpp"
 
 #include <SFML/System/NonCopyable.hpp>
 #include <SFML/Graphics/View.hpp>
@@ -31,6 +32,7 @@ public:
     explicit World(sf::RenderWindow& window);
     void update(sf::Time dt);
     void draw();
+    CommandQueue& getCommandQueue();
     
 private:
     void loadTextures();
@@ -51,6 +53,7 @@ private:
     
     SceneNode mSceneGraph;
     std::array<SceneNode*, LayerCount> mSceneLayers;
+    CommandQueue mCommandQueue;
     
     sf::FloatRect mWorldBounds;
     sf::Vector2f mSpawnPosition;
