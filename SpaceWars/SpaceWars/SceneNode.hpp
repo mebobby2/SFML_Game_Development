@@ -17,6 +17,8 @@
 #include <vector>
 #include <memory>
 
+struct Command;
+
 class SceneNode : public sf::Transformable, public sf::Drawable, private sf::NonCopyable
 {
     public:
@@ -29,6 +31,9 @@ class SceneNode : public sf::Transformable, public sf::Drawable, private sf::Non
         void update(sf::Time dt);
         sf::Vector2f getWorldPosition() const;
         sf::Transform getWorldTransform() const;
+    
+        void onCommand(const Command& command, sf::Time dt);
+        virtual unsigned int getCategory() const;
     
     private:
         virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
