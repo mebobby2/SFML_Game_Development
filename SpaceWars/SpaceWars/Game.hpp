@@ -16,6 +16,7 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 
 #include "World.hpp"
+#include "Player.hpp"
 
 class Game : private sf::NonCopyable
 {
@@ -24,11 +25,9 @@ public:
     void run();
     
 private:
-    void processEvents();
+    void processInput();
     void update(sf::Time elapsedTime);
     void render();
-    
-    void handlePlayerInput(sf::Keyboard::Key key, bool isPressed);
     void updateStatistics(sf::Time elapsedTime);
     
 private:
@@ -36,6 +35,7 @@ private:
     
     sf::RenderWindow mWindow;
     World mWorld;
+    Player mPlayer;
     
     sf::Font mFont;
     sf::Text mStatisticsText;

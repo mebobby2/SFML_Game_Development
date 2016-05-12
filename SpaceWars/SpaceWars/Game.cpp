@@ -39,7 +39,7 @@ void Game::run()
         //Read about fixed time steps here: http://gafferongames.com/game-physics/fix-your-timestep/
         while (timeSinceLastUpdate > TimePerFrame) {
             timeSinceLastUpdate -= TimePerFrame;
-            processEvents();
+            processInput();
             update(TimePerFrame);
         }
         updateStatistics(elapsedTime);
@@ -47,23 +47,19 @@ void Game::run()
     }
 }
 
-void Game::processEvents()
+void Game::processInput()
 {
+    CommandQueue& commands = mWorld.getCommandQueue();
+    
     sf::Event event;
-    while (mWindow.pollEvent(event))
-    {
-        switch (event.type) {
-            case sf::Event::KeyPressed:
-                handlePlayerInput(event.key.code, true);
-                break;
-            case sf::Event::KeyReleased:
-                handlePlayerInput(event.key.code, false);
-                break;
-            case sf::Event::Closed:
-                mWindow.close();
-                break;
-        }
+    while (mWindow.pollEvent(event)) {
+        mPlayer.handleEvent(event, commands);
+        
+        if (event.type == sf::Event::Closed)
+            mWindow.close();
     }
+    
+    mPlayer.handleRealtimeInput(commands);
 }
 
 void Game::update(sf::Time elapsedTime)
@@ -95,9 +91,4 @@ void Game::render()
     mWindow.setView(mWindow.getDefaultView());
     mWindow.draw(mStatisticsText);
     mWindow.display();
-}
-
-void Game::handlePlayerInput(sf::Keyboard::Key key, bool isPressed)
-{
-   
 }
