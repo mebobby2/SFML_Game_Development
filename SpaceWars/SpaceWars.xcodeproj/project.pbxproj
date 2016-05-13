@@ -85,13 +85,13 @@
 			name = Commands;
 			sourceTree = "<group>";
 		};
-		0752C7E81CE1A26100EF1365 /* Helpers */ = {
+		0752C7E81CE1A26100EF1365 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				0752C7E91CE1A27800EF1365 /* StringHelpers.inl */,
 				0752C7EA1CE1A27800EF1365 /* StringHelpers.hpp */,
 			);
-			name = Helpers;
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		07551B201CE29B6000D1CE8F /* Textures */ = {
@@ -171,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				072236881CE2DC9A0086A0CF /* Commands */,
-				0752C7E81CE1A26100EF1365 /* Helpers */,
+				0752C7E81CE1A26100EF1365 /* Utils */,
 				926FBF761CDAFABA00641B40 /* Core */,
 				9242CAB01CD8593000AC8A64 /* Entities */,
 				9242CAAF1CD8591E00AC8A64 /* ResourceLoaders */,
