@@ -14,6 +14,8 @@
 #include <SFML/Graphics/Transformable.hpp>
 #include <SFML/Graphics/Drawable.hpp>
 
+#include "Category.hpp"
+
 #include <vector>
 #include <memory>
 
