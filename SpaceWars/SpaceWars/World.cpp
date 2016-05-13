@@ -96,6 +96,13 @@ void World::adaptPlayerVelocity()
     if (velocity.x != 0.f && velocity.y != 0.f)
         mPlayerAircraft->setVelocity(velocity / std::sqrt(2.f));
     
+    // Add the scrollSpeed to the plane so the plane remains on the same position of the screen.
+    // If we don't do this:
+    //   If the player is not moving the arrow keys and then plane is still, it will scroll to the bottom
+    //   of the screen and it will look like the plane is moving WITH the dessert.
+    // If we do this:
+    //   And the player is not inputting arrow keys, then the plane remains in the same position of the screen,
+    //   and this gives the illusion that the plan is flying through the air.
     mPlayerAircraft->accelerate(0.f, mScrollSpeed);
 }
 
