@@ -10,6 +10,8 @@
 		0722368B1CE2DCA60086A0CF /* Command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 072236891CE2DCA60086A0CF /* Command.cpp */; };
 		07468E0C1CE542C70089667C /* CommandQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07468E0A1CE542C70089667C /* CommandQueue.cpp */; };
 		07468E0F1CE546AF0089667C /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07468E0D1CE546AF0089667C /* Player.cpp */; };
+		07468E161CE579690089667C /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07468E141CE579690089667C /* State.cpp */; };
+		07468E1C1CE57F020089667C /* StateStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07468E1A1CE57F020089667C /* StateStack.cpp */; };
 		0752C7E31CE19AD100EF1365 /* SpriteNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0752C7E11CE19AD100EF1365 /* SpriteNode.cpp */; };
 		0752C7E61CE19E7600EF1365 /* Desert.png in Resources */ = {isa = PBXBuildFile; fileRef = 0752C7E41CE19E7600EF1365 /* Desert.png */; };
 		0752C7E71CE19E7600EF1365 /* Raptor.png in Resources */ = {isa = PBXBuildFile; fileRef = 0752C7E51CE19E7600EF1365 /* Raptor.png */; };
@@ -34,6 +36,11 @@
 		07468E0B1CE542C70089667C /* CommandQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CommandQueue.hpp; sourceTree = "<group>"; };
 		07468E0D1CE546AF0089667C /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
 		07468E0E1CE546AF0089667C /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
+		07468E141CE579690089667C /* State.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = State.cpp; sourceTree = "<group>"; };
+		07468E151CE579690089667C /* State.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = State.hpp; sourceTree = "<group>"; };
+		07468E181CE579950089667C /* StateIdentifiers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StateIdentifiers.hpp; sourceTree = "<group>"; };
+		07468E1A1CE57F020089667C /* StateStack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StateStack.cpp; sourceTree = "<group>"; };
+		07468E1B1CE57F020089667C /* StateStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StateStack.hpp; sourceTree = "<group>"; };
 		0752C7E11CE19AD100EF1365 /* SpriteNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteNode.cpp; sourceTree = "<group>"; };
 		0752C7E21CE19AD100EF1365 /* SpriteNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SpriteNode.hpp; sourceTree = "<group>"; };
 		0752C7E41CE19E7600EF1365 /* Desert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Desert.png; sourceTree = "<group>"; };
@@ -83,6 +90,18 @@
 				07468E0B1CE542C70089667C /* CommandQueue.hpp */,
 			);
 			name = Commands;
+			sourceTree = "<group>";
+		};
+		07468E101CE579010089667C /* States */ = {
+			isa = PBXGroup;
+			children = (
+				07468E141CE579690089667C /* State.cpp */,
+				07468E151CE579690089667C /* State.hpp */,
+				07468E181CE579950089667C /* StateIdentifiers.hpp */,
+				07468E1A1CE57F020089667C /* StateStack.cpp */,
+				07468E1B1CE57F020089667C /* StateStack.hpp */,
+			);
+			name = States;
 			sourceTree = "<group>";
 		};
 		0752C7E81CE1A26100EF1365 /* Utils */ = {
@@ -170,6 +189,7 @@
 		92F130311CD06F710009C29C /* SpaceWars */ = {
 			isa = PBXGroup;
 			children = (
+				07468E101CE579010089667C /* States */,
 				072236881CE2DC9A0086A0CF /* Commands */,
 				0752C7E81CE1A26100EF1365 /* Utils */,
 				926FBF761CDAFABA00641B40 /* Core */,
@@ -287,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07468E1C1CE57F020089667C /* StateStack.cpp in Sources */,
 				92D697BF1CD31272000CF4BB /* Game.cpp in Sources */,
 				9266C7591CD711C10021AF29 /* ResourceHolder.inl in Sources */,
 				92F130381CD06F710009C29C /* Main.cpp in Sources */,
@@ -298,6 +319,7 @@
 				07468E0F1CE546AF0089667C /* Player.cpp in Sources */,
 				0752C7EE1CE1A39300EF1365 /* World.cpp in Sources */,
 				9242CAB41CD85A5600AC8A64 /* SceneNode.cpp in Sources */,
+				07468E161CE579690089667C /* State.cpp in Sources */,
 				92F130351CD06F710009C29C /* ResourcePath.mm in Sources */,
 				9242CAAE1CD8562800AC8A64 /* Aircraft.cpp in Sources */,
 			);
