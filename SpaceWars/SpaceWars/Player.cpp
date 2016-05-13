@@ -21,6 +21,9 @@ struct AircraftMover
     {
     }
     
+    // We are overriding the '()' operator.
+    // Another example, to override the '==' operator, we would use:
+    //      void operator== (otherObj) 
     void operator() (Aircraft& aircraft, sf::Time) const
     {
         aircraft.accelerate(velocity);
@@ -82,6 +85,12 @@ sf::Keyboard::Key Player::getAssignedKey(Player::Action action) const
 
 void Player::initializeActions()
 {
+    // derivedAction returns a function. The returned function itself returns void, and takes two arguments.
+    // The first argument is a SceneNode&, and the second argument is sf::Time.
+    // The function body then casts SceneNode to Aircraft.
+    // This enables the signiture of AircraftMover() to be 'Aircraft& aircraft, sf::Time' instead of
+    // 'SceneNode& aircraft, sf::Time'. This means the code inside AircraftMover() body does not need to cast
+    // SceneNode& to Aircraft& since derivedAction already does it for us.
     const float playerSpeed = 200.f;
     mActionBinding[MoveLeft].action = derivedAction<Aircraft>(AircraftMover(-playerSpeed, 0.f));
     mActionBinding[MoveRight].action = derivedAction<Aircraft>(AircraftMover(+playerSpeed, 0.f));
