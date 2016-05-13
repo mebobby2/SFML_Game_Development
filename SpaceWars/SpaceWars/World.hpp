@@ -37,6 +37,8 @@ public:
 private:
     void loadTextures();
     void buildScene();
+    void adaptPlayerVelocity();
+    void adaptPlayerPosition();
     
 private:
     enum Layer
