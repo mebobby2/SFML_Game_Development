@@ -33,6 +33,10 @@ World::World(sf::RenderWindow& window)
 void World::update(sf::Time dt)
 {
     mWorldView.move(0.f, mScrollSpeed * dt.asSeconds());
+    
+    // Need to reset the plane's velocity in each update frame so the plane appears to be moving at the constant speed.
+    // If we do not do this, then in each update frame, the plane's new velocity will be the old velocity (in the
+    // previous frame) plus the current velocity, so it looks like the plane is accelerating!
     mPlayerAircraft->setVelocity(0.f, 0.f);
     
     while (!mCommandQueue.isEmpty())
