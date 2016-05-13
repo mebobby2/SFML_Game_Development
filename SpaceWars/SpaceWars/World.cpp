@@ -85,18 +85,7 @@ void World::buildScene()
     std::unique_ptr<Aircraft> leader(new Aircraft(Aircraft::Eagle, mTextures));
     mPlayerAircraft = leader.get();
     mPlayerAircraft->setPosition(mSpawnPosition);
-    mPlayerAircraft->setVelocity(40.f, mScrollSpeed);
     mSceneLayers[Air]->attachChild(std::move(leader));
-    
-    // Add two escorting aircrafts, placed relatively to main plane
-    std::unique_ptr<Aircraft> leftEscort(new Aircraft(Aircraft::Rapter, mTextures));
-    leftEscort->setPosition(-80.f, 50.f);
-    mPlayerAircraft->attachChild(std::move(leftEscort));
-    
-    std::unique_ptr<Aircraft> rightEscort(new Aircraft(Aircraft::Rapter, mTextures));
-    rightEscort->setPosition(80.f, 50.f);
-    mPlayerAircraft->attachChild(std::move(rightEscort));
-    
 }
 
 void World::adaptPlayerVelocity()
