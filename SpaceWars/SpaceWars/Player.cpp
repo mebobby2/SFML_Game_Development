@@ -87,10 +87,15 @@ void Player::initializeActions()
 {
     // derivedAction returns a function. The returned function itself returns void, and takes two arguments.
     // The first argument is a SceneNode&, and the second argument is sf::Time.
-    // The function body then casts SceneNode to Aircraft.
+    // The function body then casts SceneNode to Aircraft, and calls the () method of the AircraftMover instance
+    // passing in the cast Aircraft to it.
     // This enables the signiture of AircraftMover() to be 'Aircraft& aircraft, sf::Time' instead of
     // 'SceneNode& aircraft, sf::Time'. This means the code inside AircraftMover() body does not need to cast
     // SceneNode& to Aircraft& since derivedAction already does it for us.
+    
+    // Aircraft(playerSpeed, 0.f) instantiates a new instance of AircraftMover. Inside the derivedAction, it returns
+    // a function that takes a SceneNode as parameter and calls the the AircraftMover instance's ()
+    // method, ie fn(aircraftInstance, dt), passing in the SceneNode as a parameter to it.
     const float playerSpeed = 200.f;
     mActionBinding[MoveLeft].action = derivedAction<Aircraft>(AircraftMover(-playerSpeed, 0.f));
     mActionBinding[MoveRight].action = derivedAction<Aircraft>(AircraftMover(+playerSpeed, 0.f));
