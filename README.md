@@ -13,6 +13,4 @@
 3. Make sure the C++ Compiler and Standard Library is set to C++11 with Clang and libc++
 4. Compile and run the skeleton template.
 
-## Upto Page 113
-
-Upto implementing StateStack.hpp
+## Upto Page 121 - Integrating the stack in the Application class
