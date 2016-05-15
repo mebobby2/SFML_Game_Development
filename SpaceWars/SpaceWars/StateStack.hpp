@@ -61,41 +61,20 @@ private:
     struct PendingChange
     {
         explicit PendingChange(Action action, States::ID stateID = States::None);
-    };
-}
-
-#endif /* StateStack_hpp */
-
-
-
-
-
-
-c
-    
-private:
-    State::Ptr			createState(States::ID stateID);
-    void				applyPendingChanges();
-    
-    
-private:
-    struct PendingChange
-    {
-        explicit			PendingChange(Action action, States::ID stateID = States::None);
-        
-        Action				action;
-        States::ID			stateID;
+        Action action;
+        States::ID stateID;
     };
     
-    
 private:
-    std::vector<State::Ptr>								mStack;
-    std::vector<PendingChange>							mPendingList;
+    std::vector<State::Ptr> mStack;
+    std::vector<PendingChange> mPendingList;
     
-    State::Context										mContext;
-    std::map<States::ID, std::function<State::Ptr()>>	mFactories;
+    State::Context mContext;
+    
+    // std::function<State::Ptr()> means a pointer to a function that returns a State::Ptr
+    // with no arguments.
+    std::map<States::ID, std::function<State::Ptr()>> mFactories;
 };
-
 
 template <typename T>
 void StateStack::registerState(States::ID stateID)
@@ -106,5 +85,6 @@ void StateStack::registerState(States::ID stateID)
     };
 }
 
-#endif // BOOK_STATESTACK_HPP
+
+#endif /* StateStack_hpp */
 
