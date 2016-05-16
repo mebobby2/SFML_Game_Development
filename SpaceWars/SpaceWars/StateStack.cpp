@@ -50,6 +50,18 @@ void StateStack::handleEvent(const sf::Event &event)
 
 void StateStack::pushState(States::ID stateID)
 {
+    // MyClass *object = new MyClass(); //object is on the heap,  calls MyClass::MyClass()
+    // MyClass object; //object is on the stack, calls Myclass::MyClass()
+    //
+    // MyClass object(10) //calls MyClass::MyClass(int)
+    
+    // Notice we are instantiating the PendingChange object onto the stack and NOT the heap since
+    // we are not using the 'new' keyword. You know that objects created on the stack are deallocated
+    // when the function body ends. Hence, the PendingChange object we just instantiated will be
+    // lost when the function ends. However, before the function ends, we pass the PendingChange object
+    // to the push_back method of the vector, which COPIES the passed in object to the end of the vector.
+    // This is why we can instantiate the PendingChange object on the stack since its temporary because the
+    // push_back method will make a copy of it anyways.
     mPendingList.push_back(PendingChange(Push, stateID));
 }
 
