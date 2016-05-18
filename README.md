@@ -15,4 +15,4 @@
 
 ## Upto Page 129 - The loading screen – sample
 
-Before doing that - implement the Application.hpp and Application.cpp class first. It replaces Game.hpp
+Before doing that - Use the new Application.hpp inside Main.cpp
