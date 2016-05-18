@@ -25,6 +25,8 @@
 		07BC13931CEC1B9C00615DBE /* TitleState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07BC13911CEC1B9C00615DBE /* TitleState.cpp */; };
 		07BC13961CEC25BE00615DBE /* MenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07BC13941CEC25BE00615DBE /* MenuState.cpp */; };
 		07BC13991CEC310B00615DBE /* PauseState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07BC13971CEC310B00615DBE /* PauseState.cpp */; };
+		07BEA7F71CED29060023120D /* ParallelTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07BEA7F51CED29060023120D /* ParallelTask.cpp */; };
+		07BEA7FA1CED2BA50023120D /* LoadingState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07BEA7F81CED2BA50023120D /* LoadingState.cpp */; };
 		9242CAAB1CD8544800AC8A64 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9242CAA91CD8544800AC8A64 /* Entity.cpp */; };
 		9242CAAE1CD8562800AC8A64 /* Aircraft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9242CAAC1CD8562800AC8A64 /* Aircraft.cpp */; };
 		9242CAB41CD85A5600AC8A64 /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9242CAB21CD85A5600AC8A64 /* SceneNode.cpp */; };
@@ -69,6 +71,10 @@
 		07BC13951CEC25BE00615DBE /* MenuState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MenuState.hpp; sourceTree = "<group>"; };
 		07BC13971CEC310B00615DBE /* PauseState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PauseState.cpp; sourceTree = "<group>"; };
 		07BC13981CEC310B00615DBE /* PauseState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PauseState.hpp; sourceTree = "<group>"; };
+		07BEA7F51CED29060023120D /* ParallelTask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParallelTask.cpp; sourceTree = "<group>"; };
+		07BEA7F61CED29060023120D /* ParallelTask.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ParallelTask.hpp; sourceTree = "<group>"; };
+		07BEA7F81CED2BA50023120D /* LoadingState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoadingState.cpp; sourceTree = "<group>"; };
+		07BEA7F91CED2BA50023120D /* LoadingState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LoadingState.hpp; sourceTree = "<group>"; };
 		9242CAA91CD8544800AC8A64 /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
 		9242CAAA1CD8544800AC8A64 /* Entity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
 		9242CAAC1CD8562800AC8A64 /* Aircraft.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Aircraft.cpp; sourceTree = "<group>"; };
@@ -127,6 +133,8 @@
 				07BC13951CEC25BE00615DBE /* MenuState.hpp */,
 				07BC13971CEC310B00615DBE /* PauseState.cpp */,
 				07BC13981CEC310B00615DBE /* PauseState.hpp */,
+				07BEA7F81CED2BA50023120D /* LoadingState.cpp */,
+				07BEA7F91CED2BA50023120D /* LoadingState.hpp */,
 			);
 			name = States;
 			sourceTree = "<group>";
@@ -139,6 +147,8 @@
 				07BC13891CEC160E00615DBE /* Utility.cpp */,
 				07BC138A1CEC160E00615DBE /* Utility.hpp */,
 				07BC138C1CEC16AF00615DBE /* Utility.inl */,
+				07BEA7F51CED29060023120D /* ParallelTask.cpp */,
+				07BEA7F61CED29060023120D /* ParallelTask.hpp */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -344,6 +354,7 @@
 				92D697BF1CD31272000CF4BB /* Application.cpp in Sources */,
 				07BC13931CEC1B9C00615DBE /* TitleState.cpp in Sources */,
 				9266C7591CD711C10021AF29 /* ResourceHolder.inl in Sources */,
+				07BEA7FA1CED2BA50023120D /* LoadingState.cpp in Sources */,
 				92F130381CD06F710009C29C /* Main.cpp in Sources */,
 				0722368B1CE2DCA60086A0CF /* Command.cpp in Sources */,
 				9242CAAB1CD8544800AC8A64 /* Entity.cpp in Sources */,
@@ -354,6 +365,7 @@
 				07BC138D1CEC16AF00615DBE /* Utility.inl in Sources */,
 				0752C7E31CE19AD100EF1365 /* SpriteNode.cpp in Sources */,
 				07468E0F1CE546AF0089667C /* Player.cpp in Sources */,
+				07BEA7F71CED29060023120D /* ParallelTask.cpp in Sources */,
 				0752C7EE1CE1A39300EF1365 /* World.cpp in Sources */,
 				9242CAB41CD85A5600AC8A64 /* SceneNode.cpp in Sources */,
 				07468E161CE579690089667C /* State.cpp in Sources */,
