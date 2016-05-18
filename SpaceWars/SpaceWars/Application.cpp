@@ -6,29 +6,41 @@
 //  Copyright (c) 2016 mebobby. All rights reserved.
 //
 
-#include "ResourcePath.hpp"
-#include "Game.hpp"
-#include "StringHelpers.hpp"
+#include "Application.hpp"
+#include "Utility.hpp"
+#include "State.hpp"
+#include "StateIdentifiers.hpp"
+#include "TitleState.hpp"
+#include "GameState.hpp"
+#include "MenuState.hpp"
+#include "PauseState.hpp"
 
-#include <SFML/Window/Event.hpp>
+const sf::Time Application::TimePerFrame = sf::seconds(1.f/60.f);
 
-const sf::Time Game::TimePerFrame = sf::seconds(1.f/60.f);
-
-Game::Game()
+Application::Application()
 : mWindow(sf::VideoMode(640, 480), "SpaceWars!", sf::Style::Close)
-, mWorld(mWindow)
-, mFont()
+, mTextures()
+, mFonts()
+, mPlayer()
+, mStateStack(State::Context(mWindow, mTextures, mFonts, mPlayer))
 , mStatisticsText()
 , mStatisticsUpdateTime()
 , mStatisticsNumFrames(0)
-{
-    mFont.loadFromFile(resourcePath() + "Sansation.ttf");
-    mStatisticsText.setFont(mFont);
+{    
+    mWindow.setKeyRepeatEnabled(false);
+    
+    mFonts.load(Fonts::Main, "Sansation.ttf");
+    mTextures.load(Textures::TitleScreen, "TitleScreen.png");
+    
+    mStatisticsText.setFont(mFonts.get(Fonts::Main));
     mStatisticsText.setPosition(5.f, 5.f);
-    mStatisticsText.setCharacterSize(10);
+    mStatisticsText.setCharacterSize(10u);
+    
+    registerStates();
+    mStateStack.pushState(States::Title);
 }
 
-void Game::run()
+void Application::run()
 {
     sf::Clock clock;
     sf::Time timeSinceLastUpdate = sf::Time::Zero;
@@ -39,35 +51,39 @@ void Game::run()
         //Read about fixed time steps here: http://gafferongames.com/game-physics/fix-your-timestep/
         while (timeSinceLastUpdate > TimePerFrame) {
             timeSinceLastUpdate -= TimePerFrame;
+            
             processInput();
             update(TimePerFrame);
+            
+            if (mStateStack.isEmpty())
+                mWindow.close();
         }
+        
         updateStatistics(elapsedTime);
         render();
     }
 }
 
-void Game::processInput()
+void Application::processInput()
 {
-    CommandQueue& commands = mWorld.getCommandQueue();
-    
     sf::Event event;
-    while (mWindow.pollEvent(event)) {
-        mPlayer.handleEvent(event, commands);
+    while (mWindow.pollEvent(event))
+    {
+        mStateStack.handleEvent(event);
         
         if (event.type == sf::Event::Closed)
             mWindow.close();
     }
-    
-    mPlayer.handleRealtimeInput(commands);
 }
 
-void Game::update(sf::Time elapsedTime)
+void Application::update(sf::Time dt)
 {
-    mWorld.update(elapsedTime);
+    mStateStack.update(dt);
 }
 
-void Game::updateStatistics(sf::Time elapsedTime)
+
+
+void Application::updateStatistics(sf::Time elapsedTime)
 {
     mStatisticsUpdateTime += elapsedTime;
     mStatisticsNumFrames += 1;
@@ -83,12 +99,22 @@ void Game::updateStatistics(sf::Time elapsedTime)
     }
 }
 
-void Game::render()
+void Application::render()
 {
     mWindow.clear();
-    mWorld.draw();
+    
+    mStateStack.draw();
     
     mWindow.setView(mWindow.getDefaultView());
     mWindow.draw(mStatisticsText);
+    
     mWindow.display();
+}
+
+void Application::registerStates()
+{
+    mStateStack.registerState<TitleState>(States::Title);
+    mStateStack.registerState<MenuState>(States::Menu);
+    mStateStack.registerState<GameState>(States::Game);
+    mStateStack.registerState<PauseState>(States::Pause);
 }

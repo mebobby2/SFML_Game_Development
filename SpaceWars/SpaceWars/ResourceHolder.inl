@@ -7,6 +7,7 @@
 //
 
 #include "ResourceHolder.hpp"
+#include "ResourcePath.hpp"
 #include <cassert>
 
 template <typename Resource, typename Identifier>
@@ -14,7 +15,7 @@ void ResourceHolder<Resource, Identifier>::load(Identifier id, const std::string
 {
     std::unique_ptr<Resource> resource(new Resource()); //Using the new keyword to store the texture into the Heap. We do this because we want the Texture to be alive as long as our game is running.
     
-    if (!resource->loadFromFile(filename)) // -> is just accessing a member function/variable by a pointer.
+    if (!resource->loadFromFile(resourcePath() + filename)) // -> is just accessing a member function/variable by a pointer.
         throw std::runtime_error("ResourceHolder::load - Failed to load " + filename);
     
     insertResource(id, std::move(resource));
@@ -26,7 +27,7 @@ void ResourceHolder<Resource, Identifier>::load(Identifier id, const std::string
 {
     std::unique_ptr<Resource> resource(new Resource());
     
-    if (!resource->loadFromFile(filename, secondParam))
+    if (!resource->loadFromFile(resourcePath() + filename, secondParam))
         throw std::runtime_error("ResourceHolder::load - Failed to load " + filename);
     
     insertResource(id, std::move(resource));

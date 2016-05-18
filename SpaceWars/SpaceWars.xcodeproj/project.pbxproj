@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0722368B1CE2DCA60086A0CF /* Command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 072236891CE2DCA60086A0CF /* Command.cpp */; };
+		0736EBF31CEC3FA600564375 /* TitleScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 0736EBF21CEC3FA600564375 /* TitleScreen.png */; };
 		07468E0C1CE542C70089667C /* CommandQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07468E0A1CE542C70089667C /* CommandQueue.cpp */; };
 		07468E0F1CE546AF0089667C /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07468E0D1CE546AF0089667C /* Player.cpp */; };
 		07468E161CE579690089667C /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07468E141CE579690089667C /* State.cpp */; };
@@ -29,7 +30,7 @@
 		9242CAB41CD85A5600AC8A64 /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9242CAB21CD85A5600AC8A64 /* SceneNode.cpp */; };
 		9266C7561CD707D50021AF29 /* Eagle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9266C7551CD707D50021AF29 /* Eagle.png */; };
 		9266C7591CD711C10021AF29 /* ResourceHolder.inl in Sources */ = {isa = PBXBuildFile; fileRef = 9266C7571CD711C10021AF29 /* ResourceHolder.inl */; };
-		92D697BF1CD31272000CF4BB /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92D697BD1CD31272000CF4BB /* Game.cpp */; };
+		92D697BF1CD31272000CF4BB /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92D697BD1CD31272000CF4BB /* Application.cpp */; };
 		92F130351CD06F710009C29C /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 92F130341CD06F710009C29C /* ResourcePath.mm */; };
 		92F130381CD06F710009C29C /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92F130371CD06F710009C29C /* Main.cpp */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		072236891CE2DCA60086A0CF /* Command.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Command.cpp; sourceTree = "<group>"; };
 		0722368A1CE2DCA60086A0CF /* Command.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Command.hpp; sourceTree = "<group>"; };
 		0722368D1CE2DDD40086A0CF /* Category.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Category.hpp; sourceTree = "<group>"; };
+		0736EBF21CEC3FA600564375 /* TitleScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TitleScreen.png; sourceTree = "<group>"; };
 		07468E0A1CE542C70089667C /* CommandQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CommandQueue.cpp; sourceTree = "<group>"; };
 		07468E0B1CE542C70089667C /* CommandQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CommandQueue.hpp; sourceTree = "<group>"; };
 		07468E0D1CE546AF0089667C /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
@@ -77,8 +79,8 @@
 		9266C7571CD711C10021AF29 /* ResourceHolder.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ResourceHolder.inl; sourceTree = "<group>"; };
 		9266C7581CD711C10021AF29 /* ResourceHolder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceHolder.hpp; sourceTree = "<group>"; };
 		926FBF741CDAF15200641B40 /* ResourceIdentifiers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceIdentifiers.hpp; sourceTree = "<group>"; };
-		92D697BD1CD31272000CF4BB /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
-		92D697BE1CD31272000CF4BB /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		92D697BD1CD31272000CF4BB /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
+		92D697BE1CD31272000CF4BB /* Application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
 		92F1302F1CD06F710009C29C /* SpaceWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F130331CD06F710009C29C /* SpaceWars-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpaceWars-Info.plist"; sourceTree = "<group>"; };
 		92F130341CD06F710009C29C /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		07551B201CE29B6000D1CE8F /* Textures */ = {
 			isa = PBXGroup;
 			children = (
+				0736EBF21CEC3FA600564375 /* TitleScreen.png */,
 				0752C7E41CE19E7600EF1365 /* Desert.png */,
 				0752C7E51CE19E7600EF1365 /* Raptor.png */,
 				9266C7551CD707D50021AF29 /* Eagle.png */,
@@ -188,8 +191,8 @@
 		926FBF761CDAFABA00641B40 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				92D697BE1CD31272000CF4BB /* Game.hpp */,
-				92D697BD1CD31272000CF4BB /* Game.cpp */,
+				92D697BE1CD31272000CF4BB /* Application.hpp */,
+				92D697BD1CD31272000CF4BB /* Application.cpp */,
 				0752C7EC1CE1A39300EF1365 /* World.cpp */,
 				0752C7ED1CE1A39300EF1365 /* World.hpp */,
 				07468E0D1CE546AF0089667C /* Player.cpp */,
@@ -309,6 +312,7 @@
 				07551B1F1CE29B4900D1CE8F /* Sansation.ttf in Resources */,
 				0752C7E71CE19E7600EF1365 /* Raptor.png in Resources */,
 				9266C7561CD707D50021AF29 /* Eagle.png in Resources */,
+				0736EBF31CEC3FA600564375 /* TitleScreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +341,7 @@
 			files = (
 				07BC138B1CEC160E00615DBE /* Utility.cpp in Sources */,
 				07468E1C1CE57F020089667C /* StateStack.cpp in Sources */,
-				92D697BF1CD31272000CF4BB /* Game.cpp in Sources */,
+				92D697BF1CD31272000CF4BB /* Application.cpp in Sources */,
 				07BC13931CEC1B9C00615DBE /* TitleState.cpp in Sources */,
 				9266C7591CD711C10021AF29 /* ResourceHolder.inl in Sources */,
 				92F130381CD06F710009C29C /* Main.cpp in Sources */,
