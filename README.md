@@ -13,6 +13,4 @@
 3. Make sure the C++ Compiler and Standard Library is set to C++11 with Clang and libc++
 4. Compile and run the skeleton template.
 
-## Upto Page 129 - The loading screen – sample
-
-Before doing that - Use the new Application.hpp inside Main.cpp
+## Upto Page 137 - Chapter 6
