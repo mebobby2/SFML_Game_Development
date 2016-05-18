@@ -27,7 +27,7 @@ PauseState::PauseState(StateStack& stack, Context context)
     mPausedText.setString("Game Paused");
     mPausedText.setCharacterSize(70);
     centerOrigin(mPausedText);
-    mPausedText.setPosition(0.5f * viewSize.x, 0.6f * viewSize.y);
+    mPausedText.setPosition(0.5f * viewSize.x, 0.4f * viewSize.y);
     
     mInstructionText.setFont(font);
     mInstructionText.setString("Press Backspace to return to the main menu");

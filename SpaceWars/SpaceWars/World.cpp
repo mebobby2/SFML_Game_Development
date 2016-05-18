@@ -7,7 +7,6 @@
 //
 
 #include "World.hpp"
-#include "ResourcePath.hpp"
 
 #include <cmath>
 
@@ -60,9 +59,9 @@ CommandQueue& World::getCommandQueue()
 
 void World::loadTextures()
 {
-    mTextures.load(Textures::Eagle, resourcePath() + "Eagle.png");
-    mTextures.load(Textures::Rapter, resourcePath() + "Raptor.png");
-    mTextures.load(Textures::Desert, resourcePath() + "Desert.png");
+    mTextures.load(Textures::Eagle, "Eagle.png");
+    mTextures.load(Textures::Rapter, "Raptor.png");
+    mTextures.load(Textures::Desert, "Desert.png");
 }
 
 void World::buildScene()
