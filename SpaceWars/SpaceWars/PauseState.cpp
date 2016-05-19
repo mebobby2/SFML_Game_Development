@@ -47,6 +47,9 @@ PauseState::PauseState(StateStack& stack, Context context)
                                   requestStackPush(States::Menu);
                               });
     
+    // GUI::Container#pack takes an argument of type Component::Ptr. But we declare returnButton to be a pointer to
+    // a type of GUI::Button. So how can we pass returnButton as an argument into the pack method when it expects
+    // a different type. The answer is because GUI::Button is a subclass of GUI::Component so C++ allows it.
     mGUIContainer.pack(returnButton);
     mGUIContainer.pack(backToMenuButton);
 }
