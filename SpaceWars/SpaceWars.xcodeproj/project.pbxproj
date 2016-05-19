@@ -19,6 +19,7 @@
 		0752C7EB1CE1A27800EF1365 /* StringHelpers.inl in Sources */ = {isa = PBXBuildFile; fileRef = 0752C7E91CE1A27800EF1365 /* StringHelpers.inl */; };
 		0752C7EE1CE1A39300EF1365 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0752C7EC1CE1A39300EF1365 /* World.cpp */; };
 		07551B1F1CE29B4900D1CE8F /* Sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07551B1E1CE29B4900D1CE8F /* Sansation.ttf */; };
+		07A999991CED6C6700C5FFFD /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A999971CED6C6700C5FFFD /* Component.cpp */; };
 		07BC138B1CEC160E00615DBE /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07BC13891CEC160E00615DBE /* Utility.cpp */; };
 		07BC138D1CEC16AF00615DBE /* Utility.inl in Sources */ = {isa = PBXBuildFile; fileRef = 07BC138C1CEC16AF00615DBE /* Utility.inl */; };
 		07BC13901CEC189A00615DBE /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07BC138E1CEC189A00615DBE /* GameState.cpp */; };
@@ -60,6 +61,8 @@
 		0752C7EC1CE1A39300EF1365 /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = World.cpp; sourceTree = "<group>"; };
 		0752C7ED1CE1A39300EF1365 /* World.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = World.hpp; sourceTree = "<group>"; };
 		07551B1E1CE29B4900D1CE8F /* Sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sansation.ttf; sourceTree = "<group>"; };
+		07A999971CED6C6700C5FFFD /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
+		07A999981CED6C6700C5FFFD /* Component.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
 		07BC13891CEC160E00615DBE /* Utility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utility.cpp; sourceTree = "<group>"; };
 		07BC138A1CEC160E00615DBE /* Utility.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Utility.hpp; sourceTree = "<group>"; };
 		07BC138C1CEC16AF00615DBE /* Utility.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Utility.inl; sourceTree = "<group>"; };
@@ -171,6 +174,15 @@
 			name = Tasks;
 			sourceTree = "<group>";
 		};
+		07A999961CED6C4600C5FFFD /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				07A999971CED6C6700C5FFFD /* Component.cpp */,
+				07A999981CED6C6700C5FFFD /* Component.hpp */,
+			);
+			name = GUI;
+			sourceTree = "<group>";
+		};
 		9242CAAF1CD8591E00AC8A64 /* ResourceLoaders */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +249,7 @@
 		92F130311CD06F710009C29C /* SpaceWars */ = {
 			isa = PBXGroup;
 			children = (
+				07A999961CED6C4600C5FFFD /* GUI */,
 				07A999951CED6B9E00C5FFFD /* Tasks */,
 				07468E101CE579010089667C /* States */,
 				072236881CE2DC9A0086A0CF /* Commands */,
@@ -358,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07BC138B1CEC160E00615DBE /* Utility.cpp in Sources */,
+				07A999991CED6C6700C5FFFD /* Component.cpp in Sources */,
 				07468E1C1CE57F020089667C /* StateStack.cpp in Sources */,
 				92D697BF1CD31272000CF4BB /* Application.cpp in Sources */,
 				07BC13931CEC1B9C00615DBE /* TitleState.cpp in Sources */,
