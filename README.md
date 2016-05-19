@@ -13,5 +13,4 @@
 3. Make sure the C++ Compiler and Standard Library is set to C++11 with Clang and libc++
 4. Compile and run the skeleton template.
 
-## Upto Page 143 - Label is a very small class, as all it does is simply show
-some text on the screen.
+## Upto Page 151 - Chapter 7
