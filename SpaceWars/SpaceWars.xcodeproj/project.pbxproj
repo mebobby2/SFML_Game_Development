@@ -10,6 +10,10 @@
 		0722368B1CE2DCA60086A0CF /* Command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 072236891CE2DCA60086A0CF /* Command.cpp */; };
 		0736EBF31CEC3FA600564375 /* TitleScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 0736EBF21CEC3FA600564375 /* TitleScreen.png */; };
 		073FC2C51CEE6A4A00FEB22B /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 073FC2C31CEE6A4A00FEB22B /* Label.cpp */; };
+		073FC2C81CEE700300FEB22B /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 073FC2C61CEE700300FEB22B /* Button.cpp */; };
+		073FC2CC1CEE730C00FEB22B /* ButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 073FC2C91CEE730C00FEB22B /* ButtonNormal.png */; };
+		073FC2CD1CEE730C00FEB22B /* ButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 073FC2CA1CEE730C00FEB22B /* ButtonPressed.png */; };
+		073FC2CE1CEE730C00FEB22B /* ButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 073FC2CB1CEE730C00FEB22B /* ButtonSelected.png */; };
 		07468E0C1CE542C70089667C /* CommandQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07468E0A1CE542C70089667C /* CommandQueue.cpp */; };
 		07468E0F1CE546AF0089667C /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07468E0D1CE546AF0089667C /* Player.cpp */; };
 		07468E161CE579690089667C /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07468E141CE579690089667C /* State.cpp */; };
@@ -47,6 +51,11 @@
 		0736EBF21CEC3FA600564375 /* TitleScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TitleScreen.png; sourceTree = "<group>"; };
 		073FC2C31CEE6A4A00FEB22B /* Label.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Label.cpp; sourceTree = "<group>"; };
 		073FC2C41CEE6A4A00FEB22B /* Label.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Label.hpp; sourceTree = "<group>"; };
+		073FC2C61CEE700300FEB22B /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
+		073FC2C71CEE700300FEB22B /* Button.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Button.hpp; sourceTree = "<group>"; };
+		073FC2C91CEE730C00FEB22B /* ButtonNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonNormal.png; sourceTree = "<group>"; };
+		073FC2CA1CEE730C00FEB22B /* ButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonPressed.png; sourceTree = "<group>"; };
+		073FC2CB1CEE730C00FEB22B /* ButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonSelected.png; sourceTree = "<group>"; };
 		07468E0A1CE542C70089667C /* CommandQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CommandQueue.cpp; sourceTree = "<group>"; };
 		07468E0B1CE542C70089667C /* CommandQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CommandQueue.hpp; sourceTree = "<group>"; };
 		07468E0D1CE546AF0089667C /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
@@ -163,6 +172,9 @@
 		07551B201CE29B6000D1CE8F /* Textures */ = {
 			isa = PBXGroup;
 			children = (
+				073FC2C91CEE730C00FEB22B /* ButtonNormal.png */,
+				073FC2CA1CEE730C00FEB22B /* ButtonPressed.png */,
+				073FC2CB1CEE730C00FEB22B /* ButtonSelected.png */,
 				0736EBF21CEC3FA600564375 /* TitleScreen.png */,
 				0752C7E41CE19E7600EF1365 /* Desert.png */,
 				0752C7E51CE19E7600EF1365 /* Raptor.png */,
@@ -189,6 +201,8 @@
 				07A9999B1CED6F4F00C5FFFD /* Container.hpp */,
 				073FC2C31CEE6A4A00FEB22B /* Label.cpp */,
 				073FC2C41CEE6A4A00FEB22B /* Label.hpp */,
+				073FC2C61CEE700300FEB22B /* Button.cpp */,
+				073FC2C71CEE700300FEB22B /* Button.hpp */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -350,7 +364,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0752C7E61CE19E7600EF1365 /* Desert.png in Resources */,
+				073FC2CD1CEE730C00FEB22B /* ButtonPressed.png in Resources */,
+				073FC2CE1CEE730C00FEB22B /* ButtonSelected.png in Resources */,
 				07551B1F1CE29B4900D1CE8F /* Sansation.ttf in Resources */,
+				073FC2CC1CEE730C00FEB22B /* ButtonNormal.png in Resources */,
 				0752C7E71CE19E7600EF1365 /* Raptor.png in Resources */,
 				9266C7561CD707D50021AF29 /* Eagle.png in Resources */,
 				0736EBF31CEC3FA600564375 /* TitleScreen.png in Resources */,
@@ -385,6 +402,7 @@
 				07468E1C1CE57F020089667C /* StateStack.cpp in Sources */,
 				92D697BF1CD31272000CF4BB /* Application.cpp in Sources */,
 				07BC13931CEC1B9C00615DBE /* TitleState.cpp in Sources */,
+				073FC2C81CEE700300FEB22B /* Button.cpp in Sources */,
 				9266C7591CD711C10021AF29 /* ResourceHolder.inl in Sources */,
 				07BEA7FA1CED2BA50023120D /* LoadingState.cpp in Sources */,
 				92F130381CD06F710009C29C /* Main.cpp in Sources */,

@@ -23,6 +23,9 @@ namespace Textures
         Rapter,
         Desert,
         TitleScreen,
+        ButtonNormal,
+        ButtonSelected,
+        ButtonPressed
     };
 }
 
