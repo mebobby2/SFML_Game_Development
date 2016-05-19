@@ -20,6 +20,7 @@
 		0752C7EE1CE1A39300EF1365 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0752C7EC1CE1A39300EF1365 /* World.cpp */; };
 		07551B1F1CE29B4900D1CE8F /* Sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07551B1E1CE29B4900D1CE8F /* Sansation.ttf */; };
 		07A999991CED6C6700C5FFFD /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A999971CED6C6700C5FFFD /* Component.cpp */; };
+		07A9999C1CED6F4F00C5FFFD /* Container.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A9999A1CED6F4F00C5FFFD /* Container.cpp */; };
 		07BC138B1CEC160E00615DBE /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07BC13891CEC160E00615DBE /* Utility.cpp */; };
 		07BC138D1CEC16AF00615DBE /* Utility.inl in Sources */ = {isa = PBXBuildFile; fileRef = 07BC138C1CEC16AF00615DBE /* Utility.inl */; };
 		07BC13901CEC189A00615DBE /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07BC138E1CEC189A00615DBE /* GameState.cpp */; };
@@ -63,6 +64,8 @@
 		07551B1E1CE29B4900D1CE8F /* Sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sansation.ttf; sourceTree = "<group>"; };
 		07A999971CED6C6700C5FFFD /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
 		07A999981CED6C6700C5FFFD /* Component.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
+		07A9999A1CED6F4F00C5FFFD /* Container.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Container.cpp; sourceTree = "<group>"; };
+		07A9999B1CED6F4F00C5FFFD /* Container.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Container.hpp; sourceTree = "<group>"; };
 		07BC13891CEC160E00615DBE /* Utility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utility.cpp; sourceTree = "<group>"; };
 		07BC138A1CEC160E00615DBE /* Utility.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Utility.hpp; sourceTree = "<group>"; };
 		07BC138C1CEC16AF00615DBE /* Utility.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Utility.inl; sourceTree = "<group>"; };
@@ -179,6 +182,8 @@
 			children = (
 				07A999971CED6C6700C5FFFD /* Component.cpp */,
 				07A999981CED6C6700C5FFFD /* Component.hpp */,
+				07A9999A1CED6F4F00C5FFFD /* Container.cpp */,
+				07A9999B1CED6F4F00C5FFFD /* Container.hpp */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -385,6 +390,7 @@
 				07468E0C1CE542C70089667C /* CommandQueue.cpp in Sources */,
 				0752C7EB1CE1A27800EF1365 /* StringHelpers.inl in Sources */,
 				07BC138D1CEC16AF00615DBE /* Utility.inl in Sources */,
+				07A9999C1CED6F4F00C5FFFD /* Container.cpp in Sources */,
 				0752C7E31CE19AD100EF1365 /* SpriteNode.cpp in Sources */,
 				07468E0F1CE546AF0089667C /* Player.cpp in Sources */,
 				07BEA7F71CED29060023120D /* ParallelTask.cpp in Sources */,
