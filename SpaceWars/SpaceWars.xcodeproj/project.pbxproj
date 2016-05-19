@@ -22,7 +22,6 @@
 		0752C7E31CE19AD100EF1365 /* SpriteNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0752C7E11CE19AD100EF1365 /* SpriteNode.cpp */; };
 		0752C7E61CE19E7600EF1365 /* Desert.png in Resources */ = {isa = PBXBuildFile; fileRef = 0752C7E41CE19E7600EF1365 /* Desert.png */; };
 		0752C7E71CE19E7600EF1365 /* Raptor.png in Resources */ = {isa = PBXBuildFile; fileRef = 0752C7E51CE19E7600EF1365 /* Raptor.png */; };
-		0752C7EB1CE1A27800EF1365 /* StringHelpers.inl in Sources */ = {isa = PBXBuildFile; fileRef = 0752C7E91CE1A27800EF1365 /* StringHelpers.inl */; };
 		0752C7EE1CE1A39300EF1365 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0752C7EC1CE1A39300EF1365 /* World.cpp */; };
 		07551B1F1CE29B4900D1CE8F /* Sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07551B1E1CE29B4900D1CE8F /* Sansation.ttf */; };
 		07A999991CED6C6700C5FFFD /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A999971CED6C6700C5FFFD /* Component.cpp */; };
@@ -72,8 +71,6 @@
 		0752C7E21CE19AD100EF1365 /* SpriteNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SpriteNode.hpp; sourceTree = "<group>"; };
 		0752C7E41CE19E7600EF1365 /* Desert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Desert.png; sourceTree = "<group>"; };
 		0752C7E51CE19E7600EF1365 /* Raptor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Raptor.png; sourceTree = "<group>"; };
-		0752C7E91CE1A27800EF1365 /* StringHelpers.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StringHelpers.inl; sourceTree = "<group>"; };
-		0752C7EA1CE1A27800EF1365 /* StringHelpers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StringHelpers.hpp; sourceTree = "<group>"; };
 		0752C7EC1CE1A39300EF1365 /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = World.cpp; sourceTree = "<group>"; };
 		0752C7ED1CE1A39300EF1365 /* World.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = World.hpp; sourceTree = "<group>"; };
 		07551B1E1CE29B4900D1CE8F /* Sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sansation.ttf; sourceTree = "<group>"; };
@@ -165,8 +162,6 @@
 		0752C7E81CE1A26100EF1365 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				0752C7E91CE1A27800EF1365 /* StringHelpers.inl */,
-				0752C7EA1CE1A27800EF1365 /* StringHelpers.hpp */,
 				07BC13891CEC160E00615DBE /* Utility.cpp */,
 				07BC138A1CEC160E00615DBE /* Utility.hpp */,
 				07BC138C1CEC16AF00615DBE /* Utility.inl */,
@@ -417,7 +412,6 @@
 				07BC13961CEC25BE00615DBE /* MenuState.cpp in Sources */,
 				07BC13901CEC189A00615DBE /* GameState.cpp in Sources */,
 				07468E0C1CE542C70089667C /* CommandQueue.cpp in Sources */,
-				0752C7EB1CE1A27800EF1365 /* StringHelpers.inl in Sources */,
 				07BC138D1CEC16AF00615DBE /* Utility.inl in Sources */,
 				07A9999C1CED6F4F00C5FFFD /* Container.cpp in Sources */,
 				0752C7E31CE19AD100EF1365 /* SpriteNode.cpp in Sources */,

@@ -9,6 +9,8 @@
 #ifndef Utility_hpp
 #define Utility_hpp
 
+#include <SFML/Window/Keyboard.hpp>
+
 #include <sstream>
 
 namespace sf
@@ -19,6 +21,8 @@ namespace sf
 
 template <typename T>
 std::string toString(const T& value);
+
+std::string toString(sf::Keyboard::Key key);
 
 void centerOrigin(sf::Sprite& sprite);
 void centerOrigin(sf::Text& text);
