@@ -15,6 +15,7 @@
 #include "MenuState.hpp"
 #include "PauseState.hpp"
 #include "LoadingState.hpp"
+#include "SettingsState.hpp"
 
 const sf::Time Application::TimePerFrame = sf::seconds(1.f/60.f);
 
@@ -123,4 +124,5 @@ void Application::registerStates()
     mStateStack.registerState<GameState>(States::Game);
     mStateStack.registerState<PauseState>(States::Pause);
     mStateStack.registerState<LoadingState>(States::Loading);
+    mStateStack.registerState<SettingsState>(States::Settings);
 }

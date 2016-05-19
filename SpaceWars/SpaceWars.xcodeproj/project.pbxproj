@@ -14,6 +14,7 @@
 		073FC2CC1CEE730C00FEB22B /* ButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 073FC2C91CEE730C00FEB22B /* ButtonNormal.png */; };
 		073FC2CD1CEE730C00FEB22B /* ButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 073FC2CA1CEE730C00FEB22B /* ButtonPressed.png */; };
 		073FC2CE1CEE730C00FEB22B /* ButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 073FC2CB1CEE730C00FEB22B /* ButtonSelected.png */; };
+		073FC2D11CEE7FBB00FEB22B /* SettingsState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 073FC2CF1CEE7FBB00FEB22B /* SettingsState.cpp */; };
 		07468E0C1CE542C70089667C /* CommandQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07468E0A1CE542C70089667C /* CommandQueue.cpp */; };
 		07468E0F1CE546AF0089667C /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07468E0D1CE546AF0089667C /* Player.cpp */; };
 		07468E161CE579690089667C /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07468E141CE579690089667C /* State.cpp */; };
@@ -56,6 +57,8 @@
 		073FC2C91CEE730C00FEB22B /* ButtonNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonNormal.png; sourceTree = "<group>"; };
 		073FC2CA1CEE730C00FEB22B /* ButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonPressed.png; sourceTree = "<group>"; };
 		073FC2CB1CEE730C00FEB22B /* ButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonSelected.png; sourceTree = "<group>"; };
+		073FC2CF1CEE7FBB00FEB22B /* SettingsState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingsState.cpp; sourceTree = "<group>"; };
+		073FC2D01CEE7FBB00FEB22B /* SettingsState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SettingsState.hpp; sourceTree = "<group>"; };
 		07468E0A1CE542C70089667C /* CommandQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CommandQueue.cpp; sourceTree = "<group>"; };
 		07468E0B1CE542C70089667C /* CommandQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CommandQueue.hpp; sourceTree = "<group>"; };
 		07468E0D1CE546AF0089667C /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 				07BC13981CEC310B00615DBE /* PauseState.hpp */,
 				07BEA7F81CED2BA50023120D /* LoadingState.cpp */,
 				07BEA7F91CED2BA50023120D /* LoadingState.hpp */,
+				073FC2CF1CEE7FBB00FEB22B /* SettingsState.cpp */,
+				073FC2D01CEE7FBB00FEB22B /* SettingsState.hpp */,
 			);
 			name = States;
 			sourceTree = "<group>";
@@ -405,6 +410,7 @@
 				073FC2C81CEE700300FEB22B /* Button.cpp in Sources */,
 				9266C7591CD711C10021AF29 /* ResourceHolder.inl in Sources */,
 				07BEA7FA1CED2BA50023120D /* LoadingState.cpp in Sources */,
+				073FC2D11CEE7FBB00FEB22B /* SettingsState.cpp in Sources */,
 				92F130381CD06F710009C29C /* Main.cpp in Sources */,
 				0722368B1CE2DCA60086A0CF /* Command.cpp in Sources */,
 				9242CAAB1CD8544800AC8A64 /* Entity.cpp in Sources */,
