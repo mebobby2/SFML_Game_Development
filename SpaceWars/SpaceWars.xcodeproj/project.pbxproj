@@ -147,8 +147,6 @@
 				07BC13891CEC160E00615DBE /* Utility.cpp */,
 				07BC138A1CEC160E00615DBE /* Utility.hpp */,
 				07BC138C1CEC16AF00615DBE /* Utility.inl */,
-				07BEA7F51CED29060023120D /* ParallelTask.cpp */,
-				07BEA7F61CED29060023120D /* ParallelTask.hpp */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -162,6 +160,15 @@
 				9266C7551CD707D50021AF29 /* Eagle.png */,
 			);
 			name = Textures;
+			sourceTree = "<group>";
+		};
+		07A999951CED6B9E00C5FFFD /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				07BEA7F51CED29060023120D /* ParallelTask.cpp */,
+				07BEA7F61CED29060023120D /* ParallelTask.hpp */,
+			);
+			name = Tasks;
 			sourceTree = "<group>";
 		};
 		9242CAAF1CD8591E00AC8A64 /* ResourceLoaders */ = {
@@ -230,6 +237,7 @@
 		92F130311CD06F710009C29C /* SpaceWars */ = {
 			isa = PBXGroup;
 			children = (
+				07A999951CED6B9E00C5FFFD /* Tasks */,
 				07468E101CE579010089667C /* States */,
 				072236881CE2DC9A0086A0CF /* Commands */,
 				0752C7E81CE1A26100EF1365 /* Utils */,
