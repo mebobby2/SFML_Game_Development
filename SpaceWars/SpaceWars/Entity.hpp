@@ -9,30 +9,33 @@
 #ifndef __SpaceWars__Entity__
 #define __SpaceWars__Entity__
 
-#include <SFML/Graphics/Transformable.hpp>
-#include <SFML/Graphics/Drawable.hpp>
-
 #include "SceneNode.hpp"
+#include "CommandQueue.hpp"
 
 class Entity : public SceneNode
 {
-    public:
-        void setVelocity(sf::Vector2f velocity);
-        void setVelocity(float vx, float vy);
-        sf::Vector2f getVelocity() const;
+public:
+    explicit Entity(int hitpoints);
     
-        void accelerate(sf::Vector2f velocity);
-        void accelerate(float vx, float vy);
+    void setVelocity(sf::Vector2f velocity);
+    void setVelocity(float vx, float vy);
+    void accelerate(sf::Vector2f velocity);
+    void accelerate(float vx, float vy);
+    sf::Vector2f getVelocity() const;
     
+    int getHitpoints() const;
+    void repair(int points);
+    void damage(int points);
+    void destroy();
+    virtual bool isDestroyed() const;
     
-    private:
+protected:
+    virtual void updateCurrent(sf::Time dt, CommandQueue& commands);
     
-        virtual void updateCurrent(sf::Time dt);
-    
-    private:
-        sf::Vector2f mVelocity;
+private:
+    sf::Vector2f mVelocity;
+    int mHitpoints;
 };
 
-
-
 #endif /* defined(__SpaceWars__Entity__) */
+
