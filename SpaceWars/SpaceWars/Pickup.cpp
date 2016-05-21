@@ -15,6 +15,8 @@
 
 #include <SFML/Graphics/RenderTarget.hpp>
 
+// In order to avoid name collisions, since 'Table' name is used in other files, we use an
+// anonymous namespace.
 namespace
 {
     const std::vector<PickupData> Table = initializePickupData();
