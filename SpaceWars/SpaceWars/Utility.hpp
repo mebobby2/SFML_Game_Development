@@ -10,6 +10,7 @@
 #define Utility_hpp
 
 #include <SFML/Window/Keyboard.hpp>
+#include <SFML/System/Vector2.hpp>
 
 #include <sstream>
 
