@@ -11,6 +11,19 @@
 #include "Projectile.hpp"
 #include "Pickup.hpp"
 
+
+//Nowadays, it is very common to load gameplay information from
+//external resources. There are text-based formats such as YAML or XML,
+//as well as, many application-specific text and binary formats.
+
+//One possibility that has recently gained popularity consists of using
+//script languages, most notably Lua (www.lua.org), in addition to
+//C++. This has the advantage that not only constant data, but dynamic
+//functionality can be outsourced and loaded during runtime. This means
+//we do not need to re-compile our C++ code when we change the data or
+//some functionality because Lua is a scripting language that does not
+//need to be compiled.
+
 using namespace std::placeholders;
 
 std::vector<AircraftData> initializeAircraftData()
