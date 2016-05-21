@@ -20,12 +20,18 @@ class Aircraft: public Entity
         {
             Eagle,
             Rapter,
+            Avenger,
+            TypeCount
         };
     
     public:
             Aircraft(Type type, const TextureHolder& textures);
         virtual void drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
         virtual unsigned int getCategory() const;
+    
+        void increaseFireRate();
+        void increaseSpread();
+        void collectMissiles(unsigned int count);
     
     private:
         Type mType;

@@ -15,6 +15,9 @@
 		073FC2CD1CEE730C00FEB22B /* ButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 073FC2CA1CEE730C00FEB22B /* ButtonPressed.png */; };
 		073FC2CE1CEE730C00FEB22B /* ButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 073FC2CB1CEE730C00FEB22B /* ButtonSelected.png */; };
 		073FC2D11CEE7FBB00FEB22B /* SettingsState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 073FC2CF1CEE7FBB00FEB22B /* SettingsState.cpp */; };
+		0743C6B51CEFCE040080E356 /* DataTables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0743C6B31CEFCE040080E356 /* DataTables.cpp */; };
+		0743C6B81CEFD0200080E356 /* Pickup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0743C6B61CEFD0200080E356 /* Pickup.cpp */; };
+		0743C6BB1CEFD3D30080E356 /* Projectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0743C6B91CEFD3D30080E356 /* Projectile.cpp */; };
 		07468E0C1CE542C70089667C /* CommandQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07468E0A1CE542C70089667C /* CommandQueue.cpp */; };
 		07468E0F1CE546AF0089667C /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07468E0D1CE546AF0089667C /* Player.cpp */; };
 		07468E161CE579690089667C /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07468E141CE579690089667C /* State.cpp */; };
@@ -58,6 +61,12 @@
 		073FC2CB1CEE730C00FEB22B /* ButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonSelected.png; sourceTree = "<group>"; };
 		073FC2CF1CEE7FBB00FEB22B /* SettingsState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingsState.cpp; sourceTree = "<group>"; };
 		073FC2D01CEE7FBB00FEB22B /* SettingsState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SettingsState.hpp; sourceTree = "<group>"; };
+		0743C6B31CEFCE040080E356 /* DataTables.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataTables.cpp; sourceTree = "<group>"; };
+		0743C6B41CEFCE040080E356 /* DataTables.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DataTables.hpp; sourceTree = "<group>"; };
+		0743C6B61CEFD0200080E356 /* Pickup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pickup.cpp; sourceTree = "<group>"; };
+		0743C6B71CEFD0200080E356 /* Pickup.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Pickup.hpp; sourceTree = "<group>"; };
+		0743C6B91CEFD3D30080E356 /* Projectile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Projectile.cpp; sourceTree = "<group>"; };
+		0743C6BA1CEFD3D30080E356 /* Projectile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Projectile.hpp; sourceTree = "<group>"; };
 		07468E0A1CE542C70089667C /* CommandQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CommandQueue.cpp; sourceTree = "<group>"; };
 		07468E0B1CE542C70089667C /* CommandQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CommandQueue.hpp; sourceTree = "<group>"; };
 		07468E0D1CE546AF0089667C /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
@@ -133,6 +142,16 @@
 				07468E0B1CE542C70089667C /* CommandQueue.hpp */,
 			);
 			name = Commands;
+			sourceTree = "<group>";
+		};
+		0743C6B21CEFCDF70080E356 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				07A999961CED6C4600C5FFFD /* GUI */,
+				0743C6B31CEFCE040080E356 /* DataTables.cpp */,
+				0743C6B41CEFCE040080E356 /* DataTables.hpp */,
+			);
+			name = Config;
 			sourceTree = "<group>";
 		};
 		07468E101CE579010089667C /* States */ = {
@@ -226,6 +245,10 @@
 				9242CAAA1CD8544800AC8A64 /* Entity.hpp */,
 				9242CAAC1CD8562800AC8A64 /* Aircraft.cpp */,
 				9242CAAD1CD8562800AC8A64 /* Aircraft.hpp */,
+				0743C6B61CEFD0200080E356 /* Pickup.cpp */,
+				0743C6B71CEFD0200080E356 /* Pickup.hpp */,
+				0743C6B91CEFD3D30080E356 /* Projectile.cpp */,
+				0743C6BA1CEFD3D30080E356 /* Projectile.hpp */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -273,7 +296,7 @@
 		92F130311CD06F710009C29C /* SpaceWars */ = {
 			isa = PBXGroup;
 			children = (
-				07A999961CED6C4600C5FFFD /* GUI */,
+				0743C6B21CEFCDF70080E356 /* Config */,
 				07A999951CED6B9E00C5FFFD /* Tasks */,
 				07468E101CE579010089667C /* States */,
 				072236881CE2DC9A0086A0CF /* Commands */,
@@ -399,6 +422,7 @@
 			files = (
 				07BC138B1CEC160E00615DBE /* Utility.cpp in Sources */,
 				07A999991CED6C6700C5FFFD /* Component.cpp in Sources */,
+				0743C6BB1CEFD3D30080E356 /* Projectile.cpp in Sources */,
 				07468E1C1CE57F020089667C /* StateStack.cpp in Sources */,
 				92D697BF1CD31272000CF4BB /* Application.cpp in Sources */,
 				07BC13931CEC1B9C00615DBE /* TitleState.cpp in Sources */,
@@ -415,8 +439,10 @@
 				07BC138D1CEC16AF00615DBE /* Utility.inl in Sources */,
 				07A9999C1CED6F4F00C5FFFD /* Container.cpp in Sources */,
 				0752C7E31CE19AD100EF1365 /* SpriteNode.cpp in Sources */,
+				0743C6B81CEFD0200080E356 /* Pickup.cpp in Sources */,
 				07468E0F1CE546AF0089667C /* Player.cpp in Sources */,
 				07BEA7F71CED29060023120D /* ParallelTask.cpp in Sources */,
+				0743C6B51CEFCE040080E356 /* DataTables.cpp in Sources */,
 				0752C7EE1CE1A39300EF1365 /* World.cpp in Sources */,
 				073FC2C51CEE6A4A00FEB22B /* Label.cpp in Sources */,
 				9242CAB41CD85A5600AC8A64 /* SceneNode.cpp in Sources */,
