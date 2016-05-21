@@ -21,7 +21,14 @@ namespace Textures
     {
         Eagle,
         Rapter,
+        Avenger,
+        Bullet,
+        Missile,
         Desert,
+        HealthRefill,
+        MissileRefill,
+        FireSpread,
+        FireRate,
         TitleScreen,
         ButtonNormal,
         ButtonSelected,
@@ -44,4 +51,3 @@ typedef ResourceHolder<sf::Texture, Textures::ID> TextureHolder;
 typedef ResourceHolder<sf::Font, Fonts::ID> FontHolder;
 
 #endif /* defined(__SpaceWars__ResourceIdentifiers__) */
-
