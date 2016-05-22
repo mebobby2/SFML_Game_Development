@@ -256,7 +256,7 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
-		9242CAB11CD85A1900AC8A64 /* Scenes */ = {
+		9242CAB11CD85A1900AC8A64 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
 				0752C7E11CE19AD100EF1365 /* SpriteNode.cpp */,
@@ -266,7 +266,7 @@
 				076998E01CF1A41A00554CF5 /* TextNode.cpp */,
 				076998E11CF1A41A00554CF5 /* TextNode.hpp */,
 			);
-			name = Scenes;
+			name = Nodes;
 			sourceTree = "<group>";
 		};
 		926FBF761CDAFABA00641B40 /* Core */ = {
@@ -309,7 +309,7 @@
 				926FBF761CDAFABA00641B40 /* Core */,
 				9242CAB01CD8593000AC8A64 /* Entities */,
 				9242CAAF1CD8591E00AC8A64 /* ResourceLoaders */,
-				9242CAB11CD85A1900AC8A64 /* Scenes */,
+				9242CAB11CD85A1900AC8A64 /* Nodes */,
 				92F130371CD06F710009C29C /* Main.cpp */,
 				92F130391CD06F710009C29C /* Resources */,
 				92F130321CD06F710009C29C /* Supporting Files */,
