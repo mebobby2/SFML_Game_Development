@@ -15,4 +15,6 @@
 
 ## Upto Page 155 - In the Aircraft constructor, we create a text node and attach it to the aircraft itself.
 
-Before that, implementing Aircraft.cpp
+Before the end of chapter 7:
+understand methods in Projectile (the heavy maths ones)
+understand methods in Aircraft (the heavy maths ones)
