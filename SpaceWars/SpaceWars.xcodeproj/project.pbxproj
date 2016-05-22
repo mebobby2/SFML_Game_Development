@@ -27,6 +27,7 @@
 		0752C7E71CE19E7600EF1365 /* Raptor.png in Resources */ = {isa = PBXBuildFile; fileRef = 0752C7E51CE19E7600EF1365 /* Raptor.png */; };
 		0752C7EE1CE1A39300EF1365 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0752C7EC1CE1A39300EF1365 /* World.cpp */; };
 		07551B1F1CE29B4900D1CE8F /* Sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07551B1E1CE29B4900D1CE8F /* Sansation.ttf */; };
+		076998E21CF1A41A00554CF5 /* TextNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 076998E01CF1A41A00554CF5 /* TextNode.cpp */; };
 		07A999991CED6C6700C5FFFD /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A999971CED6C6700C5FFFD /* Component.cpp */; };
 		07A9999C1CED6F4F00C5FFFD /* Container.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A9999A1CED6F4F00C5FFFD /* Container.cpp */; };
 		07BC138B1CEC160E00615DBE /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07BC13891CEC160E00615DBE /* Utility.cpp */; };
@@ -83,6 +84,8 @@
 		0752C7EC1CE1A39300EF1365 /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = World.cpp; sourceTree = "<group>"; };
 		0752C7ED1CE1A39300EF1365 /* World.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = World.hpp; sourceTree = "<group>"; };
 		07551B1E1CE29B4900D1CE8F /* Sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sansation.ttf; sourceTree = "<group>"; };
+		076998E01CF1A41A00554CF5 /* TextNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextNode.cpp; sourceTree = "<group>"; };
+		076998E11CF1A41A00554CF5 /* TextNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TextNode.hpp; sourceTree = "<group>"; };
 		07A999971CED6C6700C5FFFD /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
 		07A999981CED6C6700C5FFFD /* Component.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
 		07A9999A1CED6F4F00C5FFFD /* Container.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Container.cpp; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 				0752C7E21CE19AD100EF1365 /* SpriteNode.hpp */,
 				9242CAB21CD85A5600AC8A64 /* SceneNode.cpp */,
 				9242CAB31CD85A5600AC8A64 /* SceneNode.hpp */,
+				076998E01CF1A41A00554CF5 /* TextNode.cpp */,
+				076998E11CF1A41A00554CF5 /* TextNode.hpp */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -437,6 +442,7 @@
 				07BC13901CEC189A00615DBE /* GameState.cpp in Sources */,
 				07468E0C1CE542C70089667C /* CommandQueue.cpp in Sources */,
 				07BC138D1CEC16AF00615DBE /* Utility.inl in Sources */,
+				076998E21CF1A41A00554CF5 /* TextNode.cpp in Sources */,
 				07A9999C1CED6F4F00C5FFFD /* Container.cpp in Sources */,
 				0752C7E31CE19AD100EF1365 /* SpriteNode.cpp in Sources */,
 				0743C6B81CEFD0200080E356 /* Pickup.cpp in Sources */,
