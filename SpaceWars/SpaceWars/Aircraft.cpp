@@ -169,7 +169,7 @@ void Aircraft::updateMovementPattern(sf::Time dt)
             mTravelledDistance = 0.f;
         }
         
-        // The default, 0 degree points to the right. We do not want out enemy planes to
+        // The default, 0 degree points to the right in mathematics. We do not want out enemy planes to
         // fly to the right, but we want them to fly downwards. Hence, to make the planes
         // fly downwards, we need to add 90degrees to the original angle.
         
