@@ -13,7 +13,7 @@
 3. Make sure the C++ Compiler and Standard Library is set to C++11 with Clang and libc++
 4. Compile and run the skeleton template.
 
-## Upto Page 158 - Spawning enemies
+## Upto Page 161 - Adding projectiles
 
 Before the end of chapter 7:
 understand methods in Projectile (the heavy maths ones)
