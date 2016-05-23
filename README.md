@@ -18,3 +18,15 @@
 Before the end of chapter 7:
 understand methods in Projectile (the heavy maths ones)
 understand methods in Aircraft (the heavy maths ones)
+
+Do not need to check classes:
+1. Entity
+2. Category
+3. Pickup
+4. Utility
+5. Projectile
+6. ResourceIdentifiers
+7. DataTables
+8. TextNode
+9. Aircraft
+10. 
