@@ -28,6 +28,13 @@
 		0752C7EE1CE1A39300EF1365 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0752C7EC1CE1A39300EF1365 /* World.cpp */; };
 		07551B1F1CE29B4900D1CE8F /* Sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07551B1E1CE29B4900D1CE8F /* Sansation.ttf */; };
 		076998E21CF1A41A00554CF5 /* TextNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 076998E01CF1A41A00554CF5 /* TextNode.cpp */; };
+		076E10E21CF3BE1B001EB03A /* Avenger.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E10DB1CF3BE1B001EB03A /* Avenger.png */; };
+		076E10E31CF3BE1B001EB03A /* Bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E10DC1CF3BE1B001EB03A /* Bullet.png */; };
+		076E10E41CF3BE1B001EB03A /* FireRate.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E10DD1CF3BE1B001EB03A /* FireRate.png */; };
+		076E10E51CF3BE1B001EB03A /* FireSpread.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E10DE1CF3BE1B001EB03A /* FireSpread.png */; };
+		076E10E61CF3BE1B001EB03A /* HealthRefill.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E10DF1CF3BE1B001EB03A /* HealthRefill.png */; };
+		076E10E71CF3BE1B001EB03A /* Missile.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E10E01CF3BE1B001EB03A /* Missile.png */; };
+		076E10E81CF3BE1B001EB03A /* MissileRefill.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E10E11CF3BE1B001EB03A /* MissileRefill.png */; };
 		07A999991CED6C6700C5FFFD /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A999971CED6C6700C5FFFD /* Component.cpp */; };
 		07A9999C1CED6F4F00C5FFFD /* Container.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A9999A1CED6F4F00C5FFFD /* Container.cpp */; };
 		07BC138B1CEC160E00615DBE /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07BC13891CEC160E00615DBE /* Utility.cpp */; };
@@ -86,6 +93,13 @@
 		07551B1E1CE29B4900D1CE8F /* Sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sansation.ttf; sourceTree = "<group>"; };
 		076998E01CF1A41A00554CF5 /* TextNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextNode.cpp; sourceTree = "<group>"; };
 		076998E11CF1A41A00554CF5 /* TextNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TextNode.hpp; sourceTree = "<group>"; };
+		076E10DB1CF3BE1B001EB03A /* Avenger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Avenger.png; sourceTree = "<group>"; };
+		076E10DC1CF3BE1B001EB03A /* Bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bullet.png; sourceTree = "<group>"; };
+		076E10DD1CF3BE1B001EB03A /* FireRate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FireRate.png; sourceTree = "<group>"; };
+		076E10DE1CF3BE1B001EB03A /* FireSpread.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FireSpread.png; sourceTree = "<group>"; };
+		076E10DF1CF3BE1B001EB03A /* HealthRefill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HealthRefill.png; sourceTree = "<group>"; };
+		076E10E01CF3BE1B001EB03A /* Missile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Missile.png; sourceTree = "<group>"; };
+		076E10E11CF3BE1B001EB03A /* MissileRefill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MissileRefill.png; sourceTree = "<group>"; };
 		07A999971CED6C6700C5FFFD /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
 		07A999981CED6C6700C5FFFD /* Component.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
 		07A9999A1CED6F4F00C5FFFD /* Container.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Container.cpp; sourceTree = "<group>"; };
@@ -194,6 +208,13 @@
 		07551B201CE29B6000D1CE8F /* Textures */ = {
 			isa = PBXGroup;
 			children = (
+				076E10DB1CF3BE1B001EB03A /* Avenger.png */,
+				076E10DC1CF3BE1B001EB03A /* Bullet.png */,
+				076E10DD1CF3BE1B001EB03A /* FireRate.png */,
+				076E10DE1CF3BE1B001EB03A /* FireSpread.png */,
+				076E10DF1CF3BE1B001EB03A /* HealthRefill.png */,
+				076E10E01CF3BE1B001EB03A /* Missile.png */,
+				076E10E11CF3BE1B001EB03A /* MissileRefill.png */,
 				073FC2C91CEE730C00FEB22B /* ButtonNormal.png */,
 				073FC2CA1CEE730C00FEB22B /* ButtonPressed.png */,
 				073FC2CB1CEE730C00FEB22B /* ButtonSelected.png */,
@@ -391,13 +412,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076E10E21CF3BE1B001EB03A /* Avenger.png in Resources */,
 				0752C7E61CE19E7600EF1365 /* Desert.png in Resources */,
 				073FC2CD1CEE730C00FEB22B /* ButtonPressed.png in Resources */,
 				073FC2CE1CEE730C00FEB22B /* ButtonSelected.png in Resources */,
+				076E10E71CF3BE1B001EB03A /* Missile.png in Resources */,
+				076E10E61CF3BE1B001EB03A /* HealthRefill.png in Resources */,
 				07551B1F1CE29B4900D1CE8F /* Sansation.ttf in Resources */,
+				076E10E31CF3BE1B001EB03A /* Bullet.png in Resources */,
+				076E10E81CF3BE1B001EB03A /* MissileRefill.png in Resources */,
 				073FC2CC1CEE730C00FEB22B /* ButtonNormal.png in Resources */,
+				076E10E41CF3BE1B001EB03A /* FireRate.png in Resources */,
 				0752C7E71CE19E7600EF1365 /* Raptor.png in Resources */,
 				9266C7561CD707D50021AF29 /* Eagle.png in Resources */,
+				076E10E51CF3BE1B001EB03A /* FireSpread.png in Resources */,
 				0736EBF31CEC3FA600564375 /* TitleScreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

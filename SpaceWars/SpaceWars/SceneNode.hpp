@@ -18,21 +18,27 @@
 
 #include <vector>
 #include <memory>
+#include <set>
 
 struct Command;
+class CommandQueue;
 
 class SceneNode : public sf::Transformable, public sf::Drawable, private sf::NonCopyable
 {
     public:
         typedef std::unique_ptr<SceneNode> Ptr;
+        typedef std::pair<SceneNode*, SceneNode*> Pair;
     
     public:
-        SceneNode();
+        explicit SceneNode(Category::Type category = Category::None);
         void attachChild(Ptr child);
         Ptr detachChild(const SceneNode& node);
-        void update(sf::Time dt);
+        void update(sf::Time dt, CommandQueue& commands);
         sf::Vector2f getWorldPosition() const;
         sf::Transform getWorldTransform() const;
+        void removeWrecks();
+        void checkSceneCollisions(SceneNode& sceneGraph, std::set<Pair>& collisionPairs);
+        virtual sf::FloatRect getBoundingRect() const;
     
         void onCommand(const Command& command, sf::Time dt);
         virtual unsigned int getCategory() const;
@@ -49,5 +55,7 @@ class SceneNode : public sf::Transformable, public sf::Drawable, private sf::Non
         std::vector<Ptr> mChildren;
         SceneNode* mParent;
 };
+
+float distance(const SceneNode& lhs, const SceneNode& rhs);
 
 #endif /* defined(__SpaceWars__SceneNode__) */
