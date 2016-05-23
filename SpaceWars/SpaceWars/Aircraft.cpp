@@ -169,12 +169,40 @@ void Aircraft::updateMovementPattern(sf::Time dt)
             mTravelledDistance = 0.f;
         }
         
+        // The default, 0 degree points to the right. We do not want out enemy planes to
+        // fly to the right, but we want them to fly downwards. Hence, to make the planes
+        // fly downwards, we need to add 90degrees to the original angle.
+        
+        // Using trigonometry: the max speed (S) is the Hypotenuse, vx is the Adjacent,
+        // and xy is the Opposite. We know the angle (A) already to be directions[mDirectionIndex].angle.
+        // The diagram below depicts this.
+        //
+        //                |\
+        //            vx  | \  S
+        //                |A \
+        //                |   \
+        //                |____\
+        //
+        //                  vy
+        //
+        // To find vx, we use formula: vx = S * cos(A)
+        // vy = S * sin(A).
+        //
+        // Representations:
+        // S  = the actual speed the plane is travelling in
+        // vx = the x component of the plane's actual speed
+        // vy = the y component of the plane's actual speed
+        //
+        // Once we have vx and vy, just set these to the plane's velocity vector, which then represents
+        // the plane's direction and speed combined.
+        
         float radians = toRadian(directions[mDirectionIndex].angle + 90.f);
         float vx = getMaxSpeed() * std::cos(radians);
         float vy = getMaxSpeed() * std::sin(radians);
         
         setVelocity(vx, vy);
         
+        // Physics formual: distance = speed * time
         mTravelledDistance += getMaxSpeed() * dt.asSeconds();
     }
 }
