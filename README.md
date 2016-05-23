@@ -13,7 +13,7 @@
 3. Make sure the C++ Compiler and Standard Library is set to C++11 with Clang and libc++
 4. Compile and run the skeleton template.
 
-## Upto Page 155 - In the Aircraft constructor, we create a text node and attach it to the aircraft itself.
+## Upto Page 158 - Spawning enemies
 
 Before the end of chapter 7:
 understand methods in Projectile (the heavy maths ones)
