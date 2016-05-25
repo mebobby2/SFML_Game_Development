@@ -14,6 +14,8 @@
 #include <string>
 #include <algorithm>
 
+using namespace std::placeholders;
+
 struct AircraftMover
 {
     AircraftMover(float vx, float vy)
@@ -26,18 +28,21 @@ struct AircraftMover
     //      void operator== (otherObj) 
     void operator() (Aircraft& aircraft, sf::Time) const
     {
-        aircraft.accelerate(velocity);
+        aircraft.accelerate(velocity * aircraft.getMaxSpeed());
     }
     
     sf::Vector2f velocity;
 };
 
 Player::Player()
+: mCurrentMissionStatus(MissionRunning)
 {
     mKeyBinding[sf::Keyboard::Left] = MoveLeft;
     mKeyBinding[sf::Keyboard::Right] = MoveRight;
     mKeyBinding[sf::Keyboard::Up] = MoveUp;
     mKeyBinding[sf::Keyboard::Down] = MoveDown;
+    mKeyBinding[sf::Keyboard::Space] = Fire;
+    mKeyBinding[sf::Keyboard::M] = LaunchMissile;
     
     initializeActions();
     
@@ -83,6 +88,16 @@ sf::Keyboard::Key Player::getAssignedKey(Player::Action action) const
     return sf::Keyboard::Unknown;
 }
 
+void Player::setMissionStatus(Player::MissionStatus status)
+{
+    mCurrentMissionStatus = status;
+}
+
+Player::MissionStatus Player::getMissionStatus() const
+{
+    return mCurrentMissionStatus;
+}
+
 void Player::initializeActions()
 {
     // derivedAction returns a function. The returned function itself returns void, and takes two arguments.
@@ -96,11 +111,12 @@ void Player::initializeActions()
     // Aircraft(playerSpeed, 0.f) instantiates a new instance of AircraftMover. Inside the derivedAction, it returns
     // a function that takes a SceneNode as parameter and calls the the AircraftMover instance's ()
     // method, ie fn(aircraftInstance, dt), passing in the SceneNode as a parameter to it.
-    const float playerSpeed = 200.f;
-    mActionBinding[MoveLeft].action = derivedAction<Aircraft>(AircraftMover(-playerSpeed, 0.f));
-    mActionBinding[MoveRight].action = derivedAction<Aircraft>(AircraftMover(+playerSpeed, 0.f));
-    mActionBinding[MoveUp].action = derivedAction<Aircraft>(AircraftMover(0.f, -playerSpeed));
-    mActionBinding[MoveDown].action = derivedAction<Aircraft>(AircraftMover(0.f, +playerSpeed));
+    mActionBinding[MoveLeft].action = derivedAction<Aircraft>(AircraftMover(-1, 0));
+    mActionBinding[MoveRight].action = derivedAction<Aircraft>(AircraftMover(+1, 0));
+    mActionBinding[MoveUp].action = derivedAction<Aircraft>(AircraftMover(0, -1));
+    mActionBinding[MoveDown].action = derivedAction<Aircraft>(AircraftMover(0, +1));
+    mActionBinding[Fire].action = derivedAction<Aircraft>(std::bind(&Aircraft::fire, _1));
+    mActionBinding[LaunchMissile].action = derivedAction<Aircraft>(std::bind(&Aircraft::launchMissile, _1));
 }
 
 bool Player::isRealtimeAction(Player::Action action)
@@ -110,9 +126,11 @@ bool Player::isRealtimeAction(Player::Action action)
         case MoveRight:
         case MoveDown:
         case MoveUp:
+        case Fire:
             return true;
             
         default:
             return false;;
     }
 }
+
