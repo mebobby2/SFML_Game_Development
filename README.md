@@ -13,7 +13,7 @@
 3. Make sure the C++ Compiler and Standard Library is set to C++11 with Clang and libc++
 4. Compile and run the skeleton template.
 
-## Upto Page 161 - Adding projectiles
+## Upto Page 176 - Reacting to collisions
 
 Do not need to check classes:
 1. Entity
