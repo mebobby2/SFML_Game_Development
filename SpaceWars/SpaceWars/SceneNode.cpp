@@ -144,6 +144,8 @@ unsigned int SceneNode::getCategory() const
     return mDefaultCategory;
 }
 
+//Loop through the sceneGraph and it's children, testing to see if they collide with other
+//SceneNodes in the sceneGraph
 void SceneNode::checkSceneCollision(SceneNode &sceneGraph, std::set<Pair> &collisionPairs)
 {
     checkNodeCollision(sceneGraph, collisionPairs);
@@ -157,6 +159,7 @@ void SceneNode::checkSceneCollision(SceneNode &sceneGraph, std::set<Pair> &colli
         checkSceneCollision(*child, collisionPairs);
 }
 
+//Check the node collides with 'this' SceneNode and any of 'this's children.
 void SceneNode::checkNodeCollision(SceneNode &node, std::set<Pair> &collisionPairs)
 {
     // this != &node. node is already a reference to a SceneNode. But we want the memory address of the node variable,
@@ -164,6 +167,11 @@ void SceneNode::checkNodeCollision(SceneNode &node, std::set<Pair> &collisionPai
     // address equals 'this'. If they do, its the same object.
     if (this != &node && collision(*this, node) && !isDestroyed() && !node.isDestroyed())
         collisionPairs.insert(std::minmax(this, &node));
+    
+    //std::minmax returns the two references to the arguments passed in. It returns the min first, and then the max
+    //second. In our case, its the smaller means lower address. Therefore, std:minmax(this, &node) and
+    //std::minmax(&node, this) would return the same pair. This is important because collitionPairs is a set, there we
+    //do not repeat the same values more than once.
     
     for (Ptr& child : mChildren)
         child->checkNodeCollision(node, collisionPairs);
