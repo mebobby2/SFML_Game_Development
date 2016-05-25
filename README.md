@@ -15,9 +15,6 @@
 
 ## Upto Page 161 - Adding projectiles
 
-Before the end of chapter 7:
-understand methods in Projectile (the heavy maths ones)
-
 Do not need to check classes:
 1. Entity
 2. Category
