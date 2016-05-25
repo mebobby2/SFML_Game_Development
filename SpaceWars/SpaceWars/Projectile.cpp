@@ -47,11 +47,19 @@ void Projectile::updateCurrent(sf::Time dt, CommandQueue &commands)
     if (isGuided()) {
         const float approachRate = 200.f;
         
+        // mTargetDirection is a unit vector pointing towards the target.
+        // Think of approachRate as the missile's speed from the perspective of the target. It's a constant.
+        // We the velocity (rv) of the missile by scaling (multiplying) the approachRate by the mTargetDirection vector.
+        // We then add rv to the previous velocity vector. This gives the effect that the missile is 'curving' towards
+        // the target. If we do not add the previous velocity, the missile will travel in a straight line towards
+        // the target instead.
+        // the angle of the missile is calculated using plan on pythagaras theorem. angle = atan(o/a)
+        
         sf::Vector2f newVelocity = unitVector(approachRate * dt.asSeconds() * mTargetDirection + getVelocity());
         newVelocity *= getMaxSpeed();
         float angle = std::atan2(newVelocity.y, newVelocity.x);
         
-        setRotation(toDegree(angle) + 90.f);
+        setRotation(toDegree(angle) + 90.f); //Add 90 because missile should point up, instead of right
         setVelocity(newVelocity);
     }
     
