@@ -30,3 +30,4 @@ Do not need to check classes:
 8. TextNode
 9. Aircraft
 10. World
+11. Player
