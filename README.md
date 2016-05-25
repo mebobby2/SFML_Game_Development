@@ -17,7 +17,6 @@
 
 Before the end of chapter 7:
 understand methods in Projectile (the heavy maths ones)
-understand methods in Aircraft (the heavy maths ones)
 
 Do not need to check classes:
 1. Entity
