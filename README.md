@@ -27,3 +27,4 @@ Do not need to check classes:
 9. Aircraft
 10. World
 11. Player
+12. SceneNode

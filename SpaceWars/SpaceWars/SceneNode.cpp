@@ -8,11 +8,19 @@
 
 #include "SceneNode.hpp"
 #include "Command.hpp"
-#include <cassert>
+#include "Utility.hpp"
 
-SceneNode::SceneNode()
+#include <SFML/Graphics/RectangleShape.hpp>
+#include <SFML/Graphics/RenderTarget.hpp>
+
+#include <cassert>
+#include <algorithm>
+#include <cmath>
+
+SceneNode::SceneNode(Category::Type category)
 : mChildren()
 , mParent(nullptr)
+, mDefaultCategory(category)
 {
 }
 
@@ -43,7 +51,7 @@ SceneNode::Ptr SceneNode::detachChild(const SceneNode &node)
     // Since pointers are not implicitly deferences, p.get() will return the address of the node as
     // opposed to returning the valye at that address.
     auto found = std::find_if(mChildren.begin(), mChildren.end(),
-                              [&] (Ptr& p) -> bool { return p.get() == &node; });
+                              [&] (Ptr& p) -> bool { return p.get() == &node; }); //[&] captures all automatic variables, ie 'found' by reference
     assert(found != mChildren.end());
     
     Ptr result = std::move(*found);
@@ -52,12 +60,32 @@ SceneNode::Ptr SceneNode::detachChild(const SceneNode &node)
     return result;
 }
 
+void SceneNode::update(sf::Time dt, CommandQueue& commands)
+{
+    updateCurrent(dt, commands);
+    updateChildren(dt, commands);
+}
+
+void SceneNode::updateCurrent(sf::Time, CommandQueue&)
+{
+}
+
+void SceneNode::updateChildren(sf::Time dt, CommandQueue& commands)
+{
+    for (const Ptr& child : mChildren) {
+        child->update(dt, commands);
+    }
+}
+
 void SceneNode::draw(sf::RenderTarget &target, sf::RenderStates states) const
 {
     states.transform *= getTransform();
     
     drawCurrent(target, states);
     drawChildren(target, states);
+    
+    // Draw bounding rectangle - disabled by default
+    //drawBoundingRect(target, states);
 }
 
 void SceneNode::drawChildren(sf::RenderTarget &target, sf::RenderStates states) const
@@ -72,30 +100,28 @@ void SceneNode::drawCurrent(sf::RenderTarget&, sf::RenderStates) const
     // Do nothing by default
 }
 
-void SceneNode::update(sf::Time dt)
+void SceneNode::drawBoundingRect(sf::RenderTarget &target, sf::RenderStates states) const
 {
-    updateCurrent(dt);
-    updateChildren(dt);
-}
-
-void SceneNode::updateCurrent(sf::Time)
-{
+    sf::FloatRect rect = getBoundingRect();
     
-}
-
-void SceneNode::updateChildren(sf::Time dt)
-{
-    for (const Ptr& child : mChildren) {
-        child->update(dt);
-    }
+    sf::RectangleShape shape;
+    shape.setPosition(sf::Vector2f(rect.left, rect.top));
+    shape.setSize(sf::Vector2f(rect.width, rect.height));
+    shape.setFillColor(sf::Color::Transparent);
+    shape.setOutlineColor(sf::Color::Green);
+    shape.setOutlineThickness(1.f);
+    
+    target.draw(shape);
 }
 
 sf::Transform SceneNode::getWorldTransform() const
 {
     sf::Transform transform = sf::Transform::Identity;
+    
     for (const SceneNode* node = this; node != nullptr; node = node->mParent) {
         transform = node->getTransform() * transform;
     }
+    
     return transform;
 }
 
@@ -103,7 +129,6 @@ sf::Vector2f SceneNode::getWorldPosition() const
 {
     return getWorldTransform() * sf::Vector2f();
 }
-
 
 void SceneNode::onCommand(const Command &command, sf::Time dt)
 {
@@ -116,5 +141,64 @@ void SceneNode::onCommand(const Command &command, sf::Time dt)
 
 unsigned int SceneNode::getCategory() const
 {
-    return Category::Scene;
+    return mDefaultCategory;
+}
+
+void SceneNode::checkSceneCollision(SceneNode &sceneGraph, std::set<Pair> &collisionPairs)
+{
+    checkNodeCollision(sceneGraph, collisionPairs);
+    
+    // child is a pointer to a SceneNode. Before passing in child to checkSceneCollision, we dereference it.
+    // But checkSceneCollision takes a reference to a SceneNode as an argument, so why are we passing in a value
+    // of SceneNode instead of the reference. C++ handles this automatically for us, if we pass in a value but
+    // the function takes a reference, C++ automatically converts the value to a reference and then pass it into
+    // the function.
+    for (Ptr& child : sceneGraph.mChildren)
+        checkSceneCollision(*child, collisionPairs);
+}
+
+void SceneNode::checkNodeCollision(SceneNode &node, std::set<Pair> &collisionPairs)
+{
+    // this != &node. node is already a reference to a SceneNode. But we want the memory address of the node variable,
+    // we hence use the '&' operator which returns the memory address of a variable. Then we just check if this memory
+    // address equals 'this'. If they do, its the same object.
+    if (this != &node && collision(*this, node) && !isDestroyed() && !node.isDestroyed())
+        collisionPairs.insert(std::minmax(this, &node));
+    
+    for (Ptr& child : mChildren)
+        child->checkNodeCollision(node, collisionPairs);
+}
+
+void SceneNode::removeWrecks()
+{
+    auto wreckfieldBegin = std::remove_if(mChildren.begin(), mChildren.end(), std::mem_fn(&SceneNode::isMarkedForRemoval));
+    
+    mChildren.erase(wreckfieldBegin, mChildren.end());
+    
+    std::for_each(mChildren.begin(), mChildren.end(), std::mem_fn(&SceneNode::removeWrecks));
+}
+
+sf::FloatRect SceneNode::getBoundingRect() const
+{
+    return sf::FloatRect();
+}
+
+bool SceneNode::isMarkedForRemoval() const
+{
+    return isDestroyed();
+}
+
+bool SceneNode::isDestroyed() const
+{
+    return false;
+}
+
+bool collision(const SceneNode& lhs, const SceneNode& rhs)
+{
+    return lhs.getBoundingRect().intersects(rhs.getBoundingRect());
+}
+
+float distance(const SceneNode& lhs, const SceneNode& rhs)
+{
+    return length(lhs.getWorldPosition() - rhs.getWorldPosition());
 }
