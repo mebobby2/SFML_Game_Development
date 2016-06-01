@@ -14,19 +14,3 @@
 4. Compile and run the skeleton template.
 
 ## Upto Page 185
-
-Do not need to check classes:
-1. Entity
-2. Category
-3. Pickup
-4. Utility
-5. Projectile
-6. ResourceIdentifiers
-7. DataTables
-8. TextNode
-9. Aircraft
-10. World
-11. Player
-12. SceneNode
-13. GameOverState
-14. Command
