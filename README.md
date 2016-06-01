@@ -29,3 +29,4 @@ Do not need to check classes:
 11. Player
 12. SceneNode
 13. GameOverState
+14. Command
