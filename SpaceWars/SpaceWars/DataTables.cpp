@@ -35,13 +35,13 @@ std::vector<AircraftData> initializeAircraftData()
     data[Aircraft::Eagle].fireInterval = sf::seconds(1);
     data[Aircraft::Eagle].texture = Textures::Eagle;
     
-    data[Aircraft::Rapter].hitpoints = 20;
-    data[Aircraft::Rapter].speed = 80.f;
-    data[Aircraft::Rapter].texture = Textures::Rapter;
-    data[Aircraft::Rapter].directions.push_back(Direction(+45.f, 80.f));
-    data[Aircraft::Rapter].directions.push_back(Direction(-45.f, 160.f));
-    data[Aircraft::Rapter].directions.push_back(Direction(+45.f, 80.f));
-    data[Aircraft::Rapter].fireInterval = sf::seconds(1);
+    data[Aircraft::Raptor].hitpoints = 20;
+    data[Aircraft::Raptor].speed = 80.f;
+    data[Aircraft::Raptor].texture = Textures::Rapter;
+    data[Aircraft::Raptor].directions.push_back(Direction(+45.f, 80.f));
+    data[Aircraft::Raptor].directions.push_back(Direction(-45.f, 160.f));
+    data[Aircraft::Raptor].directions.push_back(Direction(+45.f, 80.f));
+    data[Aircraft::Raptor].fireInterval = sf::Time::Zero;
     
     data[Aircraft::Avenger].hitpoints = 40;
     data[Aircraft::Avenger].speed = 50.f;

@@ -221,15 +221,15 @@ void World::buildScene()
 }
 
 void World::addEnemies()
-{
-    addEnemy(Aircraft::Rapter, 0.f, 500.f);
-    addEnemy(Aircraft::Rapter, 0.f, 1000.f);
-    addEnemy(Aircraft::Rapter, +100.f, 1100.f);
-    addEnemy(Aircraft::Rapter, -100.f, 1100.f);
-    addEnemy(Aircraft::Rapter, -70.f, 1400.f);
-    addEnemy(Aircraft::Rapter, -70.f, 1600.f);
-    addEnemy(Aircraft::Rapter, 70.f, 1400.f);
-    addEnemy(Aircraft::Rapter, 70.f, 1600.f);
+{    
+    addEnemy(Aircraft::Raptor,    0.f,  500.f);
+    addEnemy(Aircraft::Raptor,    0.f, 1000.f);
+    addEnemy(Aircraft::Raptor, +100.f, 1100.f);
+    addEnemy(Aircraft::Raptor, -100.f, 1100.f);
+    addEnemy(Aircraft::Avenger, -70.f, 1400.f);
+    addEnemy(Aircraft::Avenger, -70.f, 1600.f);
+    addEnemy(Aircraft::Avenger,  70.f, 1400.f);
+    addEnemy(Aircraft::Avenger,  70.f, 1600.f);
     
     std::sort(mEnemySpawnPoints.begin(), mEnemySpawnPoints.end(), [] (SpawnPoint lhs, SpawnPoint rhs)
               {
