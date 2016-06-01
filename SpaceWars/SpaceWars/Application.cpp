@@ -16,11 +16,12 @@
 #include "PauseState.hpp"
 #include "LoadingState.hpp"
 #include "SettingsState.hpp"
+#include "GameOverState.hpp"
 
 const sf::Time Application::TimePerFrame = sf::seconds(1.f/60.f);
 
 Application::Application()
-: mWindow(sf::VideoMode(640, 480), "SpaceWars!", sf::Style::Close)
+: mWindow(sf::VideoMode(1024, 768), "SpaceWars!", sf::Style::Close)
 , mTextures()
 , mFonts()
 , mPlayer()
@@ -50,10 +51,11 @@ void Application::run()
 {
     sf::Clock clock;
     sf::Time timeSinceLastUpdate = sf::Time::Zero;
+    
     while (mWindow.isOpen())
     {
-        sf::Time elapsedTime = clock.restart();
-        timeSinceLastUpdate += elapsedTime;
+        sf::Time dt = clock.restart();
+        timeSinceLastUpdate += dt;
         //Read about fixed time steps here: http://gafferongames.com/game-physics/fix-your-timestep/
         while (timeSinceLastUpdate > TimePerFrame) {
             timeSinceLastUpdate -= TimePerFrame;
@@ -65,7 +67,7 @@ void Application::run()
                 mWindow.close();
         }
         
-        updateStatistics(elapsedTime);
+        updateStatistics(dt);
         render();
     }
 }
@@ -87,11 +89,9 @@ void Application::update(sf::Time dt)
     mStateStack.update(dt);
 }
 
-
-
-void Application::updateStatistics(sf::Time elapsedTime)
+void Application::updateStatistics(sf::Time dt)
 {
-    mStatisticsUpdateTime += elapsedTime;
+    mStatisticsUpdateTime += dt;
     mStatisticsNumFrames += 1;
     
     if (mStatisticsUpdateTime >= sf::seconds(1.0f))
@@ -125,4 +125,5 @@ void Application::registerStates()
     mStateStack.registerState<PauseState>(States::Pause);
     mStateStack.registerState<LoadingState>(States::Loading);
     mStateStack.registerState<SettingsState>(States::Settings);
+    mStateStack.registerState<GameOverState>(States::GameOver);
 }

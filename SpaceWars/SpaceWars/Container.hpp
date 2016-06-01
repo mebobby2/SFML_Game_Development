@@ -25,6 +25,7 @@ namespace GUI
         Container();
         
         void pack(Component::Ptr component);
+        
         virtual bool isSelectable() const;
         virtual void handleEvent(const sf::Event& event);
         
