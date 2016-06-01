@@ -164,7 +164,6 @@
 		0743C6B21CEFCDF70080E356 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				07A999961CED6C4600C5FFFD /* GUI */,
 				0743C6B31CEFCE040080E356 /* DataTables.cpp */,
 				0743C6B41CEFCE040080E356 /* DataTables.hpp */,
 			);
@@ -323,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				0743C6B21CEFCDF70080E356 /* Config */,
+				07A999961CED6C4600C5FFFD /* GUI */,
 				07A999951CED6B9E00C5FFFD /* Tasks */,
 				07468E101CE579010089667C /* States */,
 				072236881CE2DC9A0086A0CF /* Commands */,
