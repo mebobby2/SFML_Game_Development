@@ -89,16 +89,16 @@ void World::loadTextures()
 {
     mTextures.load(Textures::Eagle, "Eagle.png");
     mTextures.load(Textures::Rapter, "Raptor.png");
-    mTextures.load(Textures::Desert, "Avenger.png");
+    mTextures.load(Textures::Avenger, "Avenger.png");
     mTextures.load(Textures::Desert, "Desert.png");
     
-    mTextures.load(Textures::Desert, "Bullet.png");
-    mTextures.load(Textures::Desert, "Missile.png");
+    mTextures.load(Textures::Bullet, "Bullet.png");
+    mTextures.load(Textures::Missile, "Missile.png");
     
-    mTextures.load(Textures::Desert, "HealthRefill.png");
-    mTextures.load(Textures::Desert, "MissileRefill.png");
-    mTextures.load(Textures::Desert, "FireSpread.png");
-    mTextures.load(Textures::Desert, "FireRate.png");
+    mTextures.load(Textures::HealthRefill, "HealthRefill.png");
+    mTextures.load(Textures::MissileRefill, "MissileRefill.png");
+    mTextures.load(Textures::FireSpread, "FireSpread.png");
+    mTextures.load(Textures::FireRate, "FireRate.png");
 }
 
 void World::adaptPlayerPosition()
