@@ -13,7 +13,7 @@
 3. Make sure the C++ Compiler and Standard Library is set to C++11 with Clang and libc++
 4. Compile and run the skeleton template.
 
-## Upto Page 176 - Reacting to collisions
+## Upto Page 185
 
 Do not need to check classes:
 1. Entity
