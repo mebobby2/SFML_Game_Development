@@ -154,7 +154,7 @@ bool matchesCategories(SceneNode::Pair& colliders, Category::Type type1, Categor
 void World::handleCollisions()
 {
     std::set<SceneNode::Pair> collisionPairs;
-    mSceneGraph.checkSceneCollisions(mSceneGraph, collisionPairs);
+    mSceneGraph.checkSceneCollision(mSceneGraph, collisionPairs);
     
     for (SceneNode::Pair pair : collisionPairs)
     {
