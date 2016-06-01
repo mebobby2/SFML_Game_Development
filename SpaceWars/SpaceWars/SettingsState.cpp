@@ -12,21 +12,24 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 
+
 SettingsState::SettingsState(StateStack& stack, Context context)
 : State(stack, context)
 , mGUIContainer()
 {
     mBackgroundSprite.setTexture(context.textures->get(Textures::TitleScreen));
     
-    addButtonLabel(Player::MoveLeft, 150.f, "Move Left", context);
-    addButtonLabel(Player::MoveRight, 200.f, "Move Right", context);
-    addButtonLabel(Player::MoveUp, 250.f, "Move Up", context);
-    addButtonLabel(Player::MoveDown, 300.f, "Move Down", context);
+    addButtonLabel(Player::MoveLeft, 300.f, "Move Left", context);
+    addButtonLabel(Player::MoveRight, 350.f, "Move Right", context);
+    addButtonLabel(Player::MoveUp, 400.f, "Move Up", context);
+    addButtonLabel(Player::MoveDown, 450.f, "Move Down", context);
+    addButtonLabel(Player::Fire, 500.0f, "Fire", context);
+    addButtonLabel(Player::LaunchMissile, 550.f, "Missile", context);
     
     updateLabels();
     
     auto backButton = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
-    backButton->setPosition(80.f, 373.f);
+    backButton->setPosition(80.f, 620.f);
     backButton->setText("Back");
     backButton->setCallback(std::bind(&SettingsState::requestStackPop, this));
     
@@ -94,4 +97,5 @@ void SettingsState::addButtonLabel(Player::Action action, float y, const std::st
     mGUIContainer.pack(mBindingButtons[action]);
     mGUIContainer.pack(mBindingLabels[action]);
 }
+
 

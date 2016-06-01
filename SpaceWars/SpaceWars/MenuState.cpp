@@ -6,7 +6,6 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/View.hpp>
 
-
 MenuState::MenuState(StateStack& stack, Context context)
 : State(stack, context)
 , mGUIContainer()
@@ -15,7 +14,7 @@ MenuState::MenuState(StateStack& stack, Context context)
     mBackgroundSprite.setTexture(texture);
     
     auto playButton = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
-    playButton->setPosition(100, 250);
+    playButton->setPosition(100, 300);
     playButton->setText("Play");
     playButton->setCallback([this] ()
                             {
@@ -24,7 +23,7 @@ MenuState::MenuState(StateStack& stack, Context context)
                             });
     
     auto settingsButton = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
-    settingsButton->setPosition(100, 300);
+    settingsButton->setPosition(100, 350);
     settingsButton->setText("Settings");
     settingsButton->setCallback([this] ()
                                 {
@@ -32,7 +31,7 @@ MenuState::MenuState(StateStack& stack, Context context)
                                 });
     
     auto exitButton = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
-    exitButton->setPosition(100, 350);
+    exitButton->setPosition(100, 400);
     exitButton->setText("Exit");
     exitButton->setCallback([this] ()
                                 {
@@ -64,3 +63,4 @@ bool MenuState::handleEvent(const sf::Event& event)
     mGUIContainer.handleEvent(event);
     return false;
 }
+
