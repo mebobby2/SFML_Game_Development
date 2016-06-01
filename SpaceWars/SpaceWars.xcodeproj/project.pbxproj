@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070573111CFE673800C17EDF /* GameOverState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0705730F1CFE673800C17EDF /* GameOverState.cpp */; };
 		0722368B1CE2DCA60086A0CF /* Command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 072236891CE2DCA60086A0CF /* Command.cpp */; };
 		0736EBF31CEC3FA600564375 /* TitleScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 0736EBF21CEC3FA600564375 /* TitleScreen.png */; };
 		073FC2C51CEE6A4A00FEB22B /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 073FC2C31CEE6A4A00FEB22B /* Label.cpp */; };
@@ -56,6 +57,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0705730F1CFE673800C17EDF /* GameOverState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverState.cpp; sourceTree = "<group>"; };
+		070573101CFE673800C17EDF /* GameOverState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameOverState.hpp; sourceTree = "<group>"; };
 		072236891CE2DCA60086A0CF /* Command.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Command.cpp; sourceTree = "<group>"; };
 		0722368A1CE2DCA60086A0CF /* Command.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Command.hpp; sourceTree = "<group>"; };
 		0722368D1CE2DDD40086A0CF /* Category.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Category.hpp; sourceTree = "<group>"; };
@@ -190,6 +193,8 @@
 				07BEA7F91CED2BA50023120D /* LoadingState.hpp */,
 				073FC2CF1CEE7FBB00FEB22B /* SettingsState.cpp */,
 				073FC2D01CEE7FBB00FEB22B /* SettingsState.hpp */,
+				0705730F1CFE673800C17EDF /* GameOverState.cpp */,
+				070573101CFE673800C17EDF /* GameOverState.hpp */,
 			);
 			name = States;
 			sourceTree = "<group>";
@@ -478,6 +483,7 @@
 				07BEA7F71CED29060023120D /* ParallelTask.cpp in Sources */,
 				0743C6B51CEFCE040080E356 /* DataTables.cpp in Sources */,
 				0752C7EE1CE1A39300EF1365 /* World.cpp in Sources */,
+				070573111CFE673800C17EDF /* GameOverState.cpp in Sources */,
 				073FC2C51CEE6A4A00FEB22B /* Label.cpp in Sources */,
 				9242CAB41CD85A5600AC8A64 /* SceneNode.cpp in Sources */,
 				07468E161CE579690089667C /* State.cpp in Sources */,
