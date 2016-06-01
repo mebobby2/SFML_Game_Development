@@ -35,7 +35,7 @@ Aircraft::Aircraft(Type type, const TextureHolder& textures, const FontHolder& f
 , mSprite(textures.get(Table[type].texture))
 , mFireRateLevel(1)
 , mSpreadLevel(1)
-, mMissibleAmmo(2)
+, mMissileAmmo(2)
 , mDropPickupCommand()
 , mTravelledDistance(0.f)
 , mDirectionIndex(0)
@@ -141,7 +141,7 @@ void Aircraft::increaseSpread()
 
 void Aircraft::collectMissiles(unsigned int count)
 {
-    mMissibleAmmo += count;
+    mMissileAmmo += count;
 }
 
 void Aircraft::fire()
@@ -152,10 +152,10 @@ void Aircraft::fire()
 
 void Aircraft::launchMissile()
 {
-    if (mMissibleAmmo > 0)
+    if (mMissileAmmo > 0)
     {
         mIsLaunchingMissile = true;
-        --mMissibleAmmo;
+        --mMissileAmmo;
     }
 }
 
@@ -290,9 +290,9 @@ void Aircraft::updateTexts()
     mHealthDisplay->setRotation(-getRotation());
     
     if (mMissileDisplay) {
-        if (mMissibleAmmo == 0)
+        if (mMissileAmmo == 0)
             mMissileDisplay->setString("");
         else
-            mMissileDisplay->setString("M: " + toString(mMissibleAmmo));
+            mMissileDisplay->setString("M: " + toString(mMissileAmmo));
     }
 }
