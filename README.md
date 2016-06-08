@@ -14,3 +14,6 @@
 4. Compile and run the skeleton template.
 
 ## Upto Page 185
+
+Done:
+ResourceIdentifiers

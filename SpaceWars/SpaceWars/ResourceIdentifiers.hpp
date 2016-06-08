@@ -13,26 +13,31 @@ namespace sf
 {
     class Texture;
     class Font;
+    class Shader;
 }
 
 namespace Textures
 {
     enum ID
     {
-        Eagle,
-        Rapter,
-        Avenger,
-        Bullet,
-        Missile,
-        Desert,
-        HealthRefill,
-        MissileRefill,
-        FireSpread,
-        FireRate,
+        Entities,
+        Jungle,
         TitleScreen,
-        ButtonNormal,
-        ButtonSelected,
-        ButtonPressed
+        Buttons,
+        Explosion,
+        Particle,
+        FinishLine,
+    };
+}
+
+namespace Shaders
+{
+    enum ID
+    {
+        BrightnessPass,
+        DownSamplePass,
+        GaussianBlurPass,
+        AddPass,
     };
 }
 
@@ -49,5 +54,8 @@ class ResourceHolder;
 
 typedef ResourceHolder<sf::Texture, Textures::ID> TextureHolder;
 typedef ResourceHolder<sf::Font, Fonts::ID> FontHolder;
+typedef ResourceHolder<sf::Shader, Shaders::ID> ShaderHolder;
 
 #endif /* defined(__SpaceWars__ResourceIdentifiers__) */
+
+
