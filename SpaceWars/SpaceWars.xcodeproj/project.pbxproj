@@ -16,6 +16,11 @@
 		073DBCBD1D08D34F00A3CC06 /* Jungle.png in Resources */ = {isa = PBXBuildFile; fileRef = 073DBCB61D08D34F00A3CC06 /* Jungle.png */; };
 		073DBCBE1D08D34F00A3CC06 /* Particle.png in Resources */ = {isa = PBXBuildFile; fileRef = 073DBCB71D08D34F00A3CC06 /* Particle.png */; };
 		073DBCBF1D08D34F00A3CC06 /* TitleScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 073DBCB81D08D34F00A3CC06 /* TitleScreen.png */; };
+		073DBCC61D08D39700A3CC06 /* Add.frag in Resources */ = {isa = PBXBuildFile; fileRef = 073DBCC11D08D39700A3CC06 /* Add.frag */; };
+		073DBCC71D08D39700A3CC06 /* Brightness.frag in Resources */ = {isa = PBXBuildFile; fileRef = 073DBCC21D08D39700A3CC06 /* Brightness.frag */; };
+		073DBCC81D08D39700A3CC06 /* DownSample.frag in Resources */ = {isa = PBXBuildFile; fileRef = 073DBCC31D08D39700A3CC06 /* DownSample.frag */; };
+		073DBCC91D08D39700A3CC06 /* Fullpass.vert in Resources */ = {isa = PBXBuildFile; fileRef = 073DBCC41D08D39700A3CC06 /* Fullpass.vert */; };
+		073DBCCA1D08D39700A3CC06 /* GuassianBlur.frag in Resources */ = {isa = PBXBuildFile; fileRef = 073DBCC51D08D39700A3CC06 /* GuassianBlur.frag */; };
 		073FC2C51CEE6A4A00FEB22B /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 073FC2C31CEE6A4A00FEB22B /* Label.cpp */; };
 		073FC2C81CEE700300FEB22B /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 073FC2C61CEE700300FEB22B /* Button.cpp */; };
 		073FC2D11CEE7FBB00FEB22B /* SettingsState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 073FC2CF1CEE7FBB00FEB22B /* SettingsState.cpp */; };
@@ -62,6 +67,11 @@
 		073DBCB61D08D34F00A3CC06 /* Jungle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jungle.png; sourceTree = "<group>"; };
 		073DBCB71D08D34F00A3CC06 /* Particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Particle.png; sourceTree = "<group>"; };
 		073DBCB81D08D34F00A3CC06 /* TitleScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TitleScreen.png; sourceTree = "<group>"; };
+		073DBCC11D08D39700A3CC06 /* Add.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Add.frag; sourceTree = "<group>"; };
+		073DBCC21D08D39700A3CC06 /* Brightness.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Brightness.frag; sourceTree = "<group>"; };
+		073DBCC31D08D39700A3CC06 /* DownSample.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DownSample.frag; sourceTree = "<group>"; };
+		073DBCC41D08D39700A3CC06 /* Fullpass.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Fullpass.vert; sourceTree = "<group>"; };
+		073DBCC51D08D39700A3CC06 /* GuassianBlur.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = GuassianBlur.frag; sourceTree = "<group>"; };
 		073FC2C31CEE6A4A00FEB22B /* Label.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Label.cpp; sourceTree = "<group>"; };
 		073FC2C41CEE6A4A00FEB22B /* Label.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Label.hpp; sourceTree = "<group>"; };
 		073FC2C61CEE700300FEB22B /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
@@ -148,6 +158,18 @@
 				07468E0B1CE542C70089667C /* CommandQueue.hpp */,
 			);
 			name = Commands;
+			sourceTree = "<group>";
+		};
+		073DBCC01D08D38900A3CC06 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				073DBCC11D08D39700A3CC06 /* Add.frag */,
+				073DBCC21D08D39700A3CC06 /* Brightness.frag */,
+				073DBCC31D08D39700A3CC06 /* DownSample.frag */,
+				073DBCC41D08D39700A3CC06 /* Fullpass.vert */,
+				073DBCC51D08D39700A3CC06 /* GuassianBlur.frag */,
+			);
+			name = Shaders;
 			sourceTree = "<group>";
 		};
 		0743C6B21CEFCDF70080E356 /* Config */ = {
@@ -333,6 +355,7 @@
 		92F130391CD06F710009C29C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				073DBCC01D08D38900A3CC06 /* Shaders */,
 				07551B201CE29B6000D1CE8F /* Textures */,
 				07551B1E1CE29B4900D1CE8F /* Sansation.ttf */,
 			);
@@ -399,10 +422,15 @@
 				073DBCBA1D08D34F00A3CC06 /* Entities.png in Resources */,
 				073DBCBC1D08D34F00A3CC06 /* FinishLine.png in Resources */,
 				073DBCBD1D08D34F00A3CC06 /* Jungle.png in Resources */,
+				073DBCCA1D08D39700A3CC06 /* GuassianBlur.frag in Resources */,
 				073DBCBE1D08D34F00A3CC06 /* Particle.png in Resources */,
 				073DBCBF1D08D34F00A3CC06 /* TitleScreen.png in Resources */,
+				073DBCC61D08D39700A3CC06 /* Add.frag in Resources */,
+				073DBCC81D08D39700A3CC06 /* DownSample.frag in Resources */,
+				073DBCC71D08D39700A3CC06 /* Brightness.frag in Resources */,
 				073DBCBB1D08D34F00A3CC06 /* Explosion.png in Resources */,
 				07551B1F1CE29B4900D1CE8F /* Sansation.ttf in Resources */,
+				073DBCC91D08D39700A3CC06 /* Fullpass.vert in Resources */,
 				073DBCB91D08D34F00A3CC06 /* Buttons.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
