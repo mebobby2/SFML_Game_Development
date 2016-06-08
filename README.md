@@ -15,9 +15,10 @@
 
 ## Upto Page 189
 
-Before that, implement all the classes under Entities folder so they can use the spritesheet instead of the individual sprites.
+#Before that
+implement all the classes under Entities folder so they can use the spritesheet instead of the individual sprites.
 
-Done:
+#Done
 1. ResourceIdentifiers
 2. Particle
 3. Datatables
