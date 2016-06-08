@@ -173,6 +173,14 @@
 			name = Shaders;
 			sourceTree = "<group>";
 		};
+		073DBCCE1D08DD0700A3CC06 /* Particle */ = {
+			isa = PBXGroup;
+			children = (
+				073DBCCC1D08D69C00A3CC06 /* Particle.hpp */,
+			);
+			name = Particle;
+			sourceTree = "<group>";
+		};
 		0743C6B21CEFCDF70080E356 /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,7 +222,6 @@
 				07BC13891CEC160E00615DBE /* Utility.cpp */,
 				07BC138A1CEC160E00615DBE /* Utility.hpp */,
 				07BC138C1CEC16AF00615DBE /* Utility.inl */,
-				073DBCCC1D08D69C00A3CC06 /* Particle.hpp */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -329,6 +336,7 @@
 		92F130311CD06F710009C29C /* SpaceWars */ = {
 			isa = PBXGroup;
 			children = (
+				073DBCCE1D08DD0700A3CC06 /* Particle */,
 				0743C6B21CEFCDF70080E356 /* Config */,
 				07A999961CED6C4600C5FFFD /* GUI */,
 				07A999951CED6B9E00C5FFFD /* Tasks */,
