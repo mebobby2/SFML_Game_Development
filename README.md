@@ -16,4 +16,6 @@
 ## Upto Page 185
 
 Done:
-ResourceIdentifiers
+1. ResourceIdentifiers
+2. Particle
+3. Datatables

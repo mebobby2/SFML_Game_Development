@@ -72,6 +72,7 @@
 		073DBCC31D08D39700A3CC06 /* DownSample.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DownSample.frag; sourceTree = "<group>"; };
 		073DBCC41D08D39700A3CC06 /* Fullpass.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Fullpass.vert; sourceTree = "<group>"; };
 		073DBCC51D08D39700A3CC06 /* GuassianBlur.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = GuassianBlur.frag; sourceTree = "<group>"; };
+		073DBCCC1D08D69C00A3CC06 /* Particle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Particle.hpp; sourceTree = "<group>"; };
 		073FC2C31CEE6A4A00FEB22B /* Label.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Label.cpp; sourceTree = "<group>"; };
 		073FC2C41CEE6A4A00FEB22B /* Label.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Label.hpp; sourceTree = "<group>"; };
 		073FC2C61CEE700300FEB22B /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
@@ -213,6 +214,7 @@
 				07BC13891CEC160E00615DBE /* Utility.cpp */,
 				07BC138A1CEC160E00615DBE /* Utility.hpp */,
 				07BC138C1CEC16AF00615DBE /* Utility.inl */,
+				073DBCCC1D08D69C00A3CC06 /* Particle.hpp */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
