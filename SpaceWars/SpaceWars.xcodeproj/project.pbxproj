@@ -21,6 +21,7 @@
 		073DBCC81D08D39700A3CC06 /* DownSample.frag in Resources */ = {isa = PBXBuildFile; fileRef = 073DBCC31D08D39700A3CC06 /* DownSample.frag */; };
 		073DBCC91D08D39700A3CC06 /* Fullpass.vert in Resources */ = {isa = PBXBuildFile; fileRef = 073DBCC41D08D39700A3CC06 /* Fullpass.vert */; };
 		073DBCCA1D08D39700A3CC06 /* GuassianBlur.frag in Resources */ = {isa = PBXBuildFile; fileRef = 073DBCC51D08D39700A3CC06 /* GuassianBlur.frag */; };
+		073DBCD21D08DD5800A3CC06 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 073DBCD01D08DD5800A3CC06 /* Animation.cpp */; };
 		073FC2C51CEE6A4A00FEB22B /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 073FC2C31CEE6A4A00FEB22B /* Label.cpp */; };
 		073FC2C81CEE700300FEB22B /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 073FC2C61CEE700300FEB22B /* Button.cpp */; };
 		073FC2D11CEE7FBB00FEB22B /* SettingsState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 073FC2CF1CEE7FBB00FEB22B /* SettingsState.cpp */; };
@@ -73,6 +74,8 @@
 		073DBCC41D08D39700A3CC06 /* Fullpass.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Fullpass.vert; sourceTree = "<group>"; };
 		073DBCC51D08D39700A3CC06 /* GuassianBlur.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = GuassianBlur.frag; sourceTree = "<group>"; };
 		073DBCCC1D08D69C00A3CC06 /* Particle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Particle.hpp; sourceTree = "<group>"; };
+		073DBCD01D08DD5800A3CC06 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
+		073DBCD11D08DD5800A3CC06 /* Animation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Animation.hpp; sourceTree = "<group>"; };
 		073FC2C31CEE6A4A00FEB22B /* Label.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Label.cpp; sourceTree = "<group>"; };
 		073FC2C41CEE6A4A00FEB22B /* Label.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Label.hpp; sourceTree = "<group>"; };
 		073FC2C61CEE700300FEB22B /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
@@ -179,6 +182,15 @@
 				073DBCCC1D08D69C00A3CC06 /* Particle.hpp */,
 			);
 			name = Particle;
+			sourceTree = "<group>";
+		};
+		073DBCCF1D08DD3500A3CC06 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				073DBCD01D08DD5800A3CC06 /* Animation.cpp */,
+				073DBCD11D08DD5800A3CC06 /* Animation.hpp */,
+			);
+			name = Animation;
 			sourceTree = "<group>";
 		};
 		0743C6B21CEFCDF70080E356 /* Config */ = {
@@ -336,6 +348,7 @@
 		92F130311CD06F710009C29C /* SpaceWars */ = {
 			isa = PBXGroup;
 			children = (
+				073DBCCF1D08DD3500A3CC06 /* Animation */,
 				073DBCCE1D08DD0700A3CC06 /* Particle */,
 				0743C6B21CEFCDF70080E356 /* Config */,
 				07A999961CED6C4600C5FFFD /* GUI */,
@@ -500,6 +513,7 @@
 				92F130351CD06F710009C29C /* ResourcePath.mm in Sources */,
 				07BC13991CEC310B00615DBE /* PauseState.cpp in Sources */,
 				9242CAAE1CD8562800AC8A64 /* Aircraft.cpp in Sources */,
+				073DBCD21D08DD5800A3CC06 /* Animation.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

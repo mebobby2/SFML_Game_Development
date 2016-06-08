@@ -13,9 +13,14 @@
 3. Make sure the C++ Compiler and Standard Library is set to C++11 with Clang and libc++
 4. Compile and run the skeleton template.
 
-## Upto Page 185
+## Upto Page 189
+
+Before that, implement all the classes under Entities folder so they can use the spritesheet instead of the individual sprites.
 
 Done:
 1. ResourceIdentifiers
 2. Particle
 3. Datatables
+4. Animation
+
+
