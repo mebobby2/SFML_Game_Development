@@ -23,5 +23,6 @@ implement all the classes under Entities folder so they can use the spritesheet 
 2. Particle
 3. Datatables
 4. Animation
+5. Entity
 
 

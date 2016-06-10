@@ -10,7 +10,6 @@
 #define __SpaceWars__Entity__
 
 #include "SceneNode.hpp"
-#include "CommandQueue.hpp"
 
 class Entity : public SceneNode
 {
@@ -27,6 +26,7 @@ public:
     void repair(int points);
     void damage(int points);
     void destroy();
+    virtual void remove();
     virtual bool isDestroyed() const;
     
 protected:
@@ -38,4 +38,6 @@ private:
 };
 
 #endif /* defined(__SpaceWars__Entity__) */
+
+
 
