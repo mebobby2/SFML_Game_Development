@@ -16,7 +16,7 @@
 ## Upto Page 189
 
 #Before that
-implement all the classes under Entities folder so they can use the spritesheet instead of the individual sprites.
+implement EmiterNode and Projectile so it can use the spritesheet instead of the individual sprite.
 
 #Done
 1. ResourceIdentifiers
@@ -26,5 +26,6 @@ implement all the classes under Entities folder so they can use the spritesheet 
 5. Entity
 6. Utility
 7. Aircraft
+8. Pickup
 
 

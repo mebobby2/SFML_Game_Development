@@ -46,3 +46,4 @@ private:
 };
 
 #endif /* Pickup_hpp */
+
