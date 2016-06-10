@@ -7,6 +7,7 @@
 //
 
 #include "Utility.hpp"
+#include "Animation.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
@@ -143,13 +144,19 @@ std::string toString(sf::Keyboard::Key key)
 void centerOrigin(sf::Sprite& sprite)
 {
     sf::FloatRect bounds = sprite.getLocalBounds();
-    sprite.setOrigin(bounds.width / 2.f, bounds.height / 2.f);
+    sprite.setOrigin(std::floor(bounds.width / 2.f), std::floor(bounds.height / 2.f));
 }
 
 void centerOrigin(sf::Text& text)
 {
     sf::FloatRect bounds = text.getLocalBounds();
-    text.setOrigin(bounds.width / 2.f, bounds.height / 2.f);
+    text.setOrigin(std::floor(bounds.width / 2.f), std::floor(bounds.height / 2.f));
+}
+
+void centerOrigin(Animation& animation)
+{
+    sf::FloatRect bounds = animation.getLocalBounds();
+    animation.setOrigin(std::floor(bounds.width / 2.f), std::floor(bounds.height / 2.f));
 }
 
 float toDegree(float radian)
@@ -178,5 +185,3 @@ sf::Vector2f unitVector(sf::Vector2f vector)
     assert(vector != sf::Vector2f(0.f, 0.f));
     return vector / length(vector);
 }
-
-
