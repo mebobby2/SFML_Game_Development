@@ -29,5 +29,6 @@ implement Projectile so it can use the spritesheet instead of the individual spr
 8. Pickup
 9. Category
 10. ParticleNode
+11. EmitterNode
 
 
