@@ -58,4 +58,3 @@ typedef ResourceHolder<sf::Shader, Shaders::ID> ShaderHolder;
 
 #endif /* defined(__SpaceWars__ResourceIdentifiers__) */
 
-
