@@ -22,7 +22,7 @@ class ParticleNode : public SceneNode
 public:
     ParticleNode(Particle::Type type, const TextureHolder& textures);
     
-    void addParticles(sf::Vector2f position);
+    void addParticle(sf::Vector2f position);
     Particle::Type getParticleType() const;
     virtual unsigned int getCategory() const;
     

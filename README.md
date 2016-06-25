@@ -16,7 +16,7 @@
 ## Upto Page 189
 
 #Before that
-implement EmiterNode and Projectile so it can use the spritesheet instead of the individual sprite.
+implement Projectile so it can use the spritesheet instead of the individual sprite.
 
 #Done
 1. ResourceIdentifiers

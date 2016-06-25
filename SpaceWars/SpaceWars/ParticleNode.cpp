@@ -29,7 +29,7 @@ ParticleNode::ParticleNode(Particle::Type type, const TextureHolder& textures)
 {
 }
 
-void ParticleNode::addParticles(sf::Vector2f position)
+void ParticleNode::addParticle(sf::Vector2f position)
 {
     Particle particle;
     particle.position = position;

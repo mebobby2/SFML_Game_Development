@@ -50,6 +50,8 @@
 		9242CAAE1CD8562800AC8A64 /* Aircraft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9242CAAC1CD8562800AC8A64 /* Aircraft.cpp */; };
 		9242CAB41CD85A5600AC8A64 /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9242CAB21CD85A5600AC8A64 /* SceneNode.cpp */; };
 		9266C7591CD711C10021AF29 /* ResourceHolder.inl in Sources */ = {isa = PBXBuildFile; fileRef = 9266C7571CD711C10021AF29 /* ResourceHolder.inl */; };
+		92BEE98F1D1E6423007E3F97 /* EmitterNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92BEE98D1D1E6423007E3F97 /* EmitterNode.cpp */; };
+		92BEE9921D1E6583007E3F97 /* ParticleNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92BEE9901D1E6583007E3F97 /* ParticleNode.cpp */; };
 		92D697BF1CD31272000CF4BB /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92D697BD1CD31272000CF4BB /* Application.cpp */; };
 		92F130351CD06F710009C29C /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 92F130341CD06F710009C29C /* ResourcePath.mm */; };
 		92F130381CD06F710009C29C /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92F130371CD06F710009C29C /* Main.cpp */; };
@@ -132,6 +134,10 @@
 		9266C7571CD711C10021AF29 /* ResourceHolder.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ResourceHolder.inl; sourceTree = "<group>"; };
 		9266C7581CD711C10021AF29 /* ResourceHolder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceHolder.hpp; sourceTree = "<group>"; };
 		926FBF741CDAF15200641B40 /* ResourceIdentifiers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceIdentifiers.hpp; sourceTree = "<group>"; };
+		92BEE98D1D1E6423007E3F97 /* EmitterNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EmitterNode.cpp; sourceTree = "<group>"; };
+		92BEE98E1D1E6423007E3F97 /* EmitterNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EmitterNode.hpp; sourceTree = "<group>"; };
+		92BEE9901D1E6583007E3F97 /* ParticleNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleNode.cpp; sourceTree = "<group>"; };
+		92BEE9911D1E6583007E3F97 /* ParticleNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ParticleNode.hpp; sourceTree = "<group>"; };
 		92D697BD1CD31272000CF4BB /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		92D697BE1CD31272000CF4BB /* Application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
 		92F1302F1CD06F710009C29C /* SpaceWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,14 +180,6 @@
 				073DBCC51D08D39700A3CC06 /* GuassianBlur.frag */,
 			);
 			name = Shaders;
-			sourceTree = "<group>";
-		};
-		073DBCCE1D08DD0700A3CC06 /* Particle */ = {
-			isa = PBXGroup;
-			children = (
-				073DBCCC1D08D69C00A3CC06 /* Particle.hpp */,
-			);
-			name = Particle;
 			sourceTree = "<group>";
 		};
 		073DBCCF1D08DD3500A3CC06 /* Animation */ = {
@@ -291,6 +289,7 @@
 		9242CAB01CD8593000AC8A64 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				073DBCCC1D08D69C00A3CC06 /* Particle.hpp */,
 				9242CAA91CD8544800AC8A64 /* Entity.cpp */,
 				9242CAAA1CD8544800AC8A64 /* Entity.hpp */,
 				9242CAAC1CD8562800AC8A64 /* Aircraft.cpp */,
@@ -306,12 +305,16 @@
 		9242CAB11CD85A1900AC8A64 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				92BEE98D1D1E6423007E3F97 /* EmitterNode.cpp */,
+				92BEE98E1D1E6423007E3F97 /* EmitterNode.hpp */,
 				0752C7E11CE19AD100EF1365 /* SpriteNode.cpp */,
 				0752C7E21CE19AD100EF1365 /* SpriteNode.hpp */,
 				9242CAB21CD85A5600AC8A64 /* SceneNode.cpp */,
 				9242CAB31CD85A5600AC8A64 /* SceneNode.hpp */,
 				076998E01CF1A41A00554CF5 /* TextNode.cpp */,
 				076998E11CF1A41A00554CF5 /* TextNode.hpp */,
+				92BEE9901D1E6583007E3F97 /* ParticleNode.cpp */,
+				92BEE9911D1E6583007E3F97 /* ParticleNode.hpp */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -349,7 +352,6 @@
 			isa = PBXGroup;
 			children = (
 				073DBCCF1D08DD3500A3CC06 /* Animation */,
-				073DBCCE1D08DD0700A3CC06 /* Particle */,
 				0743C6B21CEFCDF70080E356 /* Config */,
 				07A999961CED6C4600C5FFFD /* GUI */,
 				07A999951CED6B9E00C5FFFD /* Tasks */,
@@ -487,6 +489,7 @@
 				07468E1C1CE57F020089667C /* StateStack.cpp in Sources */,
 				92D697BF1CD31272000CF4BB /* Application.cpp in Sources */,
 				07BC13931CEC1B9C00615DBE /* TitleState.cpp in Sources */,
+				92BEE98F1D1E6423007E3F97 /* EmitterNode.cpp in Sources */,
 				073FC2C81CEE700300FEB22B /* Button.cpp in Sources */,
 				9266C7591CD711C10021AF29 /* ResourceHolder.inl in Sources */,
 				07BEA7FA1CED2BA50023120D /* LoadingState.cpp in Sources */,
@@ -500,6 +503,7 @@
 				07BC138D1CEC16AF00615DBE /* Utility.inl in Sources */,
 				076998E21CF1A41A00554CF5 /* TextNode.cpp in Sources */,
 				07A9999C1CED6F4F00C5FFFD /* Container.cpp in Sources */,
+				92BEE9921D1E6583007E3F97 /* ParticleNode.cpp in Sources */,
 				0752C7E31CE19AD100EF1365 /* SpriteNode.cpp in Sources */,
 				0743C6B81CEFD0200080E356 /* Pickup.cpp in Sources */,
 				07468E0F1CE546AF0089667C /* Player.cpp in Sources */,
