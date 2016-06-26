@@ -61,3 +61,4 @@ void ResourceHolder<Resource, Identifier>::insertResource(Identifier id, std::un
     auto inserted = mResourceMap.insert(std::make_pair(id, std::move(resource)));
     assert(inserted.second);
 }
+

@@ -30,5 +30,6 @@
 12. ResourceIdentifiers.hpp
 13. Application
 14. Projectile
+15. ResourceHolder
 
 

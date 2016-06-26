@@ -48,7 +48,5 @@ class ResourceHolder
 // extension for inline template implementations.
 #include "ResourceHolder.inl"
 
-
-
-
 #endif /* defined(__SpaceWars__TextureHolder__) */
+
