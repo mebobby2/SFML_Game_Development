@@ -38,6 +38,10 @@ private:
     const sf::Texture& mTexture;
     Particle::Type mType;
     
+    //sf::VertexArray allows faster rendering of assets because all vertexes stored in the
+    //vertexarray can be passed to the GPU in one go and rendered all at oance. If we do not
+    //use a vertexarray, but a vector of sprites, we would need to call the GPU each time
+    //we wanted to render a sprite, and more calls to the GPU, the slower the performance.
     mutable sf::VertexArray mVertexArray;
     mutable bool mNeedsVertexUpdate;
 };

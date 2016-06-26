@@ -51,6 +51,13 @@ unsigned int ParticleNode::getCategory() const
 
 void ParticleNode::updateCurrent(sf::Time dt, CommandQueue&)
 {
+    //A vector provides insertion/deletion at the middle and the the end.
+    //A deque (pronounced deck) not only allows insertion/deletion at the middle
+    //and end, but also the front. Deque acheives this because it does not store its
+    //elements sequentially in memory, like a vector, but it stores them scattered
+    //in memory.
+    //Older particles are stored in the front of the list, this is the reason we use
+    //a deque over a vector because deques allow deletion at the front.
     while (!mParticles.empty() && mParticles.front().lifetime <= sf::Time::Zero)
         mParticles.pop_front();
     
