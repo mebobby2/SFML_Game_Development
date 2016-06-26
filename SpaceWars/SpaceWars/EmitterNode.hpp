@@ -26,6 +26,10 @@ private:
 private:
     sf::Time mAccumulatedTime;
     Particle::Type mType;
+    
+    //This is a pointer because there is only two instances of our particle system.
+    //One for smoke and one for propellant. Therefore, EmitterNode is responsible for
+    //finding the correct particle system to use and referencing it.
     ParticleNode* mParticleSystem;
 };
 
