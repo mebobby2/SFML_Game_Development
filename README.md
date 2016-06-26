@@ -31,5 +31,7 @@
 13. Application
 14. Projectile
 15. ResourceHolder
+16. PostEffect
+17. BloomEffect
 
 
