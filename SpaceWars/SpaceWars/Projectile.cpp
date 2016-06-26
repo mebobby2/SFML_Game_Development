@@ -10,6 +10,7 @@
 #include "DataTables.hpp"
 #include "Utility.hpp"
 #include "ResourceHolder.hpp"
+#include "EmitterNode.hpp"
 
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
@@ -25,10 +26,21 @@ namespace
 Projectile::Projectile(Type type, const TextureHolder& textures)
 : Entity(1)
 , mType(type)
-, mSprite(textures.get(Table[type].texture))
+, mSprite(textures.get(Table[type].texture, Table[type].textureRect))
 , mTargetDirection()
 {
     centerOrigin(mSprite);
+    
+    if (isGuided())
+    {
+        std::unique_ptr<EmitterNode> smoke(new EmitterNode(Particle::Smoke));
+        smoke->setPosition(0.f, getBoundingRect().height / 2.f);
+        attachChild(std::move(smoke));
+        
+        std::unique_ptr<EmitterNode> propellant(new EmitterNode(Particle::Propellant));
+        propellant->setPosition(0.f, getBoundingRect().height / 2.f);
+        attachChild(std::move(propellant));
+    }
 }
 
 void Projectile::guideTowards(sf::Vector2f position)
@@ -93,3 +105,4 @@ int Projectile::getDamage() const
 {
     return Table[mType].damage;
 }
+

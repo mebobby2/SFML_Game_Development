@@ -15,9 +15,6 @@
 
 ## Upto Page 189
 
-#Before that
-implement Projectile so it can use the spritesheet instead of the individual sprite.
-
 #Done
 1. ResourceIdentifiers
 2. Particle
@@ -32,5 +29,6 @@ implement Projectile so it can use the spritesheet instead of the individual spr
 11. EmitterNode
 12. ResourceIdentifiers.hpp
 13. Application
+14. Projectile
 
 
