@@ -26,7 +26,7 @@ namespace
 Projectile::Projectile(Type type, const TextureHolder& textures)
 : Entity(1)
 , mType(type)
-, mSprite(textures.get(Table[type].texture, Table[type].textureRect))
+, mSprite(textures.get(Table[type].texture), Table[type].textureRect)
 , mTargetDirection()
 {
     centerOrigin(mSprite);
