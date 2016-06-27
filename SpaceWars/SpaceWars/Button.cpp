@@ -17,19 +17,16 @@ namespace GUI
 {
     Button::Button(const FontHolder& fonts, const TextureHolder& textures)
     : mCallback()
-    , mNormalTexture(textures.get(Textures::ButtonNormal))
-    , mSelectedTexture(textures.get(Textures::ButtonSelected))
-    , mPressedTexture(textures.get(Textures::ButtonPressed))
-    , mSprite()
+    , mSprite(textures.get(Textures::Buttons))
     , mText("", fonts.get(Fonts::Main), 16)
     , mIsToggle(false)
     {
-        mSprite.setTexture(mNormalTexture);
+        changeTexture(Normal);
         
         sf::FloatRect bounds = mSprite.getLocalBounds();
         mText.setPosition(bounds.width / 2.f, bounds.height / 2.f);
     }
-    
+   
     void Button::setCallback(Callback callback)
     {
         mCallback = std::move(callback);
@@ -54,13 +51,13 @@ namespace GUI
     void Button::select()
     {
         Component::select();
-        mSprite.setTexture(mSelectedTexture);
+        changeTexture(Selected);
     }
     
     void Button::deselect()
     {
         Component::deselect();
-        mSprite.setTexture(mNormalTexture);
+        changeTexture(Normal);
     }
     
     void Button::activate()
@@ -68,7 +65,7 @@ namespace GUI
         Component::activate();
         
         if (mIsToggle)
-            mSprite.setTexture(mPressedTexture);
+            changeTexture(Pressed);
         
         if (mCallback)
             mCallback();
@@ -84,9 +81,9 @@ namespace GUI
         
         if (mIsToggle) {
             if (isSelected())
-                mSprite.setTexture(mSelectedTexture);
+                changeTexture(Selected);
             else
-                mSprite.setTexture(mNormalTexture);
+                changeTexture(Normal);
         }
     }
     
@@ -100,5 +97,10 @@ namespace GUI
         target.draw(mSprite, states);
         target.draw(mText, states);
     }
+    
+    void Button::changeTexture(Type buttonType)
+    {
+        sf::IntRect textureRect(0, 50 * buttonType, 200, 50);
+        mSprite.setTextureRect(textureRect);
+    }
 }
-
