@@ -13,7 +13,7 @@
 3. Make sure the C++ Compiler and Standard Library is set to C++11 with Clang and libc++
 4. Compile and run the skeleton template.
 
-## Upto Page 200 - The particle system is attached to a layer node directly under the scene graph's root
+## Upto Page 204 - The Eagle has rolled!
 
 #Done
 1. ResourceIdentifiers
