@@ -15,8 +15,6 @@
 
 ## Upto Page 200 - The particle system is attached to a layer node directly under the scene graph's root
 
-## Before that, implement world.cpp. world.hpp is already done.
-
 #Done
 1. ResourceIdentifiers
 2. Particle
@@ -35,5 +33,6 @@
 15. ResourceHolder
 16. PostEffect
 17. BloomEffect
+18. World
 
 
