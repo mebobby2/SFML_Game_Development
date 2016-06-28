@@ -15,25 +15,3 @@
 
 ## Upto Page 217 - Chapter 9
 
-#Done
-1. ResourceIdentifiers
-2. Particle
-3. Datatables
-4. Animation
-5. Entity
-6. Utility
-7. Aircraft
-8. Pickup
-9. Category
-10. ParticleNode
-11. EmitterNode
-12. ResourceIdentifiers.hpp
-13. Application
-14. Projectile
-15. ResourceHolder
-16. PostEffect
-17. BloomEffect
-18. World
-19. Button
-
-
