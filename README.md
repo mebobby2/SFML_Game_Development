@@ -13,7 +13,7 @@
 3. Make sure the C++ Compiler and Standard Library is set to C++11 with Clang and libc++
 4. Compile and run the skeleton template.
 
-## Upto Page 204 - The Eagle has rolled!
+## Upto Page 217 - Chapter 9
 
 #Done
 1. ResourceIdentifiers
