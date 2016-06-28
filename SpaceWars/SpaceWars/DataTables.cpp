@@ -46,7 +46,7 @@ std::vector<AircraftData> initializeAircraftData()
     data[Aircraft::Raptor].directions.push_back(Direction(-45.f, 160.f));
     data[Aircraft::Raptor].directions.push_back(Direction(+45.f, 80.f));
     data[Aircraft::Raptor].fireInterval = sf::Time::Zero;
-    data[Aircraft::Eagle].hasRollAnimation = false;
+    data[Aircraft::Raptor].hasRollAnimation = false;
     
     data[Aircraft::Avenger].hitpoints = 40;
     data[Aircraft::Avenger].speed = 50.f;
@@ -58,7 +58,7 @@ std::vector<AircraftData> initializeAircraftData()
     data[Aircraft::Avenger].directions.push_back(Direction(0.f, 50.f));
     data[Aircraft::Avenger].directions.push_back(Direction(+45.f, 50.f));
     data[Aircraft::Avenger].fireInterval = sf::seconds(2);
-    data[Aircraft::Eagle].hasRollAnimation = false;
+    data[Aircraft::Avenger].hasRollAnimation = false;
 
     return data;
 }
