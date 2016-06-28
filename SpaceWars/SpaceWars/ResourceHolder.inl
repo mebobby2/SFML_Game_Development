@@ -6,9 +6,7 @@
 //  Copyright (c) 2016 mebobby. All rights reserved.
 //
 
-#include "ResourceHolder.hpp"
 #include "ResourcePath.hpp"
-#include <cassert>
 
 template <typename Resource, typename Identifier>
 void ResourceHolder<Resource, Identifier>::load(Identifier id, const std::string &filename)
