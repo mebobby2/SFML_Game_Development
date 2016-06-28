@@ -8,6 +8,8 @@
 
 #include "GameState.hpp"
 
+#include <SFML/Graphics/RenderWindow.hpp>
+
 GameState::GameState(StateStack& stack, Context context)
 : State(stack, context)
 , mWorld(*context.window, *context.fonts)
