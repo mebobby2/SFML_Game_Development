@@ -104,7 +104,7 @@ void World::loadTextures()
     mTextures.load(Textures::Jungle, "Jungle.png");
     mTextures.load(Textures::Explosion, "Explosion.png");
     mTextures.load(Textures::Particle, "Particle.png");
-    mTextures.load(Textures::FinishLine, "FinishLine");
+    mTextures.load(Textures::FinishLine, "FinishLine.png");
 }
 
 void World::adaptPlayerPosition()
