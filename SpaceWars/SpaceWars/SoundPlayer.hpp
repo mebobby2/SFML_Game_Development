@@ -21,6 +21,7 @@
 
 class SoundPlayer : private sf::NonCopyable
 {
+public:
     SoundPlayer();
     
     void play(SoundEffect::ID effect);

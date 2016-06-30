@@ -25,12 +25,15 @@ Application::Application()
 , mTextures()
 , mFonts()
 , mPlayer()
+, mMusic()
+, mSounds()
 , mStateStack(State::Context(mWindow, mTextures, mFonts, mPlayer))
 , mStatisticsText()
 , mStatisticsUpdateTime()
 , mStatisticsNumFrames(0)
 {    
     mWindow.setKeyRepeatEnabled(false);
+    mWindow.setVerticalSyncEnabled(true);
     
     mFonts.load(Fonts::Main, "Sansation.ttf");
     
@@ -43,6 +46,8 @@ Application::Application()
     
     registerStates();
     mStateStack.pushState(States::Title);
+    
+    mMusic.setVolume(25.f);
 }
 
 void Application::run()
