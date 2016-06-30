@@ -52,6 +52,13 @@
 		9266C7591CD711C10021AF29 /* ResourceHolder.inl in Sources */ = {isa = PBXBuildFile; fileRef = 9266C7571CD711C10021AF29 /* ResourceHolder.inl */; };
 		9296BA0F1D1FE86800A9B6B4 /* PostEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9296BA0D1D1FE86800A9B6B4 /* PostEffect.cpp */; };
 		9296BA121D1FEC4D00A9B6B4 /* BloomEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9296BA101D1FEC4D00A9B6B4 /* BloomEffect.cpp */; };
+		9296BBEA1D256948002DF21A /* AlliedGunfire.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9296BBE31D256948002DF21A /* AlliedGunfire.wav */; };
+		9296BBEB1D256948002DF21A /* Button.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9296BBE41D256948002DF21A /* Button.wav */; };
+		9296BBEC1D256948002DF21A /* CollectPickup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9296BBE51D256948002DF21A /* CollectPickup.wav */; };
+		9296BBED1D256948002DF21A /* EnemyGunfire.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9296BBE61D256948002DF21A /* EnemyGunfire.wav */; };
+		9296BBEE1D256948002DF21A /* Explosion1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9296BBE71D256948002DF21A /* Explosion1.wav */; };
+		9296BBEF1D256948002DF21A /* Explosion2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9296BBE81D256948002DF21A /* Explosion2.wav */; };
+		9296BBF01D256948002DF21A /* LaunchMissile.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9296BBE91D256948002DF21A /* LaunchMissile.wav */; };
 		92BEE98F1D1E6423007E3F97 /* EmitterNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92BEE98D1D1E6423007E3F97 /* EmitterNode.cpp */; };
 		92BEE9921D1E6583007E3F97 /* ParticleNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92BEE9901D1E6583007E3F97 /* ParticleNode.cpp */; };
 		92D697BF1CD31272000CF4BB /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92D697BD1CD31272000CF4BB /* Application.cpp */; };
@@ -140,6 +147,15 @@
 		9296BA0E1D1FE86800A9B6B4 /* PostEffect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PostEffect.hpp; sourceTree = "<group>"; };
 		9296BA101D1FEC4D00A9B6B4 /* BloomEffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BloomEffect.cpp; sourceTree = "<group>"; };
 		9296BA111D1FEC4D00A9B6B4 /* BloomEffect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BloomEffect.hpp; sourceTree = "<group>"; };
+		9296BBE01D256934002DF21A /* MenuTheme.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = MenuTheme.ogg; sourceTree = "<group>"; };
+		9296BBE11D256934002DF21A /* MissionTheme.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = MissionTheme.ogg; sourceTree = "<group>"; };
+		9296BBE31D256948002DF21A /* AlliedGunfire.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = AlliedGunfire.wav; sourceTree = "<group>"; };
+		9296BBE41D256948002DF21A /* Button.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Button.wav; sourceTree = "<group>"; };
+		9296BBE51D256948002DF21A /* CollectPickup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CollectPickup.wav; sourceTree = "<group>"; };
+		9296BBE61D256948002DF21A /* EnemyGunfire.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = EnemyGunfire.wav; sourceTree = "<group>"; };
+		9296BBE71D256948002DF21A /* Explosion1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Explosion1.wav; sourceTree = "<group>"; };
+		9296BBE81D256948002DF21A /* Explosion2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Explosion2.wav; sourceTree = "<group>"; };
+		9296BBE91D256948002DF21A /* LaunchMissile.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LaunchMissile.wav; sourceTree = "<group>"; };
 		92BEE98D1D1E6423007E3F97 /* EmitterNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EmitterNode.cpp; sourceTree = "<group>"; };
 		92BEE98E1D1E6423007E3F97 /* EmitterNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EmitterNode.hpp; sourceTree = "<group>"; };
 		92BEE9901D1E6583007E3F97 /* ParticleNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleNode.cpp; sourceTree = "<group>"; };
@@ -349,6 +365,29 @@
 			name = Effects;
 			sourceTree = "<group>";
 		};
+		9296BBDF1D256926002DF21A /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				9296BBE01D256934002DF21A /* MenuTheme.ogg */,
+				9296BBE11D256934002DF21A /* MissionTheme.ogg */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
+		9296BBE21D256939002DF21A /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				9296BBE31D256948002DF21A /* AlliedGunfire.wav */,
+				9296BBE41D256948002DF21A /* Button.wav */,
+				9296BBE51D256948002DF21A /* CollectPickup.wav */,
+				9296BBE61D256948002DF21A /* EnemyGunfire.wav */,
+				9296BBE71D256948002DF21A /* Explosion1.wav */,
+				9296BBE81D256948002DF21A /* Explosion2.wav */,
+				9296BBE91D256948002DF21A /* LaunchMissile.wav */,
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
 		92F130251CD06F710009C29C = {
 			isa = PBXGroup;
 			children = (
@@ -398,6 +437,8 @@
 		92F130391CD06F710009C29C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9296BBE21D256939002DF21A /* Sound */,
+				9296BBDF1D256926002DF21A /* Music */,
 				073DBCC01D08D38900A3CC06 /* Shaders */,
 				07551B201CE29B6000D1CE8F /* Textures */,
 				07551B1E1CE29B4900D1CE8F /* Sansation.ttf */,
@@ -462,19 +503,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9296BBEB1D256948002DF21A /* Button.wav in Resources */,
 				073DBCBA1D08D34F00A3CC06 /* Entities.png in Resources */,
 				073DBCBC1D08D34F00A3CC06 /* FinishLine.png in Resources */,
+				9296BBED1D256948002DF21A /* EnemyGunfire.wav in Resources */,
+				9296BBEE1D256948002DF21A /* Explosion1.wav in Resources */,
+				9296BBEA1D256948002DF21A /* AlliedGunfire.wav in Resources */,
 				073DBCBD1D08D34F00A3CC06 /* Jungle.png in Resources */,
 				073DBCCA1D08D39700A3CC06 /* GuassianBlur.frag in Resources */,
 				073DBCBE1D08D34F00A3CC06 /* Particle.png in Resources */,
 				073DBCBF1D08D34F00A3CC06 /* TitleScreen.png in Resources */,
+				9296BBF01D256948002DF21A /* LaunchMissile.wav in Resources */,
 				073DBCC61D08D39700A3CC06 /* Add.frag in Resources */,
 				073DBCC81D08D39700A3CC06 /* DownSample.frag in Resources */,
 				073DBCC71D08D39700A3CC06 /* Brightness.frag in Resources */,
 				073DBCBB1D08D34F00A3CC06 /* Explosion.png in Resources */,
 				07551B1F1CE29B4900D1CE8F /* Sansation.ttf in Resources */,
+				9296BBEF1D256948002DF21A /* Explosion2.wav in Resources */,
 				073DBCC91D08D39700A3CC06 /* Fullpass.vert in Resources */,
 				073DBCB91D08D34F00A3CC06 /* Buttons.png in Resources */,
+				9296BBEC1D256948002DF21A /* CollectPickup.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
