@@ -10,6 +10,7 @@
 #include "Utility.hpp"
 #include "ResourceHolder.hpp"
 #include "Button.hpp"
+#include "MusicPlayer.hpp"
 
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
@@ -52,6 +53,13 @@ PauseState::PauseState(StateStack& stack, Context context)
     // a different type. The answer is because GUI::Button is a subclass of GUI::Component so C++ allows it.
     mGUIContainer.pack(returnButton);
     mGUIContainer.pack(backToMenuButton);
+    
+    getContext().music->setPaused(true);
+}
+
+PauseState::~PauseState()
+{
+    getContext().music->setPaused(false);
 }
 
 void PauseState::draw()

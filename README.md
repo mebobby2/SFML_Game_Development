@@ -21,4 +21,5 @@
 4. Application
 5. State
 6. GameState
+7. PauseState
 
