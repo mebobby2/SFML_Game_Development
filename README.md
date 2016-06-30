@@ -20,4 +20,5 @@
 3. SoundPlayer
 4. Application
 5. State
+6. GameState
 
