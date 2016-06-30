@@ -25,12 +25,12 @@ SoundPlayer::SoundPlayer()
 , mSounds()
 {
     mSoundBuffers.load(SoundEffect::AlliedGunfire, "AlliedGunfire.wav");
-    mSoundBuffers.load(SoundEffect::AlliedGunfire, "EnemyGunfire.wav");
-    mSoundBuffers.load(SoundEffect::AlliedGunfire, "Explosion1.wav");
-    mSoundBuffers.load(SoundEffect::AlliedGunfire, "Explosion2.wav");
-    mSoundBuffers.load(SoundEffect::AlliedGunfire, "LaunchMissile.wav");
-    mSoundBuffers.load(SoundEffect::AlliedGunfire, "CollectPickup.wav");
-    mSoundBuffers.load(SoundEffect::AlliedGunfire, "Button.wav");
+    mSoundBuffers.load(SoundEffect::EnemyGunfire, "EnemyGunfire.wav");
+    mSoundBuffers.load(SoundEffect::Explosion1, "Explosion1.wav");
+    mSoundBuffers.load(SoundEffect::Explosion2, "Explosion2.wav");
+    mSoundBuffers.load(SoundEffect::LaunchMissile, "LaunchMissile.wav");
+    mSoundBuffers.load(SoundEffect::CollectPickup, "CollectPickup.wav");
+    mSoundBuffers.load(SoundEffect::Button, "Button.wav");
     
     sf::Listener::setDirection(0.f, 0.f, -1.f);
 }
