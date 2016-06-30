@@ -15,8 +15,6 @@
 
 ## Upto Page 221 - Sound effects
 
-## But first fix the crash when transitioning to the gamestate
-
 1. ResourceIdentifiers
 2. MusicPlayer
 3. SoundPlayer

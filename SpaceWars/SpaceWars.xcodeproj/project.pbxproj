@@ -49,6 +49,8 @@
 		9242CAAB1CD8544800AC8A64 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9242CAA91CD8544800AC8A64 /* Entity.cpp */; };
 		9242CAAE1CD8562800AC8A64 /* Aircraft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9242CAAC1CD8562800AC8A64 /* Aircraft.cpp */; };
 		9242CAB41CD85A5600AC8A64 /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9242CAB21CD85A5600AC8A64 /* SceneNode.cpp */; };
+		9256C2231D2581EA0030D88E /* MissionTheme.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 9256C2221D2580870030D88E /* MissionTheme.ogg */; };
+		9256C2241D2581EC0030D88E /* MenuTheme.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 9256C2211D2580870030D88E /* MenuTheme.ogg */; };
 		9266C7591CD711C10021AF29 /* ResourceHolder.inl in Sources */ = {isa = PBXBuildFile; fileRef = 9266C7571CD711C10021AF29 /* ResourceHolder.inl */; };
 		9296BA0F1D1FE86800A9B6B4 /* PostEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9296BA0D1D1FE86800A9B6B4 /* PostEffect.cpp */; };
 		9296BA121D1FEC4D00A9B6B4 /* BloomEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9296BA101D1FEC4D00A9B6B4 /* BloomEffect.cpp */; };
@@ -142,6 +144,8 @@
 		9242CAAD1CD8562800AC8A64 /* Aircraft.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Aircraft.hpp; sourceTree = "<group>"; };
 		9242CAB21CD85A5600AC8A64 /* SceneNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneNode.cpp; sourceTree = "<group>"; };
 		9242CAB31CD85A5600AC8A64 /* SceneNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SceneNode.hpp; sourceTree = "<group>"; };
+		9256C2211D2580870030D88E /* MenuTheme.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = MenuTheme.ogg; sourceTree = "<group>"; };
+		9256C2221D2580870030D88E /* MissionTheme.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = MissionTheme.ogg; sourceTree = "<group>"; };
 		9266C7571CD711C10021AF29 /* ResourceHolder.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ResourceHolder.inl; sourceTree = "<group>"; };
 		9266C7581CD711C10021AF29 /* ResourceHolder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceHolder.hpp; sourceTree = "<group>"; };
 		926FBF741CDAF15200641B40 /* ResourceIdentifiers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceIdentifiers.hpp; sourceTree = "<group>"; };
@@ -149,8 +153,6 @@
 		9296BA0E1D1FE86800A9B6B4 /* PostEffect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PostEffect.hpp; sourceTree = "<group>"; };
 		9296BA101D1FEC4D00A9B6B4 /* BloomEffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BloomEffect.cpp; sourceTree = "<group>"; };
 		9296BA111D1FEC4D00A9B6B4 /* BloomEffect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BloomEffect.hpp; sourceTree = "<group>"; };
-		9296BBE01D256934002DF21A /* MenuTheme.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = MenuTheme.ogg; sourceTree = "<group>"; };
-		9296BBE11D256934002DF21A /* MissionTheme.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = MissionTheme.ogg; sourceTree = "<group>"; };
 		9296BBE31D256948002DF21A /* AlliedGunfire.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = AlliedGunfire.wav; sourceTree = "<group>"; };
 		9296BBE41D256948002DF21A /* Button.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Button.wav; sourceTree = "<group>"; };
 		9296BBE51D256948002DF21A /* CollectPickup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CollectPickup.wav; sourceTree = "<group>"; };
@@ -374,8 +376,8 @@
 		9296BBDF1D256926002DF21A /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				9296BBE01D256934002DF21A /* MenuTheme.ogg */,
-				9296BBE11D256934002DF21A /* MissionTheme.ogg */,
+				9256C2221D2580870030D88E /* MissionTheme.ogg */,
+				9256C2211D2580870030D88E /* MenuTheme.ogg */,
 			);
 			name = Music;
 			sourceTree = "<group>";
@@ -527,7 +529,9 @@
 				9296BBED1D256948002DF21A /* EnemyGunfire.wav in Resources */,
 				9296BBEE1D256948002DF21A /* Explosion1.wav in Resources */,
 				9296BBEA1D256948002DF21A /* AlliedGunfire.wav in Resources */,
+				9256C2241D2581EC0030D88E /* MenuTheme.ogg in Resources */,
 				073DBCBD1D08D34F00A3CC06 /* Jungle.png in Resources */,
+				9256C2231D2581EA0030D88E /* MissionTheme.ogg in Resources */,
 				073DBCCA1D08D39700A3CC06 /* GuassianBlur.frag in Resources */,
 				073DBCBE1D08D34F00A3CC06 /* Particle.png in Resources */,
 				073DBCBF1D08D34F00A3CC06 /* TitleScreen.png in Resources */,
