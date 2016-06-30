@@ -7,6 +7,7 @@
 //
 
 #include "GameState.hpp"
+#include "MusicPlayer.hpp"
 
 #include <SFML/Graphics/RenderWindow.hpp>
 
