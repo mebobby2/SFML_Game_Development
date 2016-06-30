@@ -15,3 +15,6 @@
 
 ## Upto Page 217 - Chapter 9
 
+1. ResourceIdentifiers
+2. MusicPlayer
+

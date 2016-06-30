@@ -59,6 +59,7 @@
 		9296BBEE1D256948002DF21A /* Explosion1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9296BBE71D256948002DF21A /* Explosion1.wav */; };
 		9296BBEF1D256948002DF21A /* Explosion2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9296BBE81D256948002DF21A /* Explosion2.wav */; };
 		9296BBF01D256948002DF21A /* LaunchMissile.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9296BBE91D256948002DF21A /* LaunchMissile.wav */; };
+		9296BBF41D256AE5002DF21A /* MusicPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9296BBF21D256AE5002DF21A /* MusicPlayer.cpp */; };
 		92BEE98F1D1E6423007E3F97 /* EmitterNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92BEE98D1D1E6423007E3F97 /* EmitterNode.cpp */; };
 		92BEE9921D1E6583007E3F97 /* ParticleNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92BEE9901D1E6583007E3F97 /* ParticleNode.cpp */; };
 		92D697BF1CD31272000CF4BB /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92D697BD1CD31272000CF4BB /* Application.cpp */; };
@@ -156,6 +157,8 @@
 		9296BBE71D256948002DF21A /* Explosion1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Explosion1.wav; sourceTree = "<group>"; };
 		9296BBE81D256948002DF21A /* Explosion2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Explosion2.wav; sourceTree = "<group>"; };
 		9296BBE91D256948002DF21A /* LaunchMissile.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LaunchMissile.wav; sourceTree = "<group>"; };
+		9296BBF21D256AE5002DF21A /* MusicPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MusicPlayer.cpp; sourceTree = "<group>"; };
+		9296BBF31D256AE5002DF21A /* MusicPlayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MusicPlayer.hpp; sourceTree = "<group>"; };
 		92BEE98D1D1E6423007E3F97 /* EmitterNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EmitterNode.cpp; sourceTree = "<group>"; };
 		92BEE98E1D1E6423007E3F97 /* EmitterNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EmitterNode.hpp; sourceTree = "<group>"; };
 		92BEE9901D1E6583007E3F97 /* ParticleNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleNode.cpp; sourceTree = "<group>"; };
@@ -388,6 +391,15 @@
 			name = Sound;
 			sourceTree = "<group>";
 		};
+		9296BBF11D256AD7002DF21A /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				9296BBF21D256AE5002DF21A /* MusicPlayer.cpp */,
+				9296BBF31D256AE5002DF21A /* MusicPlayer.hpp */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
 		92F130251CD06F710009C29C = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +419,7 @@
 		92F130311CD06F710009C29C /* SpaceWars */ = {
 			isa = PBXGroup;
 			children = (
+				9296BBF11D256AD7002DF21A /* Music */,
 				9296BA0C1D1FE85700A9B6B4 /* Effects */,
 				073DBCCF1D08DD3500A3CC06 /* Animation */,
 				0743C6B21CEFCDF70080E356 /* Config */,
@@ -583,6 +596,7 @@
 				9242CAB41CD85A5600AC8A64 /* SceneNode.cpp in Sources */,
 				07468E161CE579690089667C /* State.cpp in Sources */,
 				92F130351CD06F710009C29C /* ResourcePath.mm in Sources */,
+				9296BBF41D256AE5002DF21A /* MusicPlayer.cpp in Sources */,
 				07BC13991CEC310B00615DBE /* PauseState.cpp in Sources */,
 				9242CAAE1CD8562800AC8A64 /* Aircraft.cpp in Sources */,
 				073DBCD21D08DD5800A3CC06 /* Animation.cpp in Sources */,
