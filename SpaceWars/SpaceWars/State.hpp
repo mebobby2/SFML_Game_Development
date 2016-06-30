@@ -29,6 +29,8 @@ class StateStack;
 // but storing a reference to it. Player* player is legal, but Player player is illegal, when using
 //forward declarations.
 class Player;
+class MusicPlayer;
+class SoundPlayer;
 
 class State
 {
@@ -37,11 +39,13 @@ public:
     
     struct Context
     {
-        Context(sf::RenderWindow& window, TextureHolder& textures, FontHolder& fonts, Player& player);
+        Context(sf::RenderWindow& window, TextureHolder& textures, FontHolder& fonts, Player& player, MusicPlayer& music, SoundPlayer& sounds);
         sf::RenderWindow* window;
         TextureHolder* textures;
         FontHolder* fonts;
         Player* player;
+        MusicPlayer* music;
+        SoundPlayer* sounds;
     };
     
 public:
