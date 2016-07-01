@@ -13,7 +13,7 @@
 3. Make sure the C++ Compiler and Standard Library is set to C++11 with Clang and libc++
 4. Compile and run the skeleton template.
 
-## Upto Page 221 - Sound effects
+## Upto Page 225 - Sounds in 3D space
 
 1. ResourceIdentifiers
 2. MusicPlayer
