@@ -2,6 +2,7 @@
 #include "Utility.hpp"
 #include "ResourceHolder.hpp"
 #include "Button.hpp"
+#include "MusicPlayer.hpp"
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/View.hpp>
@@ -13,7 +14,7 @@ MenuState::MenuState(StateStack& stack, Context context)
     sf::Texture& texture = context.textures->get(Textures::TitleScreen);
     mBackgroundSprite.setTexture(texture);
     
-    auto playButton = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
+    auto playButton = std::make_shared<GUI::Button>(context);
     playButton->setPosition(100, 300);
     playButton->setText("Play");
     playButton->setCallback([this] ()
@@ -22,7 +23,7 @@ MenuState::MenuState(StateStack& stack, Context context)
                                 requestStackPush(States::Game);
                             });
     
-    auto settingsButton = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
+    auto settingsButton = std::make_shared<GUI::Button>(context);
     settingsButton->setPosition(100, 350);
     settingsButton->setText("Settings");
     settingsButton->setCallback([this] ()
@@ -30,7 +31,7 @@ MenuState::MenuState(StateStack& stack, Context context)
                                     requestStackPush(States::Settings);
                                 });
     
-    auto exitButton = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
+    auto exitButton = std::make_shared<GUI::Button>(context);
     exitButton->setPosition(100, 400);
     exitButton->setText("Exit");
     exitButton->setCallback([this] ()
@@ -41,6 +42,8 @@ MenuState::MenuState(StateStack& stack, Context context)
     mGUIContainer.pack(playButton);
     mGUIContainer.pack(settingsButton);
     mGUIContainer.pack(exitButton);
+    
+    context.music->play(Music::MenuTheme);
 }
 
 void MenuState::draw()
