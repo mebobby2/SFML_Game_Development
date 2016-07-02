@@ -11,6 +11,9 @@
 #include "Pickup.hpp"
 #include "TextNode.hpp"
 #include "ParticleNode.hpp"
+#include "SoundNode.hpp"
+
+#include <SFML/Graphics/RenderTarget.hpp>
 
 #include <cmath>
 #include <algorithm>
@@ -18,12 +21,13 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 
-World::World(sf::RenderTarget& outputTarget, FontHolder& fonts)
+World::World(sf::RenderTarget& outputTarget, FontHolder& fonts, SoundPlayer& sounds)
 : mTarget(outputTarget)
 , mSceneTexture()
 , mWorldView(outputTarget.getDefaultView())
 , mTextures()
 , mFonts(fonts)
+, mSounds(sounds)
 , mSceneGraph()
 , mSceneLayers()
 , mWorldBounds(0.f, 0.f, mWorldView.getSize().x, 5000.f)
@@ -64,6 +68,8 @@ void World::update(sf::Time dt)
     
     mSceneGraph.update(dt, mCommandQueue);
     adaptPlayerPosition();
+    
+    updateSounds();
 }
 
 void World::draw()

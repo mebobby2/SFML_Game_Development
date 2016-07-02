@@ -47,6 +47,7 @@ public:
     
     void fire();
     void launchMissile();
+    void playLocalSound(CommandQueue& commands, SoundEffect::ID effect);
     
 private:
     void updateMovementPattern(sf::Time dt);
@@ -71,6 +72,7 @@ private:
     bool mIsFiring;
     bool mIsLaunchingMissile;
     bool mShowExplosion;
+    bool mPlayedExplosionSound;
     bool mSpawnedPickup;
     
     int mFireRateLevel;

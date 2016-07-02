@@ -12,11 +12,14 @@
 #include "CommandQueue.hpp"
 #include "ResourceHolder.hpp"
 #include "Utility.hpp"
+#include "SoundNode.hpp"
 
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
 
 #include <cmath>
+
+using namespace std::placeholders;
 
 namespace
 {
@@ -32,6 +35,7 @@ Aircraft::Aircraft(Type type, const TextureHolder& textures, const FontHolder& f
 , mIsFiring(false)
 , mIsLaunchingMissile(false)
 , mShowExplosion(true)
+, mPlayedExplosionSound(false)
 , mSpawnedPickup(false)
 , mSprite(textures.get(Table[type].texture), Table[type].textureRect)
 , mExplosion(textures.get(Textures::Explosion))
@@ -100,6 +104,15 @@ void Aircraft::updateCurrent(sf::Time dt, CommandQueue &commands)
     {
         checkPickupDrop(commands);
         mExplosion.update(dt);
+        
+        if (!mPlayedExplosionSound)
+        {
+            SoundEffect::ID soundEffect = (randomInt(2) == 0) ? SoundEffect::Explosion1 : SoundEffect::Explosion2;
+            playLocalSound(commands, soundEffect);
+            
+            mPlayedExplosionSound = true;
+        }
+        
         return;
     }
     
@@ -175,6 +188,16 @@ void Aircraft::launchMissile()
     }
 }
 
+void Aircraft::playLocalSound(CommandQueue &commands, SoundEffect::ID effect)
+{
+    Command command;
+    command.category = Category::SoundEffect;
+    command.action = derivedAction<SoundNode>(
+                                              std::bind(&SoundNode::playSound, _1, effect, getWorldPosition()));
+    
+    commands.push(command);
+}
+
 void Aircraft::updateMovementPattern(sf::Time dt)
 {
     const std::vector<Direction>& directions = Table[mType].directions;
@@ -239,6 +262,8 @@ void Aircraft::checkProjectileLaunch(sf::Time dt, CommandQueue &commands)
     if (mIsFiring && mFireCountdown <= sf::Time::Zero)
     {
         commands.push(mFireCommand);
+        playLocalSound(commands, isAllied() ? SoundEffect::AlliedGunfire : SoundEffect::EnemyGunfire);
+        
         mFireCountdown += Table[mType].fireInterval / (mFireRateLevel + 1.f);
         mIsFiring = false;
     }
@@ -251,6 +276,7 @@ void Aircraft::checkProjectileLaunch(sf::Time dt, CommandQueue &commands)
     if (mIsLaunchingMissile)
     {
         commands.push(mMissileCommand);
+        playLocalSound(commands, SoundEffect::LaunchMissile);
         mIsLaunchingMissile = false;
     }
 }
