@@ -66,6 +66,7 @@
 		92BEE98F1D1E6423007E3F97 /* EmitterNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92BEE98D1D1E6423007E3F97 /* EmitterNode.cpp */; };
 		92BEE9921D1E6583007E3F97 /* ParticleNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92BEE9901D1E6583007E3F97 /* ParticleNode.cpp */; };
 		92D697BF1CD31272000CF4BB /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92D697BD1CD31272000CF4BB /* Application.cpp */; };
+		92E85F1E1D27745A00FF80E3 /* SoundNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E85F1C1D27745A00FF80E3 /* SoundNode.cpp */; };
 		92F130351CD06F710009C29C /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 92F130341CD06F710009C29C /* ResourcePath.mm */; };
 		92F130381CD06F710009C29C /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92F130371CD06F710009C29C /* Main.cpp */; };
 /* End PBXBuildFile section */
@@ -170,6 +171,8 @@
 		92BEE9911D1E6583007E3F97 /* ParticleNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ParticleNode.hpp; sourceTree = "<group>"; };
 		92D697BD1CD31272000CF4BB /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		92D697BE1CD31272000CF4BB /* Application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
+		92E85F1C1D27745A00FF80E3 /* SoundNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundNode.cpp; sourceTree = "<group>"; };
+		92E85F1D1D27745A00FF80E3 /* SoundNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SoundNode.hpp; sourceTree = "<group>"; };
 		92F1302F1CD06F710009C29C /* SpaceWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F130331CD06F710009C29C /* SpaceWars-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpaceWars-Info.plist"; sourceTree = "<group>"; };
 		92F130341CD06F710009C29C /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
@@ -345,6 +348,8 @@
 				076998E11CF1A41A00554CF5 /* TextNode.hpp */,
 				92BEE9901D1E6583007E3F97 /* ParticleNode.cpp */,
 				92BEE9911D1E6583007E3F97 /* ParticleNode.hpp */,
+				92E85F1C1D27745A00FF80E3 /* SoundNode.cpp */,
+				92E85F1D1D27745A00FF80E3 /* SoundNode.hpp */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -600,6 +605,7 @@
 				07468E0F1CE546AF0089667C /* Player.cpp in Sources */,
 				07BEA7F71CED29060023120D /* ParallelTask.cpp in Sources */,
 				0743C6B51CEFCE040080E356 /* DataTables.cpp in Sources */,
+				92E85F1E1D27745A00FF80E3 /* SoundNode.cpp in Sources */,
 				0752C7EE1CE1A39300EF1365 /* World.cpp in Sources */,
 				070573111CFE673800C17EDF /* GameOverState.cpp in Sources */,
 				073FC2C51CEE6A4A00FEB22B /* Label.cpp in Sources */,

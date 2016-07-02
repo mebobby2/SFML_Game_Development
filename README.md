@@ -24,4 +24,6 @@
 7. PauseState
 8. Button
 9. MenuState
+10. Category
+11. SoundNode
 
