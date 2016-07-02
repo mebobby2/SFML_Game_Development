@@ -201,6 +201,13 @@ void World::handleCollisions()
     
 }
 
+void World::updateSounds()
+{
+    mSounds.setListenerPosition(mPlayerAircraft->getWorldPosition());
+    
+    mSounds.removeStoppedSounds();
+}
+
 void World::buildScene()
 {
     // Set up the layers
@@ -240,6 +247,10 @@ void World::buildScene()
     // Add propellnt particle node to the scene
     std::unique_ptr<ParticleNode> propellantNode(new ParticleNode(Particle::Propellant, mTextures));
     mSceneLayers[LowerAir]->attachChild(std::move(propellantNode));
+    
+    // Add sound effect node
+    std::unique_ptr<SoundNode> soundNode(new SoundNode(mSounds));
+    mSceneGraph.attachChild(std::move(soundNode));
     
     // Add Player's Aircraft
     std::unique_ptr<Aircraft> player(new Aircraft(Aircraft::Eagle, mTextures, mFonts));
