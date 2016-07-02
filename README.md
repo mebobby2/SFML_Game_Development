@@ -15,17 +15,5 @@
 
 ## Upto Page 225 - Sounds in 3D space
 
-1. ResourceIdentifiers
-2. MusicPlayer
-3. SoundPlayer
-4. Application
-5. State
-6. GameState
-7. PauseState
-8. Button
-9. MenuState
-10. Category
-11. SoundNode
-12. World
-14. Aircraft
+1. NetworkProtocol
 
