@@ -67,7 +67,6 @@
 		92BEE9921D1E6583007E3F97 /* ParticleNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92BEE9901D1E6583007E3F97 /* ParticleNode.cpp */; };
 		92D697BF1CD31272000CF4BB /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92D697BD1CD31272000CF4BB /* Application.cpp */; };
 		92E85F1E1D27745A00FF80E3 /* SoundNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E85F1C1D27745A00FF80E3 /* SoundNode.cpp */; };
-		92E85F211D278D3A00FF80E3 /* MultiplayerGameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E85F1F1D278D3A00FF80E3 /* MultiplayerGameState.cpp */; };
 		92E85F281D278FBA00FF80E3 /* GameServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E85F261D278FBA00FF80E3 /* GameServer.cpp */; };
 		92F130351CD06F710009C29C /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 92F130341CD06F710009C29C /* ResourcePath.mm */; };
 		92F130381CD06F710009C29C /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92F130371CD06F710009C29C /* Main.cpp */; };
@@ -175,8 +174,6 @@
 		92D697BE1CD31272000CF4BB /* Application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
 		92E85F1C1D27745A00FF80E3 /* SoundNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundNode.cpp; sourceTree = "<group>"; };
 		92E85F1D1D27745A00FF80E3 /* SoundNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SoundNode.hpp; sourceTree = "<group>"; };
-		92E85F1F1D278D3A00FF80E3 /* MultiplayerGameState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MultiplayerGameState.cpp; sourceTree = "<group>"; };
-		92E85F201D278D3A00FF80E3 /* MultiplayerGameState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MultiplayerGameState.hpp; sourceTree = "<group>"; };
 		92E85F241D278DC900FF80E3 /* NetworkProtocol.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NetworkProtocol.hpp; sourceTree = "<group>"; };
 		92E85F261D278FBA00FF80E3 /* GameServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameServer.cpp; sourceTree = "<group>"; };
 		92E85F271D278FBA00FF80E3 /* GameServer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameServer.hpp; sourceTree = "<group>"; };
@@ -262,8 +259,6 @@
 				073FC2D01CEE7FBB00FEB22B /* SettingsState.hpp */,
 				0705730F1CFE673800C17EDF /* GameOverState.cpp */,
 				070573101CFE673800C17EDF /* GameOverState.hpp */,
-				92E85F1F1D278D3A00FF80E3 /* MultiplayerGameState.cpp */,
-				92E85F201D278D3A00FF80E3 /* MultiplayerGameState.hpp */,
 			);
 			name = States;
 			sourceTree = "<group>";
@@ -605,7 +600,6 @@
 				07BC13931CEC1B9C00615DBE /* TitleState.cpp in Sources */,
 				92BEE98F1D1E6423007E3F97 /* EmitterNode.cpp in Sources */,
 				073FC2C81CEE700300FEB22B /* Button.cpp in Sources */,
-				92E85F211D278D3A00FF80E3 /* MultiplayerGameState.cpp in Sources */,
 				9266C7591CD711C10021AF29 /* ResourceHolder.inl in Sources */,
 				9296BA121D1FEC4D00A9B6B4 /* BloomEffect.cpp in Sources */,
 				07BEA7FA1CED2BA50023120D /* LoadingState.cpp in Sources */,
