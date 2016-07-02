@@ -186,6 +186,7 @@ void World::handleCollisions()
             
             pickup.apply(player);
             pickup.destroy();
+            player.playLocalSound(mCommandQueue, SoundEffect::CollectPickup);
         }
         
         else if (matchesCategories(pair, Category::EnemyAircraft, Category::AlliedProjectile)
