@@ -68,6 +68,7 @@
 		92D697BF1CD31272000CF4BB /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92D697BD1CD31272000CF4BB /* Application.cpp */; };
 		92E85F1E1D27745A00FF80E3 /* SoundNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E85F1C1D27745A00FF80E3 /* SoundNode.cpp */; };
 		92E85F211D278D3A00FF80E3 /* MultiplayerGameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E85F1F1D278D3A00FF80E3 /* MultiplayerGameState.cpp */; };
+		92E85F281D278FBA00FF80E3 /* GameServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E85F261D278FBA00FF80E3 /* GameServer.cpp */; };
 		92F130351CD06F710009C29C /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 92F130341CD06F710009C29C /* ResourcePath.mm */; };
 		92F130381CD06F710009C29C /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92F130371CD06F710009C29C /* Main.cpp */; };
 /* End PBXBuildFile section */
@@ -177,6 +178,8 @@
 		92E85F1F1D278D3A00FF80E3 /* MultiplayerGameState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MultiplayerGameState.cpp; sourceTree = "<group>"; };
 		92E85F201D278D3A00FF80E3 /* MultiplayerGameState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MultiplayerGameState.hpp; sourceTree = "<group>"; };
 		92E85F241D278DC900FF80E3 /* NetworkProtocol.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NetworkProtocol.hpp; sourceTree = "<group>"; };
+		92E85F261D278FBA00FF80E3 /* GameServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameServer.cpp; sourceTree = "<group>"; };
+		92E85F271D278FBA00FF80E3 /* GameServer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameServer.hpp; sourceTree = "<group>"; };
 		92F1302F1CD06F710009C29C /* SpaceWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F130331CD06F710009C29C /* SpaceWars-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpaceWars-Info.plist"; sourceTree = "<group>"; };
 		92F130341CD06F710009C29C /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
@@ -422,6 +425,8 @@
 			isa = PBXGroup;
 			children = (
 				92E85F241D278DC900FF80E3 /* NetworkProtocol.hpp */,
+				92E85F261D278FBA00FF80E3 /* GameServer.cpp */,
+				92E85F271D278FBA00FF80E3 /* GameServer.hpp */,
 			);
 			name = Server;
 			sourceTree = "<group>";
@@ -607,6 +612,7 @@
 				073FC2D11CEE7FBB00FEB22B /* SettingsState.cpp in Sources */,
 				92F130381CD06F710009C29C /* Main.cpp in Sources */,
 				0722368B1CE2DCA60086A0CF /* Command.cpp in Sources */,
+				92E85F281D278FBA00FF80E3 /* GameServer.cpp in Sources */,
 				9242CAAB1CD8544800AC8A64 /* Entity.cpp in Sources */,
 				07BC13961CEC25BE00615DBE /* MenuState.cpp in Sources */,
 				07BC13901CEC189A00615DBE /* GameState.cpp in Sources */,
