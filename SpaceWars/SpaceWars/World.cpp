@@ -12,6 +12,7 @@
 #include "TextNode.hpp"
 #include "ParticleNode.hpp"
 #include "SoundNode.hpp"
+#include "NetworkNode.hpp"
 
 #include <SFML/Graphics/RenderTarget.hpp>
 
