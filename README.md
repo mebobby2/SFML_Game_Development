@@ -19,4 +19,5 @@
 2. GameServer
 3. Category
 4. NetworkNode
+5. Aircraft
 

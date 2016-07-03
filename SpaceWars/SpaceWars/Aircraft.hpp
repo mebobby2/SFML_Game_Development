@@ -40,6 +40,7 @@ public:
     virtual bool isMarkedForRemoval() const;
     bool isAllied() const;
     float getMaxSpeed() const;
+    void disablePickups();
     
     void increaseFireRate();
     void increaseSpread();
@@ -48,6 +49,10 @@ public:
     void fire();
     void launchMissile();
     void playLocalSound(CommandQueue& commands, SoundEffect::ID effect);
+    int getIdentifier();
+    void setIdentifier(int identifier);
+    int getMissileAmmo() const;
+    void setMissileAmmo(int ammo);
     
 private:
     void updateMovementPattern(sf::Time dt);
@@ -72,8 +77,9 @@ private:
     bool mIsFiring;
     bool mIsLaunchingMissile;
     bool mShowExplosion;
-    bool mPlayedExplosionSound;
+    bool mExplosionBegan;
     bool mSpawnedPickup;
+    bool mPickupEnabled;
     
     int mFireRateLevel;
     int mSpreadLevel;
@@ -85,6 +91,7 @@ private:
     TextNode* mHealthDisplay;
     TextNode* mMissileDisplay;
     
+    int mIdentifier;
 };
 
 

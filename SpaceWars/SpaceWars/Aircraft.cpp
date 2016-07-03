@@ -13,6 +13,7 @@
 #include "ResourceHolder.hpp"
 #include "Utility.hpp"
 #include "SoundNode.hpp"
+#include "NetworkNode.hpp"
 
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
@@ -35,7 +36,7 @@ Aircraft::Aircraft(Type type, const TextureHolder& textures, const FontHolder& f
 , mIsFiring(false)
 , mIsLaunchingMissile(false)
 , mShowExplosion(true)
-, mPlayedExplosionSound(false)
+, mExplosionBegan(false)
 , mSpawnedPickup(false)
 , mSprite(textures.get(Table[type].texture), Table[type].textureRect)
 , mExplosion(textures.get(Textures::Explosion))
@@ -46,6 +47,8 @@ Aircraft::Aircraft(Type type, const TextureHolder& textures, const FontHolder& f
 , mTravelledDistance(0.f)
 , mDirectionIndex(0)
 , mMissileDisplay(nullptr)
+, mIdentifier(0)
+, mPickupEnabled(true)
 {
     mExplosion.setFrameSize(sf::Vector2i(256, 256));
     mExplosion.setNumFrames(16);
@@ -87,12 +90,27 @@ Aircraft::Aircraft(Type type, const TextureHolder& textures, const FontHolder& f
     updateTexts();
 }
 
+int Aircraft::getMissileAmmo() const
+{
+    return mMissileAmmo;
+}
+
+void Aircraft::setMissileAmmo(int ammo)
+{
+    mMissileAmmo = ammo;
+}
+
 void Aircraft::drawCurrent(sf::RenderTarget &target, sf::RenderStates states) const
 {
     if (isDestroyed() && mShowExplosion)
         target.draw(mExplosion, states);
     else
         target.draw(mSprite, states);
+}
+
+void Aircraft::disablePickups()
+{
+    mPickupEnabled = false;
 }
 
 void Aircraft::updateCurrent(sf::Time dt, CommandQueue &commands)
@@ -105,12 +123,25 @@ void Aircraft::updateCurrent(sf::Time dt, CommandQueue &commands)
         checkPickupDrop(commands);
         mExplosion.update(dt);
         
-        if (!mPlayedExplosionSound)
+        if (!mExplosionBegan)
         {
             SoundEffect::ID soundEffect = (randomInt(2) == 0) ? SoundEffect::Explosion1 : SoundEffect::Explosion2;
             playLocalSound(commands, soundEffect);
             
-            mPlayedExplosionSound = true;
+            if (!isAllied())
+            {
+                sf::Vector2f position = getWorldPosition();
+                
+                Command command;
+                command.category = Category::Network;
+                command.action = derivedAction<NetworkNode>([position](NetworkNode& node, sf::Time)
+                                                            {
+                                                                node.notifyGameAction(GameActions::EnemyExplode, position);
+                                                            });
+                commands.push(command);
+            }
+            
+            mExplosionBegan = true;
         }
         
         return;
@@ -196,6 +227,16 @@ void Aircraft::playLocalSound(CommandQueue &commands, SoundEffect::ID effect)
                                               std::bind(&SoundNode::playSound, _1, effect, getWorldPosition()));
     
     commands.push(command);
+}
+
+int Aircraft::getIdentifier()
+{
+    return mIdentifier;
+}
+
+void Aircraft::setIdentifier(int identifier)
+{
+    mIdentifier = identifier;
 }
 
 void Aircraft::updateMovementPattern(sf::Time dt)
