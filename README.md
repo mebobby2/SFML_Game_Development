@@ -15,6 +15,8 @@
 
 ## Upto Page 245 - Creating the structure for multiplayer
 
+## Before that, implement KeyBinding, Player, and then MultiplayerGameState
+
 1. NetworkProtocol
 2. GameServer
 3. Category
