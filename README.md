@@ -15,8 +15,6 @@
 
 ## Upto Page 245 - Creating the structure for multiplayer
 
-## Before that, implement MultiplayerGameState
-
 1. NetworkProtocol
 2. GameServer
 3. Category
@@ -24,4 +22,7 @@
 5. Aircraft
 6. KeyBinding
 7. Player
+8. State
+9. StateIdentifiers
+10. MultiPlayerGameState
 
