@@ -27,4 +27,5 @@
 10. MultiPlayerGameState
 11. Entity
 12. MenuState
+13. PauseState
 
