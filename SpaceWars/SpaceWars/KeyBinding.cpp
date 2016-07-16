@@ -17,11 +17,11 @@ KeyBinding::KeyBinding(int controlPreconfiguration)
     if (controlPreconfiguration == 1)
     {
         mKeyMap[sf::Keyboard::Left] = PlayerAction::MoveLeft;
-        mKeyMap[sf::Keyboard::Left] = PlayerAction::MoveRight;
-        mKeyMap[sf::Keyboard::Left] = PlayerAction::MoveUp;
-        mKeyMap[sf::Keyboard::Left] = PlayerAction::MoveDown;
-        mKeyMap[sf::Keyboard::Left] = PlayerAction::Fire;
-        mKeyMap[sf::Keyboard::Left] = PlayerAction::LaunchMissile;
+        mKeyMap[sf::Keyboard::Right] = PlayerAction::MoveRight;
+        mKeyMap[sf::Keyboard::Up] = PlayerAction::MoveUp;
+        mKeyMap[sf::Keyboard::Down] = PlayerAction::MoveDown;
+        mKeyMap[sf::Keyboard::Space] = PlayerAction::Fire;
+        mKeyMap[sf::Keyboard::M] = PlayerAction::LaunchMissile;
     }
     else if (controlPreconfiguration == 2)
     {
