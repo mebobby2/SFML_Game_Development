@@ -74,7 +74,8 @@ MultiplayerGameState::MultiplayerGameState(StateStack& stack, Context context, b
     }
     else
     {
-        ip = getAddressFromFile();
+        //ip = getAddressFromFile();
+        ip = "192.168.0.154"; //Erica's computer
     }
     
     if (mSocket.connect(ip, ServerPort, sf::seconds(5.f)) == sf::TcpSocket::Done)
