@@ -28,4 +28,10 @@
 11. Entity
 12. MenuState
 13. PauseState
+15. SettingsState
+16. Application
+17. StateStack
+18. Button
+19. GameOverState
+20. GameState
 

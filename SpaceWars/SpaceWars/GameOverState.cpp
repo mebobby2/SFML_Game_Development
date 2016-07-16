@@ -15,7 +15,7 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/View.hpp>
 
-GameOverState::GameOverState(StateStack& stack, Context context)
+GameOverState::GameOverState(StateStack& stack, Context context, const std::string& text)
 : State(stack, context)
 , mGameOverText()
 , mElapsedTime(sf::Time::Zero)
@@ -24,11 +24,7 @@ GameOverState::GameOverState(StateStack& stack, Context context)
     sf::Vector2f windowSize(context.window->getSize());
     
     mGameOverText.setFont(font);
-    if (context.player->getMissionStatus() == Player::MissionFailure)
-        mGameOverText.setString("Mission failed!");
-    else
-        mGameOverText.setString("Mission successful!");
-    
+    mGameOverText.setString(text);
     mGameOverText.setCharacterSize(70);
     centerOrigin(mGameOverText);
     mGameOverText.setPosition(0.5f * windowSize.x, 0.4f * windowSize.y);
@@ -51,7 +47,8 @@ void GameOverState::draw()
 bool GameOverState::update(sf::Time dt)
 {
     mElapsedTime += dt;
-    if (mElapsedTime > sf::seconds(3)) {
+    if (mElapsedTime > sf::seconds(3))
+    {
         requestStateClear();
         requestStackPush(States::Menu);
     }

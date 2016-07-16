@@ -19,12 +19,15 @@ SettingsState::SettingsState(StateStack& stack, Context context)
 {
     mBackgroundSprite.setTexture(context.textures->get(Textures::TitleScreen));
     
-    addButtonLabel(Player::MoveLeft, 300.f, "Move Left", context);
-    addButtonLabel(Player::MoveRight, 350.f, "Move Right", context);
-    addButtonLabel(Player::MoveUp, 400.f, "Move Up", context);
-    addButtonLabel(Player::MoveDown, 450.f, "Move Down", context);
-    addButtonLabel(Player::Fire, 500.0f, "Fire", context);
-    addButtonLabel(Player::LaunchMissile, 550.f, "Missile", context);
+    for (std::size_t x = 0; x < 2; ++x)
+    {
+        addButtonLabel(PlayerAction::MoveLeft, x, 0, "Move Left", context);
+        addButtonLabel(PlayerAction::MoveRight, x, 1, "Move Right", context);
+        addButtonLabel(PlayerAction::MoveUp, x, 2, "Move Up", context);
+        addButtonLabel(PlayerAction::MoveDown, x, 3, "Move Down", context);
+        addButtonLabel(PlayerAction::Fire, x, 4, "Fire", context);
+        addButtonLabel(PlayerAction::LaunchMissile, x, 5, "Missile", context);
+    }
     
     updateLabels();
     
@@ -53,13 +56,19 @@ bool SettingsState::handleEvent(const sf::Event &event)
 {
     bool isKeyBinding = false;
     
-    for (std::size_t action = 0; action < Player::ActionCount; ++action) {
-        if (mBindingButtons[action]->isActive()) {
+    for (std::size_t i = 0; i < 2*PlayerAction::Count; ++i) {
+        if (mBindingButtons[i]->isActive()) {
             isKeyBinding = true;
             if (event.type == sf::Event::KeyReleased)
             {
-                getContext().player->assignKey(static_cast<Player::Action>(action), event.key.code);
-                mBindingButtons[action]->deactivate();
+                if (i < PlayerAction::Count)
+                    getContext().keys1->assignKey(static_cast<PlayerAction::Type>(i), event.key.code);
+                
+                else
+                    getContext().keys2->assignKey(static_cast<PlayerAction::Type>(i - PlayerAction::Count), event.key.code);
+                
+                
+                mBindingButtons[i]->deactivate();
             }
             break;
         }
@@ -75,27 +84,32 @@ bool SettingsState::handleEvent(const sf::Event &event)
 
 void SettingsState::updateLabels()
 {
-    Player& player = *getContext().player;
-    
-    for (std::size_t i = 0; i < Player::ActionCount; ++i)
+    for (std::size_t i = 0; i < PlayerAction::Count; ++i)
     {
-        sf::Keyboard::Key key = player.getAssignedKey(static_cast<Player::Action>(i));
-        mBindingLabels[i]->setText(toString(key));
+        auto action = static_cast<PlayerAction::Type>(i);
+        
+        sf::Keyboard::Key key1 = getContext().keys1->getAssignedKey(action);
+        sf::Keyboard::Key key2 = getContext().keys2->getAssignedKey(action);
+        
+        mBindingLabels[i]->setText(toString(key1));
+        mBindingLabels[i + PlayerAction::Count]->setText(toString(key2));
     }
 }
 
-void SettingsState::addButtonLabel(Player::Action action, float y, const std::string &text, State::Context context)
+void SettingsState::addButtonLabel(std::size_t index, std::size_t x, std::size_t y, const std::string &text, State::Context context)
 {
-    mBindingButtons[action] = std::make_shared<GUI::Button>(context);
-    mBindingButtons[action]->setPosition(80.f, y);
-    mBindingButtons[action]->setText(text);
-    mBindingButtons[action]->setToggle(true);
+    index += PlayerAction::Count * x;
     
-    mBindingLabels[action] = std::make_shared<GUI::Label>("", *context.fonts);
-    mBindingLabels[action]->setPosition(300.f, y + 15.f);
+    mBindingButtons[index] = std::make_shared<GUI::Button>(context);
+    mBindingButtons[index]->setPosition(400.f*x + 80.f, 50.f*y + 300.f);
+    mBindingButtons[index]->setText(text);
+    mBindingButtons[index]->setToggle(true);
     
-    mGUIContainer.pack(mBindingButtons[action]);
-    mGUIContainer.pack(mBindingLabels[action]);
+    mBindingLabels[index] = std::make_shared<GUI::Label>("", *context.fonts);
+    mBindingLabels[index]->setPosition(400.f*x + 300.f, 50.f*y + 315.f);
+    
+    mGUIContainer.pack(mBindingButtons[index]);
+    mGUIContainer.pack(mBindingLabels[index]);
 }
 
 

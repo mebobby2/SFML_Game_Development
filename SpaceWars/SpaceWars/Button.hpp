@@ -12,6 +12,7 @@
 #include "Component.hpp"
 #include "ResourceIdentifiers.hpp"
 #include "State.hpp"
+#include "ResourceHolder.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>

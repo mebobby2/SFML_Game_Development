@@ -13,9 +13,10 @@
 
 GameState::GameState(StateStack& stack, Context context)
 : State(stack, context)
-, mWorld(*context.window, *context.fonts, *context.sounds)
-, mPlayer(*context.player)
+, mWorld(*context.window, *context.fonts, *context.sounds, false)
+, mPlayer(nullptr, 1, context.keys1)
 {
+    mWorld.addAircraft(1);
     mPlayer.setMissionStatus(Player::MissionRunning);
     
     context.music->play(Music::MissionTheme);
