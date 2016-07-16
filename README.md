@@ -13,7 +13,7 @@
 3. Make sure the C++ Compiler and Standard Library is set to C++11 with Clang and libc++
 4. Compile and run the skeleton template.
 
-## Upto - Finished the book - just need to make sure code is synced
+## Upto - See why we get a timeout when hosting a game
 
 1. NetworkProtocol
 2. GameServer
