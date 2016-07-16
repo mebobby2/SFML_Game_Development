@@ -114,6 +114,9 @@ void MultiplayerGameState::onActivate()
 
 void MultiplayerGameState::onDestroy()
 {
+    if (mHost)
+        mSocket.disconnect();
+    
     if (!mHost && mConnected)
     {
         sf::Packet packet;
