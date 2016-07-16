@@ -134,5 +134,5 @@ void Application::registerStates()
     mStateStack.registerState<LoadingState>(States::Loading);
     mStateStack.registerState<SettingsState>(States::Settings);
     mStateStack.registerState<GameOverState>(States::GameOver, "Mission Failed");
-    mStateStack.registerState<GameOverState>(States::MissionSuccess, "Mission Successfu;!");
+    mStateStack.registerState<GameOverState>(States::MissionSuccess, "Mission Successful!");
 }
