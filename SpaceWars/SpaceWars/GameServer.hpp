@@ -59,7 +59,7 @@ private:
     sf::Time now() const;
     
     void handleIncomingPackets();
-    void handleIncomingPacket(sf::Packet packet, RemotePeer& receivingPeer, bool& detectedTimeout);
+    void handleIncomingPacket(sf::Packet& packet, RemotePeer& receivingPeer, bool& detectedTimeout);
     
     void handleIncomingConnections();
     void handleDisconnections();
