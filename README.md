@@ -13,25 +13,3 @@
 3. Make sure the C++ Compiler and Standard Library is set to C++11 with Clang and libc++
 4. Compile and run the skeleton template.
 
-## Upto - See why we get a timeout when hosting a game
-
-1. NetworkProtocol
-2. GameServer
-3. Category
-4. NetworkNode
-5. Aircraft
-6. KeyBinding
-7. Player
-8. State
-9. StateIdentifiers
-10. MultiPlayerGameState
-11. Entity
-12. MenuState
-13. PauseState
-15. SettingsState
-16. Application
-17. StateStack
-18. Button
-19. GameOverState
-20. GameState
-
