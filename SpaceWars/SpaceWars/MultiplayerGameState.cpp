@@ -97,7 +97,7 @@ void MultiplayerGameState::draw()
         if (!mBroadcasts.empty())
             mWindow.draw(mBroadcastText);
         
-        if (mLocalPlayerIndentifiers.size() < 2 && mPlayerInvitationTime < sf::seconds(0.5f))
+        if (mLocalPlayerIdentifiers.size() < 2 && mPlayerInvitationTime < sf::seconds(0.5f))
             mWindow.draw(mPlayerInvitationText);
     }
     else
@@ -130,7 +130,7 @@ bool MultiplayerGameState::update(sf::Time dt)
         bool foundLocalPlane = false;
         for (auto itr = mPlayers.begin(); itr != mPlayers.end(); )
         {
-            if (std::find(mLocalPlayerIndentifiers.begin(), mLocalPlayerIndentifiers.end(), itr->first) != mLocalPlayerIndentifiers.end())
+            if (std::find(mLocalPlayerIdentifiers.begin(), mLocalPlayerIdentifiers.end(), itr->first) != mLocalPlayerIdentifiers.end())
             {
                 foundLocalPlane = true;
             }
@@ -207,9 +207,9 @@ bool MultiplayerGameState::update(sf::Time dt)
         {
             sf::Packet positionUpdatePacket;
             positionUpdatePacket << static_cast<sf::Int32>(Client::PositionUpdate);
-            positionUpdatePacket << static_cast<sf::Int32>(mLocalPlayerIndentifiers.size());
+            positionUpdatePacket << static_cast<sf::Int32>(mLocalPlayerIdentifiers.size());
             
-            for (sf::Int32 identifier : mLocalPlayerIndentifiers)
+            for (sf::Int32 identifier : mLocalPlayerIdentifiers)
             {
                 if (Aircraft* aircraft = mWorld.getAircraft(identifier))
                     positionUpdatePacket << identifier << aircraft->getPosition().x << aircraft->getPosition().y << static_cast<sf::Int32>(aircraft->getHitpoints()) << static_cast<sf::Int32>(aircraft->getMissileAmmo());
@@ -234,7 +234,7 @@ void MultiplayerGameState::disableAllRealtimeActions()
 {
     mActiveState = false;
     
-    for (sf::Int32 identifier : mLocalPlayerIndentifiers)
+    for (sf::Int32 identifier : mLocalPlayerIdentifiers)
         mPlayers[identifier]->disableAllRealtimeActions();
 }
 
@@ -247,7 +247,7 @@ bool MultiplayerGameState::handleEvent(const sf::Event &event)
     
     if (event.type == sf::Event::KeyPressed)
     {
-        if (event.key.code == sf::Keyboard::Return && mLocalPlayerIndentifiers.size() == 1)
+        if (event.key.code == sf::Keyboard::Return && mLocalPlayerIdentifiers.size() == 1)
         {
             sf::Packet packet;
             packet << static_cast<sf::Int32>(Client::RequestCoopPartner);
@@ -319,7 +319,7 @@ void MultiplayerGameState::handlePacket(sf::Int32 packetType, sf::Packet &packet
             aircraft->setPosition(aircraftPosition);
             
             mPlayers[aircraftIdentifier].reset(new Player(&mSocket, aircraftIdentifier, getContext().keys1));
-            mLocalPlayerIndentifiers.push_back(aircraftIdentifier);
+            mLocalPlayerIdentifiers.push_back(aircraftIdentifier);
             
             mGameStarted = true;
         } break;
@@ -379,7 +379,7 @@ void MultiplayerGameState::handlePacket(sf::Int32 packetType, sf::Packet &packet
             
             mWorld.addAircraft(aircraftIdentifier);
             mPlayers[aircraftIdentifier].reset(new Player(&mSocket, aircraftIdentifier, getContext().keys2));
-            mLocalPlayerIndentifiers.push_back(aircraftIdentifier);
+            mLocalPlayerIdentifiers.push_back(aircraftIdentifier);
         } break;
             
         case Server::PlayerEvent:
@@ -447,7 +447,7 @@ void MultiplayerGameState::handlePacket(sf::Int32 packetType, sf::Packet &packet
                 packet >> aircraftIdentifier >> aircraftPosition.x >> aircraftPosition.y;
                 
                 Aircraft *aircraft = mWorld.getAircraft(aircraftIdentifier);
-                bool isLocalPlane = std::find(mLocalPlayerIndentifiers.begin(), mLocalPlayerIndentifiers.end(), aircraftIdentifier) != mLocalPlayerIndentifiers.end();
+                bool isLocalPlane = std::find(mLocalPlayerIdentifiers.begin(), mLocalPlayerIdentifiers.end(), aircraftIdentifier) != mLocalPlayerIdentifiers.end();
                 if (aircraft && !isLocalPlane)
                 {
                     sf::Vector2f interpolatedPosition = aircraft->getPosition() + (aircraftPosition - aircraft->getPosition()) * 0.1f;

@@ -46,7 +46,7 @@ private:
     TextureHolder& mTextureHolder;
     
     std::map<int, PlayerPtr> mPlayers;
-    std::vector<sf::Int32> mLocalPlayerIndentifiers;
+    std::vector<sf::Int32> mLocalPlayerIdentifiers;
     sf::TcpSocket mSocket;
     bool mConnected;
     std::unique_ptr<GameServer> mGameServer;
