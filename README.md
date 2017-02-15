@@ -1,4 +1,4 @@
-# SFML_Game_Development
+# Spacewars!
 
 ## Installing SFML
 1. Go to http://www.sfml-dev.org/download/sfml/2.3.2 and download SFML for OSX
